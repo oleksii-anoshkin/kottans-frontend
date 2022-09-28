@@ -1,0 +1,240 @@
+/* fonts */
+@font-face {
+  font-family: "Times New Roman";
+  font-display: swap;
+  src: url("./fonts/times_new_roman.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("./fonts/times_new_roman.eot?#iefix") format("embedded-opentype"), url("./fonts/times_new_roman.woff2") format("woff2"), url("./fonts/times_new_roman.woff") format("woff"), url("./fonts/times_new_roman.ttf") format("truetype"), url("./fonts/times_new_roman.svg#times_new_roman") format("svg");
+  /* Chrome < 4, Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  font-display: swap;
+  src: url("./fonts/uk_arial1_normal.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("./fonts/uk_arial1_normal.eot?#iefix") format("embedded-opentype"), url("./fonts/uk_arial1_normal.woff2") format("woff2"), url("./fonts/uk_arial1_normal.woff") format("woff"), url("./fonts/uk_arial1_normal.ttf") format("truetype"), url("./fonts/uk_arial1_normal.svg#uk_arial1_normal") format("svg");
+  /* Chrome < 4, Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* roots */
+:root {
+  /* bg colors */
+  --backgrount-color: #e8e8e8;
+  --bottum-color: #80b7b3;
+  --border-color: #ffffff;
+
+  /* fonts colors */
+  --preheader-color: #899194;
+  --header-color: #273d46;
+  --text-color: #606c71;
+  --last-list-color: #bcbfc1;
+  --bottum-text-color: #ffffff;
+
+  /* fonts */
+  --primary-font: "Times New Roman", serif;
+  --btn-font: "Arial", serif;
+}
+
+/* general styles */
+body {
+  width: 100%;
+
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+
+  color: var(--text-color);
+  background: var(--backgrount-color) url('./images/bg-img.png') no-repeat;
+  background-size: 100% auto;
+}
+
+/* main styles */
+main {
+  padding: 8% 20%;
+}
+
+span {
+  margin: 2% auto;
+
+  display: block;
+
+  font-family: var(--btn-font);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--preheader-color);
+}
+
+h1 {
+  margin: 0 auto 8%;
+  max-width: 560px;
+
+  font-size: 24px;
+  text-align: center;
+
+  color: var(--header-color);
+}
+
+img.main-img {
+  margin: 0 auto 8%;
+  width: 100%;
+  height: inherit;
+
+  display: block;
+
+  border: 8px solid #ffffff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  margin: 6%;
+  color: var(--text-color);
+}
+
+ul {
+  margin: 6%;
+
+  font-size: 12px;
+  font-family: var(--btn-font);
+}
+
+li {
+  margin-bottom: 1%;
+  padding: 0 4%;
+  background: url(./images/check-icon.png) 0 50%/3% no-repeat;
+}
+
+ul :first-child {
+  font-weight: 600;
+  color: var(--header-color);
+}
+
+ul :nth-child(2) {
+  font-style: italic;
+  color: var(--bottum-color);
+}
+
+ul :nth-child(3) {
+  color: var(--header-color);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+ul :last-child {
+  text-decoration: line-through;
+  color: var(--last-list-color);
+}
+
+button {
+  margin-left: 6%;
+  padding: 11px 12px;
+
+  width: 124px;
+  height: 32px;
+
+  font-family: var(--btn-font);
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+
+  color: var(--bottum-text-color);
+  background-color: var(--bottum-color);
+  border-radius: 16px;
+
+  box-shadow: 0 0 8px var(--bottum-color);
+}
+
+/* low screen styles */
+@media (width <=650px) {
+  span {
+    font-size: 4px;
+  }
+
+  h1 {
+    font-size: 12px;
+  }
+
+  img.main-img {
+    border-width: 4px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    font-size: 8px;
+  }
+
+  ul {
+    font-size: 6px;
+  }
+
+  button {
+    padding: 6px 0;
+
+    width: 100px;
+    height: 20px;
+
+    font-size: 7px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 8px var(--bottum-color);
+  }
+
+  img.btn-img {
+    width: 12px;
+    height: 9px;
+  }
+}
+
+/* high screen styles */
+@media (width >=1250px) {
+  span {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 32px;
+    max-width: 760px;
+  }
+
+  img.main-img {
+    border-width: 12px;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  ul {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 12px 12px;
+
+    width: 160px;
+    height: 40px;
+
+    font-size: 12px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 16px var(--bottum-color);
+  }
+
+  img.btn-img {
+    width: 20px;
+    height: 14px;
+  }
+}
