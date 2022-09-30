@@ -1,0 +1,195 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+
+/* roots */
+:root {
+  /* bg colors */
+  --bg-color: #e8e8e8;
+  --button-color: #80b7b3;
+  --button-hover-color: #3a5856;
+  --button-active-color: #818181;
+
+  /* fonts colors */
+  --text-color: #273d46;
+  --text-active-color: #d55a5a;
+  --button-text-color: #ffffff;
+
+  /* form */
+  --form-border-color: #b0b0b0;
+  --form-activ-border-color: #7fbed5;
+
+  /* fonts */
+  --primary-font: 'Roboto', sans-serif;
+  --btn-h-font: 'Montserrat', sans-serif;
+}
+
+/* general styles */
+body {
+  width: 100%;
+
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* main styles */
+main {
+  margin: 6% 20%;
+}
+
+/* headers */
+h1 {
+  padding-bottom: 2%;
+
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--btn-h-font);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--btn-h-font);
+}
+
+/* other */
+div,
+ul {
+  margin: 1% 0 4%;
+}
+
+/* example 1 */
+li {
+  margin-bottom: 1%;
+}
+
+li::before {
+  content: url(./images/check-m-icon.png);
+  padding-right: 1%;
+}
+
+ul :first-child {
+  text-decoration: line-through;
+}
+
+ul :nth-child(2) {
+  font-weight: 600;
+}
+
+ul :nth-child(3) {
+  font-style: italic;
+}
+
+ul :last-child {
+  text-transform: uppercase;
+}
+
+/* example 2 */
+a {
+  margin-bottom: 1%;
+
+  display: block;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+
+  color: inherit;
+}
+
+a::before {
+  content: url(./images/check-m-icon.png);
+  padding-right: 1%;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--text-active-color);
+  cursor: pointer;
+}
+
+a:hover::before,
+a:focus::before,
+a:active::before {
+  content: url(./images/check-active-m-icon.png);
+}
+
+/* button */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2% 1% 4%;
+
+  width: 160px;
+  height: 40px;
+
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+
+  border-radius: 20px;
+
+  box-shadow: 0 0 8px var(--button-color);
+}
+
+img {
+  margin-left: 8px;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--button-hover-color);
+  box-shadow: 0 0 4px var(--button-hover-color);
+}
+
+button:active {
+  background-color: var(--button-active-color);
+  box-shadow: none;
+}
+
+/* form */
+form {
+  padding: 2% 1%;
+}
+
+label {
+  margin-right: 8px;
+}
+
+input {
+  height: 24px;
+  padding: 4px;
+
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+
+  border: 1px solid;
+  border-color: var(--form-border-color);
+}
+
+input:hover {
+  box-shadow: 0 0 4px var(--form-border-color);
+}
+
+input:focus {
+  border-color: var(--form-activ-border-color);
+  box-shadow: 0 0 4px var(--form-activ-border-color);
+}
