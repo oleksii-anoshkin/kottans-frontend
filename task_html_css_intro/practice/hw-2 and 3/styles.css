@@ -39,7 +39,7 @@ body {
 
 /* main styles */
 main {
-  margin: 6% 20%;
+  padding: 6% 20% 6%;
 }
 
 /* headers */
@@ -192,4 +192,20 @@ input:hover {
 input:focus {
   border-color: var(--form-activ-border-color);
   box-shadow: 0 0 4px var(--form-activ-border-color);
+}
+
+/* other text */
+p {
+  padding: 2% 0;
+  text-align: justify;
+}
+
+p::first-line {
+  font-style: italic;
+  color: var(--text-active-color);
+}
+
+p::first-letter {
+  font-weight: 600;
+  color: var(--button-hover-color);
 }
