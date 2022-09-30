@@ -1,0 +1,81 @@
+.conteiner {
+  display: inline-flex;
+  flex-flow: row wrap;
+
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  background: gray;
+}
+
+.conteiner__box {
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: center;
+
+  height: 120px;
+
+  margin: 1%;
+  padding: 1%;
+}
+
+.box-1 {
+  background-color: yellowgreen;
+  border: 2px solid black;
+  flex-basis: 23%;
+  order: 3;
+}
+
+.box-2 {
+  background-color: teal;
+  border: 2px solid black;
+  flex-basis: 48%;
+  order: 1;
+}
+
+.box-3 {
+  background-color: peru;
+  border: 2px solid black;
+  flex-basis: 98%;
+  order: 0;
+}
+
+.box-4 {
+  background-color: olivedrab;
+  border: 2px solid black;
+  flex-basis: 23%;
+  order: 2;
+}
+
+.box__item {
+  border: 2px solid black;
+  height: 50px;
+  width: 60px;
+  text-align: center;
+}
+
+.item-1 {
+  align-self: flex-start;
+  background-color: red;
+  order: 2;
+}
+
+.item-2 {
+  align-self: center;
+  background-color: blue;
+  order: 0;
+}
+
+.item-3 {
+  align-self: flex-start;
+  background-color: wheat;
+  order: 1;
+}
+
+
+.item-4 {
+  align-self: flex-end;
+  background-color: deeppink;
+  order: 1;
+}
