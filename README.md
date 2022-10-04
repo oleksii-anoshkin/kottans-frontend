@@ -101,7 +101,7 @@ Flexbox дуже корисний та гнучкий. Буду використ
 ### Скріншоти виконаних завдань:
 
 ![flexbox-froggy-game-end](./task_responsive_web_design/flexbox-froggy-game-end.png)
-![my-firts-site](https://short-about-html.netlify.app/)
+[Мій перший сайт](https://short-about-html.netlify.app "Що таке HTML?")
 
 ### Додаткова практика та виконані роботи:
 
