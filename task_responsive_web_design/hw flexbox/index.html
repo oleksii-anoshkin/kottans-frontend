@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- about author -->
+    <meta name="Author" content="Oleksii Anoshkin">
+    <meta name="Copyright" content="Oleksii Anoshkin">
+    <meta name="Address" content="Ukraine, Kharkiv">
+    <!-- general -->
+    <meta
+      name="description"
+      content="Коротко та корисно про мову розмітки HTML">
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, JS, HTML теги, HTML атрибути, семантичні теги, HTML таблиці, валідатор, символічні підстановки">
+    <meta name="robots" content="all">
+    <!-- facebook -->
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Що таке HTML?">
+    <meta
+      property="og:description"
+      content="Коротко та корисно про мову розмітки HTML">
+    <meta property="og:image" content="https://short-about-html.netlify.app/images/html-icon.png">
+    <meta property="og:url" content="https://short-about-html.netlify.app/">
+    <meta property="og:site_name" content="Що таке HTML?">
+    <title>Що таке HTML?</title>
+    <!-- links -->
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- images -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.png">
+    <link rel="preload" as="image" href="./images/bg-code.png">
+    <link rel="preload" as="image" href="./images/check-icon.svg">
+    <link rel="preload" as="image" href="./images/check-active-icon.svg">
+    <link rel="preload" as="image" href="./images/check-active2-icon.svg">
+    <link rel="preload" as="image" href="./images/html-img.jpg">
+    <link rel="preload" as="image" href="./images/html-code.jpg">
+    <link rel="preload" as="image" href="./images/arrow-icon.svg">
+    <link rel="preload" as="image" href="./images/arrow-white-icon.svg">
+    <link rel="preload" as="image" href="./images/arrow-active-icon.svg">
+    <link rel="preload" as="image" href="./images/arrow-active2-icon.svg">
+    <link rel="preload" as="image" href="./images/html-icon.png">
+    <link rel="preload" as="image" href="./images/css-icon.png">
+    <link rel="preload" as="image" href="./images/js-icon.png">
+    <link rel="preload" as="image" href="./images/image.jpg">
+    <link rel="preload" as="image" href="./images/sings.png">
+    <link rel="preload" as="image" href="./images/table.png">
+    <link rel="preload" as="image" href="./images/valid.png">
+    <link rel="preload" as="image" href="./images/arrow-right-icon.svg">
+    <link
+      rel="preload"
+      as="image"
+      href="./images/arrow-right-active-icon.svg">
+    <link
+      rel="preload"
+      as="image"
+      href="./images/arrow-right-active2-icon.svg">
+  </head>
+  <body class="conteiner">
+    <!-- header -->
+    <header class="conteiner__box">
+      <!-- description -->
+      <nav id="header" class="topbox">
+        <h1 class="topbox__header">Що таке HTML?</h1>
+        <ul>
+          <li>
+            <a class="topbox__link" href="#about">Коротко про HTML</a>
+          </li>
+          <li>
+            <a class="topbox__link" href="#tags">Основні теги та атрибути</a>
+          </li>
+          <li>
+            <a class="topbox__link" href="#other"
+              >Додаткова корисна інформація</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- html logo -->
+      <div class="conteiner__box-img">
+        <img
+          class="img"
+          src="./images/html-img.jpg"
+          alt="HTML логотип"
+          width="1200"
+          height="340">
+      </div>
+    </header>
+    <!-- content -->
+    <main class="conteiner__content">
+      <!-- about HTML -->
+      <section id="about" class="about">
+        <h2 hidden>Коротко про HTML</h2>
+        <!-- image -->
+        <div class="about__box">
+          <img
+            class="img-html"
+            src="./images/html-code.jpg"
+            alt="HTML-код"
+            width="1200"
+            height="720">
+        </div>
+        <!-- about HTML -->
+        <article class="about__box">
+          <!-- header -->
+          <h2 class="text__h">Коротко про HTML</h2>
+          <!-- text -->
+          <p class="text__p">
+            <abbr title="HyperText Markup Language">HTML</abbr>&#160;-&#160;мова
+            розмітки веб-документів. Набір правил для структурування (розмітки)
+            текстової інформації, додавання зображень, створення таблиць, форм,
+            списків тощо.
+            <a
+              class="text__p-link"
+              href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="Детальніше про HTML"
+              >Детальніше...</a
+            >
+          </p>
+          <p class="text__p">
+            Для того щоб створити веб-сайт, недостатньо базових знань технології
+            HTML. Під час розробки використовуються редактори коду, системи
+            контролю версій, збирачі, фреймворки, бібліотеки, хостинг та інші
+            концепції, з якими необхідно буде познайомитися.
+          </p>
+          <p class="text__p">
+            Під час розробки веб-сайтів також використовують CSS і JavaScript.
+            <abbr title="Cascading Style Sheets">CSS</abbr
+            >&#160;-&#160;використовується для оформлення та позиціонування,
+            відповідає за зовнішній вигляд веб-сайтів.
+            <abbr title="JavaScript">JS</abbr>&#160;-&#160;дозволяє додати
+            функціонал, реакцію на дії користувача.
+          </p>
+        </article>
+        <!-- up-button -->
+        <div class="about__btn">
+          <a class="about__btn-up" href="#header" title="Вверх"></a>
+        </div>
+      </section>
+      <!-- tags and attributes -->
+      <section id="tags" class="tags">
+        <h2 class="tags__head">Основні теги та атрибути</h2>
+        <!-- basic tags -->
+        <ul class="tags__items">
+          <li class="tags__item">
+            <h3 class="item__head">Основні теги:</h3>
+            <ul class="item__tags">
+              <li class="item__tag">&lt;h1-h6&gt;</li>
+              <li class="item__tag">&lt;div&gt;</li>
+              <li class="item__tag">&lt;span&gt;</li>
+              <li class="item__tag">&lt;html&gt;</li>
+              <li class="item__tag">&lt;body&gt;</li>
+              <li class="item__tag">&lt;a&gt;</li>
+              <li class="item__tag">&lt;button&gt;</li>
+              <li class="item__tag">&lt;img&gt;</li>
+              <li class="item__tag">&lt;ul&gt;</li>
+              <li class="item__tag">&lt;ol&gt;</li>
+              <li class="item__tag">&lt;li&gt;</li>
+              <li class="item__tag">&lt;form&gt;</li>
+              <li class="item__tag">&lt;input&gt;</li>
+            </ul>
+            <!-- link -->
+            <a
+              class="item__btn"
+              href="https://w3schoolsua.github.io/html/html_basic.html"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="Основні теги"
+              >Детальніше...</a
+            >
+          </li>
+          <!-- semantic tags -->
+          <li class="tags__item">
+            <h3 class="item__head">Семантичні теги:</h3>
+            <ul class="item__tags">
+              <li class="item__tag">&lt;aside&gt;</li>
+              <li class="item__tag">&lt;article&gt;</li>
+              <li class="item__tag">&lt;details&gt;</li>
+              <li class="item__tag">&lt;figcaption&gt;</li>
+              <li class="item__tag">&lt;figure&gt;</li>
+              <li class="item__tag">&lt;footer&gt;</li>
+              <li class="item__tag">&lt;header&gt;</li>
+              <li class="item__tag">&lt;main&gt;</li>
+              <li class="item__tag">&lt;mark&gt;</li>
+              <li class="item__tag">&lt;nav&gt;</li>
+              <li class="item__tag">&lt;section&gt;</li>
+              <li class="item__tag">&lt;summary&gt;</li>
+              <li class="item__tag">&lt;time&gt;</li>
+              <li class="item__tag">&lt;p&gt;</li>
+            </ul>
+            <!-- link -->
+            <a
+              class="item__btn"
+              href="https://w3schoolsua.github.io/html/html5_semantic_elements.html"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="Семантичні теги"
+              >Детальніше...</a
+            >
+          </li>
+          <!-- basic attribute -->
+          <li class="tags__item">
+            <h3 class="item__head">Основні атрибути:</h3>
+            <ul class="item__tags">
+              <li class="item__tag">href=""</li>
+              <li class="item__tag">src=""</li>
+              <li class="item__tag">width=""</li>
+              <li class="item__tag">height=""</li>
+              <li class="item__tag">alt=""</li>
+              <li class="item__tag">style=""</li>
+              <li class="item__tag">lang=""</li>
+              <li class="item__tag">title=""</li>
+              <li class="item__tag">class=""</li>
+              <li class="item__tag">id=""</li>
+              <li class="item__tag">target=""</li>
+              <li class="item__tag">type=""</li>
+              <li class="item__tag">name=""</li>
+              <li class="item__tag">value=""</li>
+            </ul>
+            <!-- link -->
+            <a
+              class="item__btn"
+              href="https://w3schoolsua.github.io/html/html_attributes.html"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="Основні отрибути"
+              >Детальніше...</a
+            >
+          </li>
+        </ul>
+        <!-- up-button -->
+        <div class="about__btn">
+          <a class="tags__btn-up" href="#header" title="Вверх"></a>
+        </div>
+      </section>
+      <!-- other information -->
+      <section id="other" class="other">
+        <!-- header -->
+        <h2 class="other__head">Додаткова корисна інформація</h2>
+        <!-- cards -->
+        <ul class="cards">
+          <!-- signs -->
+          <li class="card">
+            <div>
+              <img
+                class="card__img"
+                src="./images/sings.png"
+                alt="Символьні підстановки"
+                width="750"
+                height="500">
+            </div>
+            <div class="card__box">
+              <h3 class="card__head">Символьні підстановки</h3>
+              <p class="card__text">
+                Не всі символи можна набрати на клавіатурі. Наприклад, символ
+                зареєстрованого торгового знака & reg;, торгової марки & trade;,
+                авторського права & copy;. для введення подібних знаків
+                використовують символьні підстановки.
+              </p>
+            </div>
+            <!-- link -->
+            <a
+              class="card__btn"
+              href="https://www.toptal.com/designers/htmlarrows/symbols/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="Детальніше..."></a>
+          </li>
+          <!-- images -->
+          <li class="card">
+            <div>
+              <img
+                class="card__img"
+                src="./images/image.jpg"
+                alt="Зображення"
+                width="750"
+                height="500">
+            </div>
+            <div class="card__box">
+              <h3 class="card__head">Зображення</h3>
+              <p class="card__text">
+                Використання графіки робить веб-сторінки візуально
+                привабливішими. Зображення допомагають краще передати суть і
+                зміст документа. Тег &lt;img&gt; призначений для розмітки
+                зображень у різних графічних форматах.
+              </p>
+            </div>
+            <!-- link -->
+            <a
+              class="card__btn"
+              href="https://www.pexels.com/ru-ru/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="Детальніше..."></a>
+          </li>
+          <!-- validation -->
+          <li class="card">
+            <div>
+              <img
+                class="card__img"
+                src="./images/valid.png"
+                alt="Валідація"
+                width="750"
+                height="500">
+            </div>
+            <div class="card__box">
+              <h3 class="card__head">Валідація</h3>
+              <p class="card__text">
+                Валідація потрібна для виявлення помилок у синтаксисі розмітки
+                HTML-документа і розбіжностей з HTML-специфікацією, вказаною в
+                &lt;!DOCTYPE&gt;. Програма для такої перевірки називається
+                валідатором.
+              </p>
+            </div>
+            <!-- link -->
+            <a
+              class="card__btn"
+              href="https://validator.w3.org/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="Детальніше..."></a>
+          </li>
+          <!-- table -->
+          <li class="card">
+            <div>
+              <img
+                class="card__img"
+                src="./images/table.png"
+                alt="HTML таблиця"
+                width="750"
+                height="500">
+            </div>
+            <div class="card__box">
+              <h3 class="card__head">HTML Таблиці</h3>
+              <p class="card__text">
+                Таблиці дозволяють відобразити складні зв'язки, розміщуючи в
+                клітинках будь-який контент. Їх потрібно використовувати тільки
+                для розмітки табличних даних: розклад транспорту, календар,
+                результати матчів, фінансові операції, меню в ресторані,
+                прайс-лист тощо.
+              </p>
+            </div>
+            <!-- link -->
+            <a
+              class="card__btn"
+              href="https://html.spec.whatwg.org/multipage/tables.html#tables"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="Детальніше..."></a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="conteiner__box">
+      <!-- copyright and up-button -->
+      <ul class="links">
+        <li>
+          <a class="links__upbtn" href="#header" title="Вверх"></a>
+        </li>
+        <li>
+          <a
+            class="links__creator"
+            href="https://www.facebook.com/aleksey.kh.ua"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            title="Профіль Facebook"
+            >&#169; Олексій Аношкін 2022</a
+          >
+        </li>
+      </ul>
+      <!-- links -->
+      <nav class="links">
+        <!-- text -->
+        <p class="links__text">Детальніше про:</p>
+        <ul class="langs">
+          <!-- HTML -->
+          <li>
+            <a
+              class="links__img html"
+              href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="HTML"></a>
+          </li>
+          <!-- CSS -->
+          <li>
+            <a
+              class="links__img css"
+              href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="CSS"></a>
+          </li>
+          <!-- JavaScript -->
+          <li>
+            <a
+              class="links__img js"
+              href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="JavaScript"></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
