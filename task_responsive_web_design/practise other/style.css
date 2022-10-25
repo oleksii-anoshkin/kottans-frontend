@@ -50,6 +50,8 @@
   font-size: 1.6em;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  z-index: 100;
 }
 
 .nav__logo-letter {
@@ -59,6 +61,117 @@
 .nav__logo-letter:hover {
   font-size: 1.3em;
   color: orangered;
+}
+
+.burger__box {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .line {
+    width: 100%;
+    height: 40px;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+
+    background-color: rgb(35, 35, 35);
+    border-bottom: 2px solid white;
+  }
+
+  .burger__box {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 16px;
+    z-index: 100;
+  }
+
+  .burger__box::before,
+  .burger__box::after {
+    content: '';
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+
+    transition: all 0.3s ease 0s;
+  }
+
+  .burger__box::before {
+    top: 0;
+  }
+
+  .burger__box::after {
+    bottom: 0;
+  }
+
+  .burger {
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 7px;
+
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav__links {
+    flex-direction: column;
+    justify-content: flex-start !important;
+
+    padding: 60px 0 0;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(35, 35, 35);
+
+    transition: all 0.3s ease 0s;
+    z-index: 40;
+
+    overflow: auto;
+  }
+
+  .nav__links.active {
+    top: 0;
+
+  }
+
+  .burger__box.active::before {
+    transform: rotate(45deg);
+    top: 7px;
+  }
+
+  .burger__box.active::after {
+    transform: rotate(-45deg);
+    bottom: 7px;
+  }
+
+  .burger.active {
+    transform: scale(0);
+  }
+
+  .position {
+    padding: 0 0 12px;
+    text-align: center;
+    width: 200px;
+    margin: 8px 0;
+    border-bottom: 2px solid white;
+  }
+
+  .nav__link {
+    font-size: 1.2em;
+  }
 }
 
 .nav__links {
@@ -103,7 +216,7 @@
   text-align: center;
 }
 
-.link__block-items {
+.block {
   display: flex;
   flex-direction: column;
 }
