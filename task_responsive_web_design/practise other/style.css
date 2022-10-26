@@ -449,3 +449,42 @@
   background-color: rgb(85, 85, 85);
   font-size: 1.1em;
 }
+
+/* ------------------------------------------- */
+/* circle */
+.circle-conteiner {
+  position: relative;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: rgb(85, 85, 85);
+  position: fixed;
+  top: 32px;
+  z-index: 49;
+
+  animation-name: my-circle;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes my-circle {
+  0% {
+    background-color: orangered;
+    left: 0;
+  }
+
+  50% {
+    border-radius: 4px;
+    background-color: rgb(85, 85, 85);
+  }
+
+  100% {
+    background-color: orangered;
+    left: 99%;
+  }
+}
