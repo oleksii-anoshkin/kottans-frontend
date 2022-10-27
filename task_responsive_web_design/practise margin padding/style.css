@@ -1,0 +1,186 @@
+/* conteiners */
+.conteiner {
+  width: 100%;
+  background-color: beige;
+}
+
+.lists__box {
+  width: 80%;
+  padding: 2%;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+
+.lists {
+  font-size: 16px;
+  font-variant: small-caps;
+
+  color: white;
+}
+
+/* borders */
+.border__bot {
+  border-bottom: 2px solid black;
+}
+
+.border__top {
+  border-top: 2px solid black;
+}
+
+/* primary content */
+.list {
+  margin-bottom: 12px;
+  padding: 12px;
+
+  list-style-type: square;
+  list-style-position: inside;
+
+  background-color: rgb(40, 40, 40);
+  border: 2px solid rgb(235, 235, 235);
+}
+
+.list:last-child {
+  margin: 0;
+}
+
+/* primary secondary */
+.flex {
+  margin: 0 -1%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.flex .list {
+  margin: 0 1%;
+}
+
+.flex .list {
+  background-color: rgb(0, 0, 90);
+}
+
+.flex .list:last-child {
+  margin: 0 1%;
+}
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex .list {
+    margin: 0 1% 12px;
+  }
+}
+
+/* transform */
+.flex__2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  perspective: 500px;
+}
+
+.box {
+  width: 180px;
+  height: 180px;
+
+  border: 2px solid rgb(235, 235, 235);
+}
+
+@media (max-width: 768px) {
+  .flex__2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    margin-bottom: 12px;
+  }
+
+  .box:last-child {
+    margin: 0;
+  }
+}
+
+.first {
+  background-color: rgb(20, 90, 0);
+  transition: all 0.5s ease 0s;
+}
+
+.first:hover {
+  transform: translate(10px, 10px);
+  background-color: rgb(30, 125, 0);
+}
+
+.second {
+  background-color: rgb(90, 90, 0);
+  transition: all 0.5s ease 0s;
+}
+
+.second:hover {
+  transform: scale(0.8);
+  background-color: rgb(125, 125, 0);
+}
+
+.third {
+  background-color: rgb(0, 90, 90);
+  transition: all 0.5s ease 0s;
+}
+
+.third:hover {
+  transform: rotate(180deg);
+  background-color: rgb(0, 125, 125);
+}
+
+.fourth {
+  background-color: rgb(20, 90, 0);
+  transition: all 0.5s ease 0s;
+}
+
+.fourth:hover {
+  transform: skew(8deg, 8deg);
+  background-color: rgb(30, 125, 0);
+}
+
+.fifth {
+  background-color: rgb(90, 90, 0);
+  transition: all 0.5s ease 0s;
+}
+
+.fifth:hover {
+  transform: rotate(360deg) scale(0.8) translate(22px, 22px);
+  background-color: rgb(125, 125, 0);
+}
+
+.sixth {
+  background-color: rgb(0, 90, 90);
+  transition: all 0.5s ease 0s;
+}
+
+.sixth:hover {
+  transform: rotateX(45deg);
+  background-color: rgb(0, 125, 125);
+}
+
+.only {
+  background-color: rgb(192, 83, 32);
+  transition: all 0.5s ease 0s;
+}
+
+.only:hover {
+  animation-name: only-cartoon;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes only-cartoon {
+  25% {
+    transform: scale(1.1) rotate(90deg) translateX(50px);
+  }
+
+  75% {
+    transform: scale(0.9) rotate(-90deg) translateX(-50px);
+  }
+}
