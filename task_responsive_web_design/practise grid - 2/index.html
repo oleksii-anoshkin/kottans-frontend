@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Grid Layout - Практика</title>
+  </head>
+  <body class="wrapper">
+    <!-- Шапка -->
+    <header class="header">
+      <a href="" class="header__logo">TF</a>
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li><a href="./index.html" class="header__link">Головна</a></li>
+          <li><a href="#gallery" class="header__link">Галерея</a></li>
+          <li><a href="#products" class="header__link">Товари</a></li>
+          <li><a href="#footer" class="header__link">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Контент (grid-контейнер) -->
+    <main class="main">
+      <!-- Сайдбар -->
+      <aside class="sidebar">
+        <nav class="sidebar__menu">
+          <ul class="sidebar__list">
+            <li><a href="" class="sidebar__link">Пункт меню</a></li>
+            <li><a href="" class="sidebar__link">Пункт меню</a></li>
+            <li><a href="" class="sidebar__link">Пункт меню</a></li>
+            <li><a href="" class="sidebar__link">Пункт меню</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- Контент -->
+      <section class="content">
+        <h1 class="content__title">Grid Layout - Практика</h1>
+        <!-- Галерея -->
+        <section id="gallery" class="content__gallery gallery">
+          <h2 class="gallery__title">Галерея</h2>
+          <ul class="gallery__items">
+            <li class="gallery__item big">
+              <img src="./images/1.jpg" alt="img" />
+            </li>
+            <li class="gallery__item">
+              <img src="./images/2.jpg" alt="img" />
+            </li>
+            <li class="gallery__item">
+              <img src="./images/3.jpg" alt="img" />
+            </li>
+            <li class="gallery__item">
+              <img src="./images/4.jpg" alt="img" />
+            </li>
+            <li class="gallery__item">
+              <img src="./images/5.jpg" alt="img" />
+            </li>
+            <li class="gallery__item">
+              <img src="./images/6.jpg" alt="img" />
+            </li>
+            <li class="gallery__item">
+              <img src="./images/7.jpg" alt="img" />
+            </li>
+            <li class="gallery__item big">
+              <img src="./images/8.jpg" alt="img" />
+            </li>
+            <li class="gallery__item">
+              <img src="./images/9.jpg" alt="img" />
+            </li>
+            <li class="gallery__item">
+              <img src="./images/10.jpg" alt="img" />
+            </li>
+          </ul>
+        </section>
+        <!-- Товари -->
+        <section id="products" class="content__products products">
+          <h2 class="products__title">Товари</h2>
+          <ul class="products__items">
+            <li class="products__item">
+              <a class="products__image" href="#">
+                <img
+                  src="./images/t-shirt.jpg"
+                  alt="Футболка"
+                  width="630"
+                  height="630" />
+              </a>
+              <a class="products__head" href="#">Футболка</a>
+              <a class="products__button" href="#">Купити</a>
+            </li>
+            <li class="products__item">
+              <a class="products__image" href="#">
+                <img
+                  src="./images/cap.jpg"
+                  alt="Чашка"
+                  width="630"
+                  height="630" />
+              </a>
+              <a class="products__head" href="#">Чашка</a>
+              <a class="products__button" href="#">Купити</a>
+            </li>
+            <li class="products__item">
+              <a class="products__image" href="#">
+                <img
+                  src="./images/head.jpg"
+                  alt="Кепка"
+                  width="630"
+                  height="630" />
+              </a>
+              <a class="products__head" href="#">Кепка</a>
+              <a class="products__button" href="#">Купити</a>
+            </li>
+            <li class="products__item">
+              <a class="products__image" href="#">
+                <img
+                  src="./images/light.jpg"
+                  alt="Ліхтарик"
+                  width="630"
+                  height="630" />
+              </a>
+              <a class="products__head" href="#">Ліхтарик</a>
+              <a class="products__button" href="#">Купити</a>
+            </li>
+            <li class="products__item">
+              <a class="products__image" href="#">
+                <img
+                  src="./images/watch.jpg"
+                  alt="Годинник"
+                  width="630"
+                  height="630" />
+              </a>
+              <a class="products__head" href="#">Годинник</a>
+              <a class="products__button" href="#">Купити</a>
+            </li>
+            <li class="products__item">
+              <a class="products__image" href="#">
+                <img
+                  src="./images/phone.jpg"
+                  alt="Телефон"
+                  width="630"
+                  height="630" />
+              </a>
+              <a class="products__head" href="#">Телефон</a>
+              <a class="products__button" href="#">Купити</a>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    <!-- Підвал -->
+    <footer id="footer" class="footer">
+      <ul>
+        <li class="footer__copy">Copy &#169;</li>
+        <li class="footer__text">Lorem ipsum dolor sit amet.</li>
+      </ul>
+    </footer>
+  </body>
+</html>
