@@ -1,0 +1,124 @@
+/* main styles */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  background-image: radial-gradient(farthest-corner at 40px 40px,
+      hsl(0, 0%, 75%) 0%,
+      hsl(0, 0%, 90%) 50%,
+      hsl(0, 0%, 95%) 100%);
+}
+
+header,
+footer {
+  margin: 0 auto;
+
+  width: 100%;
+  height: 40px;
+
+  background-image: radial-gradient(circle at 80% 60%,
+      hsl(0, 0%, 75%) 0%,
+      hsl(0, 0%, 90%) 50%,
+      hsl(0, 0%, 95%) 100%);
+}
+
+header {
+  border-bottom: 1px solid hsl(240, 100%, 80%);
+}
+
+footer {
+  border-top: 1px solid hsl(240, 100%, 80%);
+}
+
+main {
+  flex: 1 1 auto;
+
+  margin: 0 auto;
+
+  width: 90%;
+
+  background-image: repeating-linear-gradient(45deg,
+      hsl(0, 0%, 90%) 0,
+      hsl(0, 0%, 90%) 10px,
+      hsl(0, 0%, 95%) 10px,
+      hsl(0, 0%, 95%) 20px);
+
+  border-left: 1px solid hsl(240, 100%, 80%);
+  border-right: 1px solid hsl(240, 100%, 80%);
+
+  box-shadow: inset 0 0 20px hsl(0, 0%, 50%);
+}
+
+.conteiner {
+  padding: 20px;
+}
+
+.figures {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.figure {
+  margin: 12px;
+
+  width: 300px;
+  height: 200px;
+}
+
+.first {
+  border-radius: 150px / 200px;
+
+  background-image: repeating-linear-gradient(75deg,
+      hsl(240, 90%, 50%) 0,
+      hsl(240, 90%, 75%) 10px,
+      hsl(240, 90%, 50%) 20px);
+}
+
+.second {
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: none;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 150px;
+
+  background-image: linear-gradient(135deg, black 30%, green, white 70%);
+}
+
+.third {
+  border-radius: 25px / 200px;
+
+  background-image:
+    linear-gradient(cyan, transparent),
+    linear-gradient(225deg, magenta, transparent),
+    linear-gradient(45deg, yellow, transparent);
+}
+
+p {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+
+  color: rgba(0, 0, 0, 0.1);
+
+  background-image:
+    linear-gradient(rgb(0, 238, 255), transparent),
+    linear-gradient(225deg, rgb(255, 0, 0), transparent),
+    linear-gradient(45deg, yellow, transparent);
+
+  background-position: center center;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.secondary {
+  background-image: repeating-linear-gradient(45deg,
+      hsl(0, 100%, 50%) 0,
+      hsl(0, 100%, 50%) 10px,
+      hsl(0, 0%, 95%) 10px,
+      hsl(0, 0%, 95%) 20px);
+}
