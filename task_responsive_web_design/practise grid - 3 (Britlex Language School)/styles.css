@@ -57,11 +57,17 @@ html {
     "footer";
 }
 
-/* @media (max-width: 1280px) {
+@media (max-width: 1280px) {
   .wrapper {
-    padding: 30px 3.025% 12px;
+    padding: calc(0.02822 * 100vw) 3.226%;
+
+    grid-template: 50px 1fr 72px / 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
   }
-} */
+}
 
 /* -------------------------------------------------------------- */
 /* header */
@@ -73,6 +79,12 @@ html {
   align-items: center;
 }
 
+@media (max-width: 1280px) {
+  .header {
+    grid-template: 50px / 90px minmax(17.638%, auto) 42.078% minmax(9.043%, auto) minmax(160px, 312px);
+  }
+}
+
 /* logo  */
 .logo {
   grid-column: 1 / 2;
@@ -81,17 +93,17 @@ html {
   color: var(--primary-logo);
 }
 
-@media (max-width: 922px) {
+@media (max-width: 1280px) {
   .logo {
     font-size: 30px;
   }
 }
 
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   .logo {
     font-size: 24px;
   }
-}
+} */
 
 .secondary {
   color: var(--secondary-logo);
@@ -100,6 +112,12 @@ html {
 /* nav top */
 .nav {
   grid-column: 3 / 4;
+}
+
+@media (max-width: 1280px) {
+  .nav {
+    min-width: 372px;
+  }
 }
 
 .nav__items {
@@ -113,6 +131,12 @@ html {
   color: var(--secondary-text);
 
   transition: all 0.15s linear 0s;
+}
+
+@media (max-width: 1280px) {
+  .nav__link {
+    font-size: 16px;
+  }
 }
 
 .nav__link:hover,
@@ -142,6 +166,13 @@ html {
   border-radius: 10px;
 
   transition: all 0.15s linear 0s;
+}
+
+@media (max-width: 1280px) {
+  .tel__link {
+    font-size: 18px;
+    border-radius: 5px;
+  }
 }
 
 .tel__link:hover,
@@ -185,6 +216,12 @@ html {
   border-top: 1px solid var(--footer-line);
 }
 
+@media (max-width: 1280px) {
+  .footer {
+    grid-template: 72px / 90px 1fr 57.4%;
+  }
+}
+
 /* nav bot */
 .footer .nav__items {
   grid-template: 1fr / repeat(3, auto);
@@ -202,7 +239,13 @@ html {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
+  .nav__link.bottom {
+    font-size: 16px;
+  }
+}
+
+/* @media (max-width: 992px) {
   .footer .nav__items {
     justify-content: end;
   }
@@ -214,9 +257,9 @@ html {
   .nav__link.point::after {
     content: '•';
   }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav__link.bottom {
     font-size: 13px;
   }
@@ -232,7 +275,7 @@ html {
   .nav__link.bottom {
     font-size: 11px;
   }
-}
+} */
 
 .nav__link.bottom:hover,
 .nav__link.bottom:focus {
