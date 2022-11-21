@@ -21,6 +21,7 @@
   --bottoms-bg: #263238;
   --cards-bg: #F5F5F5;
   --prices-bg: #EEEEEE;
+  --burger-bg: rgba(7, 34, 47, 0.7);
 
   /* other */
   --email-form: #8F95A5;
@@ -194,10 +195,11 @@ html {
 }
 
 @media (max-width: 992px) {
-  /* body.lock {
+  body.lock {
     overflow: hidden;
-  } */
+  }
 
+  .header .nav,
   .header .nav__items,
   .tel__link {
     display: none;
@@ -238,7 +240,7 @@ html {
     background-color: var(--burger-line);
     border-radius: 1px;
 
-    transition: all 0.15s linear 0s;
+    transition: all 0.15s ease 0s;
   }
 
   .burger::before {
@@ -261,54 +263,64 @@ html {
     background-color: var(--burger-line);
     border-radius: 1px;
 
-    transition: all 0.15s linear 0s;
+    transition: all 0.15s ease 0s;
+  }
+
+  .burger:hover::before,
+  .burger:hover::after {
+    background-color: var(--secondary-logo);
+  }
+
+  .burger.active {
+    z-index: 0;
+  }
+
+  /* .burger.active::before {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+
+  .burger.active::after {
+    width: 100%;
+    bottom: 8px;
+    transform: rotate(-45deg);
   }
 
   .burger__line.active {
-    background-color: red;
-  }
+    transform: scale(0);
+  } */
 
-  /* .header .nav__items.active {
+  .header .nav.active {
+    display: grid;
+    grid-template: repeat(3, 100px) / 432px;
+
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(35, 35, 35);
 
-    transition: all 0.3s ease 0s;
-    z-index: 40;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--burger-bg);
+
+    z-index: 10;
 
     overflow: auto;
   }
 
-  .header .nav__links.active {
-    top: 0;
+  .header .nav__items.active {
+    display: block;
+
+    background-color: var(--body-bg);
+
+    z-index: 20;
   }
 
-  .burger.active::before {
-    transform: rotate(45deg);
-    top: 0;
-  }
+  .header .tel__link.active {
+    display: block;
 
-  .burger.active::after {
-    transform: rotate(-45deg);
-    bottom: 0;
+    z-index: 20;
   }
-
-  .burger.active {
-    transform: scale(0);
-  }
-
-  .position {
-    padding: 0 0 12px;
-    text-align: center;
-    width: 200px;
-    margin: 8px 0;
-    border-bottom: 2px solid white;
-  }
-
-  .nav__link {
-    font-size: 1.2em;
-  } */
 }
 
 /* -------------------------------------------------------------- */
