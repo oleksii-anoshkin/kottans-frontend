@@ -88,7 +88,7 @@
 
 ### Що для вас було новим:
 
-У flexbox для мене новим стало позиціонування та вирівнювання об'єктів.
+У flexbox для мене новим стало позиціонування та вирівнювання об'єктів. Про технологію Grid раніше чув, але не практикував. Вона здавалася мені складною, але на практиці все видалося значно простіше та цікавіше.
 
 ### Що вас здивувало:
 
@@ -96,12 +96,15 @@
 
 ### Що ви плануєте використовувати в майбутньому:
 
-Flexbox дуже корисний та гнучкий. Буду використовувати по максимально.
+Flexbox дуже корисний та гнучкий. Grid також необхідна річ. Буду використовувати обидві технології за потреби.
 
 ### Скріншоти виконаних завдань:
 
 ![flexbox-froggy-game-end](./task_responsive_web_design/flexbox-froggy-game-end.png)
+![grid-garden-game-end](./task_responsive_web_design/grid-garden-game-end.png)
+![codecademy-intermediate-css-end](./task_responsive_web_design/codecademy-intermediate-css-end.png)
 [Мій перший сайт](https://short-about-html.netlify.app "Що таке HTML?")
+[Мій перший макет](https://britlex-lan9ua9e-school.netlify.app "Britlex Language School")
 
 ### Додаткова практика та виконані роботи:
 
