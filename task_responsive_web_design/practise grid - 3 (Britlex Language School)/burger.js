@@ -2,7 +2,12 @@
 
 $(document).ready(function () {
   $('.burger').click(function (event) {
-    $('.burger, .burger__line, .nav, .nav__items, .tel__link').toggleClass('active');
-    $('body').toggleClass('lock');
+    $('.burger, .nav').addClass('active');
+    $('body').addClass('lock');
+  });
+
+  $('.close__btn').click(function (event) {
+    $('.burger, .nav').removeClass('active');
+    $('body').removeClass('lock');
   });
 });

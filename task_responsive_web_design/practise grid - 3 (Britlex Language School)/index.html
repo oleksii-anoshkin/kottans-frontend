@@ -4,26 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css" />
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet" />
+    <!-- images -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./favicon.png"> -->
+    <link rel="preload" as="image" href="./images/burger-bg.png" />
+    <!-- title -->
     <title>Britlex Language School</title>
   </head>
-  <body class="wrapper">
+  <body id="home" class="wrapper">
     <!-- header  -->
-    <header id="home" class="header">
-      <!-- logo -->
+    <header class="header">
+      <!-- header logo -->
       <p class="logo">Brit<span class="logo secondary">lex</span></p>
       <!-- nav top -->
       <nav class="nav">
-        <!-- burger -->
-        <div class="burger">
-          <span class="burger__line"></span>
-        </div>
+        <!-- burger logo -->
+        <p class="logo">Brit<span class="logo secondary">lex</span></p>
         <!-- menu -->
         <ul class="nav__items">
           <li class="nav__item">
@@ -42,9 +46,16 @@
             <a class="nav__link" href="#">Contacts</a>
           </li>
         </ul>
+        <div class="close__btn"></div>
+        <!-- tel -->
+        <a class="tel__link" href="tel:+380993649575">Let&#39;s Talk</a>
       </nav>
-      <!-- tel -->
-      <a class="tel__link" href="tel:+380993649575">Let&#39;s Talk</a>
+      <!-- burger -->
+      <div class="burger__box">
+        <div class="burger">
+          <span class="burger__line"></span>
+        </div>
+      </div>
     </header>
     <!-- content  -->
     <main class="main">
