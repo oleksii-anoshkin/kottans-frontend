@@ -498,13 +498,48 @@ html {
 /* hero */
 .hero {}
 
-.hero__header {}
+.hero__header {
+  font-weight: 600;
+  font-size: 64px;
+  color: var(--primary-logo);
+}
 
-.hero__lamp {}
+.hero__text {
+  font-size: 24px;
+}
 
-.hero__text {}
+.tel__link.hero {
+  width: 420px;
+  height: 100px;
 
-.tel__link {}
+  display: grid;
+  grid-template: 1fr / 1fr;
+  align-items: center;
+
+  font-size: 36px;
+  text-align: center;
+  color: var(--bottoms-text);
+
+  background-color: var(--bottoms-bg);
+  border: 2px solid var(--bottoms-bg);
+  border-radius: 10px;
+
+  transition: all 0.15s linear 0s;
+}
+
+.tel__link.hero:hover,
+.tel__link.hero:focus {
+  background-color: var(--body-bg);
+  color: var(--primary-logo);
+  border: 2px solid var(--primary-logo);
+}
+
+.tel__link.hero:active {
+  color: var(--bottoms-text);
+  background-color: var(--secondary-logo);
+  border-color: var(--secondary-logo);
+  border: 2px solid var(--secondary-logo);
+}
 
 .hero__girl {}
 
