@@ -491,24 +491,52 @@ html {
 /* content */
 .main {
   grid-area: main;
-
-  height: auto;
+  padding-top: 56px;
 }
 
 /* hero */
-.hero {}
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 608px;
+
+  display: grid;
+  grid-template: 280px 168px 1fr / 30% 10.5% 1fr;
+}
 
 .hero__header {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
   font-weight: 600;
   font-size: 64px;
+  line-height: 1.25;
   color: var(--primary-logo);
 }
 
+.hero__lamp {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  position: absolute;
+  top: 34%;
+  right: 0;
+  width: 80%;
+  height: auto;
+}
+
 .hero__text {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+
   font-size: 24px;
 }
 
 .tel__link.hero {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+
   width: 420px;
   height: 100px;
 
@@ -531,17 +559,25 @@ html {
 .tel__link.hero:focus {
   background-color: var(--body-bg);
   color: var(--primary-logo);
-  border: 2px solid var(--primary-logo);
+  border-color: var(--primary-logo);
 }
 
 .tel__link.hero:active {
   color: var(--bottoms-text);
   background-color: var(--secondary-logo);
   border-color: var(--secondary-logo);
-  border: 2px solid var(--secondary-logo);
 }
 
-.hero__girl {}
+.hero__girl {
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 84%;
+  height: auto;
+}
 
 /* skills */
 
