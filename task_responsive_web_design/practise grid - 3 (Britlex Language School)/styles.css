@@ -500,6 +500,7 @@ html {
 
   padding-bottom: 62px;
   width: 100%;
+  max-height: 612px;
 
   display: grid;
   grid-template: 280px 168px 1fr / 30% 10.5% 1fr;
@@ -535,7 +536,7 @@ html {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .hero {
     grid-template: 174px 98px 1fr / 30% 10.5% 1fr;
   }
@@ -593,7 +594,7 @@ html {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1050px) {
   .hero__header {
     font-size: 40px;
   }
