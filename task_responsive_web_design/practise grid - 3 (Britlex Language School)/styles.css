@@ -660,8 +660,8 @@ html {
   grid-row: 1 / 2;
 
   position: absolute;
-  top: 34%;
-  right: 0;
+  top: 36%;
+  left: 0;
   width: 80%;
   height: auto;
 }
@@ -669,7 +669,6 @@ html {
 @media (max-width: 768px) {
   .hero__lamp {
     top: 42%;
-    left: 0;
     width: 66%;
   }
 }
@@ -869,6 +868,12 @@ html {
   right: 0;
   width: 84%;
   height: auto;
+}
+
+@media (max-width: 992px) {
+  .hero__girl {
+    width: 88%;
+  }
 }
 
 @media (max-width: 768px) {
