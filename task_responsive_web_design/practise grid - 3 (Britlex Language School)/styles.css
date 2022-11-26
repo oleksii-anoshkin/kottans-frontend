@@ -87,7 +87,7 @@ html {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 585px) {
   .wrapper {
     padding: 32px 32px 24px;
   }
@@ -431,7 +431,7 @@ html {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 585px) {
   .header .nav {
     padding: 32px 32px 0;
 
@@ -503,6 +503,12 @@ html {
 @media (max-width: 768px) {
   .main {
     padding-top: 68px;
+  }
+}
+
+@media (max-width: 585px) {
+  .main {
+    padding-top: 86px;
   }
 }
 
@@ -588,6 +594,16 @@ html {
 @media (max-width: 654px) {
   .hero {
     grid-template: 104px 62px 1fr / 30% 18% 2% 50%;
+  }
+}
+
+@media (max-width: 585px) {
+  .hero {
+    margin-bottom: 96px;
+    grid-template: 1fr 1fr 1fr 76px / 1fr;
+    justify-items: center;
+
+    max-height: auto;
   }
 }
 
@@ -679,6 +695,21 @@ html {
   }
 }
 
+@media (max-width: 585px) {
+  .hero__header {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    margin-bottom: 24px;
+
+    font-size: 34px;
+  }
+
+  .hero br {
+    display: none;
+  }
+}
+
 .hero__lamp {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
@@ -701,6 +732,12 @@ html {
   .hero__lamp {
     top: 42%;
     width: 56%;
+  }
+}
+
+@media (max-width: 585px) {
+  .hero__lamp {
+    display: none;
   }
 }
 
@@ -762,6 +799,18 @@ html {
 @media (max-width: 654px) {
   .hero__text {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 585px) {
+  .hero__text {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    text-align: center;
   }
 }
 
@@ -905,6 +954,23 @@ html {
   }
 }
 
+@media (max-width: 585px) {
+  .tel__link.hero {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+
+    width: 304px;
+    height: 76px;
+
+    display: grid;
+    grid-template: 76px / 1fr;
+
+    font-size: 18px;
+
+    border-radius: 6px;
+  }
+}
+
 .tel__link.hero:hover,
 .tel__link.hero:focus {
   background-color: var(--body-bg);
@@ -940,6 +1006,18 @@ html {
     grid-column: 4 / 5;
 
     width: 100%;
+  }
+}
+
+@media (max-width: 585px) {
+  .hero__girl {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    margin-bottom: 20px;
+
+    position: static;
+    width: 88%;
   }
 }
 
@@ -1059,7 +1137,7 @@ html {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 585px) {
   .nav__link.bottom {
     font-size: 12px;
   }
