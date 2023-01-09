@@ -512,11 +512,12 @@ html {
   }
 }
 
+/* -------------------------------------------------------------- */
 /* hero */
 .hero {
   position: relative;
 
-  padding-bottom: 62px;
+  padding-bottom: 80px;
   width: 100%;
   max-height: 612px;
 
@@ -1030,13 +1031,266 @@ html {
   }
 }
 
+/* -------------------------------------------------------------- */
 /* skills */
+.skills {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 992px) {
+  .skills {
+    padding-top: 60px;
+  }
+}
+
+.skills__title {
+  padding-bottom: 44px;
+
+  font-weight: 600;
+  font-size: 48px;
+
+  color: var(--primary-logo);
+
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .skills__title {
+    padding-bottom: 52px;
+
+    font-size: 36px;
+  }
+}
+
+.skills__cards {
+  display: grid;
+  grid-template: 0.63fr 0.37fr/ 1fr 1fr 1fr;
+}
+
+.skills__card {
+  margin: 16px;
+  padding: 32px 20px;
+
+  background-color: var(--cards-bg);
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  .skills__card {
+    margin: 8px;
+  }
+}
+
+.skills__card.first {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.skills__card.second {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.skills__card.third {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.skills__card.fourth {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+
+  align-items: center;
+
+  display: grid;
+  grid-template: auto / 40% 60%;
+}
+
+.card__img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  margin-bottom: 24px;
+
+  width: 100%;
+  height: auto;
+}
+
+.card__img.fourth {
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+
+  margin-left: 20%;
+
+  margin-bottom: 0;
+  width: 80%;
+}
+
+@media (max-width: 992px) {
+  .card__img.fourth {
+    margin-left: 0;
+
+    width: 100%;
+  }
+}
+
+.card__title {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 30px;
+
+  color: var(--secondary-text);
+}
+
+.card__title.fourth {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+@media (max-width: 1280px) {
+  .card__title {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card__title {
+    margin-bottom: 14px;
+
+    font-size: 20px;
+  }
+}
+
+.card__text {
+  margin-bottom: 32px;
+
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+
+  font-size: 16px;
+}
+
+.card__text.first {
+  margin-bottom: 24px;
+}
+
+.card__text.fourth {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+@media (max-width: 1280px) {
+  .card__text {
+    margin-bottom: 28px;
+
+    font-size: 14px;
+  }
+
+  .card__text.first {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card__text {
+    margin-bottom: 24px;
+
+    font-size: 13px;
+  }
+
+  .card__text.first {
+    margin-bottom: 16px;
+  }
+}
+
+.card__btn {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+
+  width: 220px;
+  height: 60px;
+
+  padding: 0;
+
+  display: grid;
+  grid-template: 60px / 1fr;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--bottoms-text);
+
+  background-color: var(--bottoms-bg);
+  border: 2px solid var(--bottoms-bg);
+  border-radius: 10px;
+
+  transition: all 0.15s linear 0s;
+}
+
+.card__btn.fourth {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.card__btn:hover,
+.card__btn:focus {
+  background-color: var(--body-bg);
+  color: var(--primary-logo);
+  border-color: var(--primary-logo);
+}
+
+.card__btn:active {
+  color: var(--bottoms-text);
+  background-color: var(--secondary-logo);
+  border-color: var(--secondary-logo);
+}
+
+@media (max-width: 1280px) {
+  .card__btn {
+    width: 200px;
+
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card__btn {
+    width: 180px;
+    height: 52px;
+
+    grid-template: 52px / 1fr;
+
+    font-size: 16px;
+
+    border-radius: 6px;
+  }
+}
+
+/* -------------------------------------------------------------- */
 
 /* about */
+.about {
+  display: none;
+}
 
-/* cricing */
+/* pricing */
+.pricing {
+  display: none;
+}
 
 /* contact */
+.contact {
+  display: none;
+}
 
 /* -------------------------------------------------------------- */
 /* footer */
