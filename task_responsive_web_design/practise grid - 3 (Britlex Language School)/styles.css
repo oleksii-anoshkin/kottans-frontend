@@ -995,6 +995,15 @@ html {
   height: auto;
 }
 
+@media (min-width: 1700px) {
+  .hero__girl {
+    width: 720px;
+    height: 560px;
+
+    right: 5%;
+  }
+}
+
 @media (max-width: 992px) {
   .hero__girl {
     width: 88%;
