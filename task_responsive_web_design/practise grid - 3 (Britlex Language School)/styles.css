@@ -600,7 +600,7 @@ html {
 
 @media (max-width: 585px) {
   .hero {
-    margin-bottom: 96px;
+    margin-bottom: 60px;
     grid-template: 1fr 1fr 1fr 76px / 1fr;
     justify-items: center;
 
@@ -620,79 +620,79 @@ html {
 
 @media (max-width: 1580px) {
   .hero__header {
-    font-size: 60px;
+    font-size: 58px;
   }
 }
 
 @media (max-width: 1480px) {
   .hero__header {
-    font-size: 56px;
+    font-size: 54px;
   }
 }
 
 @media (max-width: 1380px) {
   .hero__header {
-    font-size: 52px;
+    font-size: 50px;
   }
 }
 
 @media (max-width: 1320px) {
   .hero__header {
-    font-size: 48px;
+    font-size: 46px;
   }
 }
 
 @media (max-width: 1280px) {
   .hero__header {
-    font-size: 46px;
+    font-size: 44px;
   }
 }
 
 @media (max-width: 1200px) {
   .hero__header {
-    font-size: 44px;
+    font-size: 42px;
   }
 }
 
 @media (max-width: 1100px) {
   .hero__header {
-    font-size: 42px;
+    font-size: 40px;
   }
 }
 
 @media (max-width: 1050px) {
   .hero__header {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 
 @media (max-width: 900px) {
   .hero__header {
-    font-size: 38px;
+    font-size: 36px;
   }
 }
 
 @media (max-width: 860px) {
   .hero__header {
-    font-size: 36px;
+    font-size: 34px;
   }
 }
 
 @media (max-width: 810px) {
   .hero__header {
-    font-size: 34px;
+    font-size: 32px;
   }
 }
 
 @media (max-width: 724px) {
   .hero__header {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 654px) {
   .hero__header {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -704,6 +704,8 @@ html {
     margin-bottom: 24px;
 
     font-size: 34px;
+
+    text-align: center;
   }
 
   .hero br {
@@ -1038,9 +1040,29 @@ html {
   padding-bottom: 80px;
 }
 
+@media (max-width: 1280px) {
+  .skills {
+    padding-top: 72px;
+  }
+}
+
 @media (max-width: 992px) {
   .skills {
     padding-top: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .skills {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .skills {
+    padding-top: 12px;
+    padding-bottom: 32px;
   }
 }
 
@@ -1055,6 +1077,12 @@ html {
   text-align: center;
 }
 
+@media (max-width: 1280px) {
+  .skills__title {
+    font-size: 42px;
+  }
+}
+
 @media (max-width: 992px) {
   .skills__title {
     padding-bottom: 52px;
@@ -1063,9 +1091,23 @@ html {
   }
 }
 
+@media (max-width: 800px) {
+  .skills__title {
+    padding-bottom: 34px;
+
+    font-size: 30px;
+  }
+}
+
 .skills__cards {
   display: grid;
   grid-template: 0.63fr 0.37fr/ 1fr 1fr 1fr;
+}
+
+@media (max-width: 650px) {
+  .skills__cards {
+    grid-template: auto auto / 1fr 1fr;
+  }
 }
 
 .skills__card {
@@ -1079,6 +1121,22 @@ html {
 @media (max-width: 992px) {
   .skills__card {
     margin: 8px;
+  }
+}
+
+@media (max-width: 800px) {
+  .skills__card {
+    margin: 6px;
+    padding: 28px 8px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .skills__card {
+    margin: 12px;
+    padding: 20px 8px;
+    border-radius: 5px;
   }
 }
 
@@ -1105,6 +1163,30 @@ html {
 
   display: grid;
   grid-template: auto / 40% 60%;
+}
+
+@media (max-width: 650px) {
+  .skills__card.first {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .skills__card.second {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .skills__card.third {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .skills__card.fourth {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: block;
+  }
 }
 
 .card__img {
@@ -1168,6 +1250,22 @@ html {
   }
 }
 
+@media (max-width: 800px) {
+  .card__title {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  .card__title {
+    margin-bottom: 8px;
+
+    font-size: 16px;
+  }
+}
+
 .card__text {
   margin-bottom: 32px;
 
@@ -1207,6 +1305,30 @@ html {
 
   .card__text.first {
     margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card__text {
+    margin-bottom: 16px;
+
+    font-size: 12px;
+  }
+
+  .card__text.first {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .card__text {
+    margin-bottom: 14px;
+
+    font-size: 10px;
+  }
+
+  .card__text.first {
+    margin-bottom: 10px;
   }
 }
 
@@ -1272,6 +1394,30 @@ html {
     font-size: 16px;
 
     border-radius: 6px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card__btn {
+    width: 160px;
+    height: 44px;
+
+    grid-template: 44px / 1fr;
+
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 650px) {
+  .card__btn {
+    margin: 0 auto;
+
+    width: 180px;
+    height: 44px;
+
+    grid-template: 44px / 1fr;
+
+    font-size: 14px;
   }
 }
 
