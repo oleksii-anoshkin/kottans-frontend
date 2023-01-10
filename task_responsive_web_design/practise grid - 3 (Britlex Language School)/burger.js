@@ -10,4 +10,9 @@ $(document).ready(function () {
     $('.burger, .nav').removeClass('active');
     $('body').removeClass('lock');
   });
+
+  $('.nav__link').click(function (event) {
+    $('.burger, .nav').removeClass('active');
+    $('body').removeClass('lock');
+  });
 });
