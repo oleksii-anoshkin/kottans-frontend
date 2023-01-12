@@ -2239,7 +2239,123 @@ picture.fourth {
 /* -------------------------------------------------------------- */
 /* contact */
 .contact {
-  display: none;
+  margin-bottom: 52px;
+
+  display: grid;
+  grid-template: 30% 30% 40% / 42% 58%;
+}
+
+.contact__title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  font-weight: 600;
+  font-size: 48px;
+
+  color: var(--primary-logo);
+}
+
+@media (min-width: 1650px) {
+  .contact__title {
+    font-size: 52px;
+  }
+}
+
+.contact__img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+
+  padding-right: 25%;
+
+  width: 100%;
+  height: auto;
+}
+
+.contact__text {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  font-size: 20px;
+}
+
+@media (min-width: 1650px) {
+  .contact__text {
+    font-size: 23px;
+  }
+}
+
+.contact__form {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+
+  display: grid;
+  grid-template: 72px 1fr / 55% 5% 40%;
+}
+
+@media (min-width: 1650px) {
+  .contact__form {
+    grid-template: 72px 1fr / 50% 15% 35%;
+  }
+}
+
+.contact__form-text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template: 1fr / 1fr;
+  align-items: center;
+
+  padding-left: 7%;
+
+  font-size: 16px;
+
+  border: 1px solid var(--email-form);
+  border-radius: 10px;
+}
+
+@media (min-width: 1650px) {
+  .contact__form-text {
+    font-size: 18px;
+  }
+}
+
+.contact__form-btn {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template: 1fr / 1fr;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--bottoms-text);
+
+  background-color: var(--bottoms-bg);
+  border: 2px solid var(--bottoms-bg);
+  border-radius: 10px;
+
+  transition: all 0.15s linear 0s;
+}
+
+@media (min-width: 1650px) {
+  .contact__form-btn {
+    font-size: 23px;
+  }
+}
+
+.contact__form-btn:hover,
+.contact__form-btn:focus {
+  background-color: var(--body-bg);
+  color: var(--primary-logo);
+  border-color: var(--primary-logo);
+}
+
+.contact__form-btn:active {
+  color: var(--bottoms-text);
+  background-color: var(--secondary-logo);
+  border-color: var(--secondary-logo);
 }
 
 /* -------------------------------------------------------------- */
