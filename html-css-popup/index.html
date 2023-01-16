@@ -13,38 +13,46 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css" />
     <!-- images -->
-    <link rel="shortcut icon" type="image/x-icon" href="#" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
     <!-- title -->
     <title>HTML CSS Popup Practise</title>
   </head>
   <body class="wrapper">
     <header class="header">
-      <h1 class="header__title">Icon fonts for any project</h1>
+      <div class="title__conteiner">
+        <h1 class="header__title">Icon fonts for any project</h1>
+      </div>
       <nav class="header__nav">
         <ul class="nav__items">
           <li class="nav__item">
-            <input type="checkbox" class="hide" id="popup" />
-            <label for="popup" class="item__btn">Media</label>
-            <div class="popup__conteiner">
-              <ul class="popup__content"></ul>
+            <input type="checkbox" class="hide" id="checkbox__first" />
+            <label for="checkbox__first" class="item__btn">Media</label>
+            <div id="popup__first" class="overlay">
+              <ul class="popup__conteiner"></ul>
             </div>
           </li>
           <li class="nav__item">
-            <input type="checkbox" class="hide" id="popup" />
-            <label for="popup" class="item__btn">Maps</label>
-            <div class="popup__conteiner">
-              <ul class="popup__content"></ul>
+            <input type="checkbox" class="hide" id="checkbox__second" />
+            <label for="checkbox__second" class="item__btn">Maps</label>
+            <div id="popup__second" class="overlay">
+              <ul class="popup__conteiner"></ul>
             </div>
           </li>
           <li class="nav__item">
-            <input type="checkbox" class="hide" id="popup" />
-            <label for="popup" class="item__btn">Arrow</label>
-            <div class="popup__conteiner">
-              <ul class="popup__content"></ul>
+            <input type="checkbox" class="hide" id="checkbox__third" />
+            <label for="checkbox__third" class="item__btn">Arrow</label>
+            <div id="popup__third" class="overlay">
+              <ul class="popup__conteiner"></ul>
             </div>
           </li>
           <li class="nav__item">
-            <a href="#">Others</a>
+            <a
+              class="other"
+              href="https://www.flaticon.com/icon-fonts-most-downloaded"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Others</a
+            >
           </li>
         </ul>
       </nav>
@@ -60,8 +68,8 @@
       <ul class="footer__links">
         <li>
           <a
-            class="footer__link"
-            href="#"
+            class="footer__link github"
+            href="https://github.com/oleksii-anoshkin"
             target="_blank"
             rel="noopener noreferrer nofollow"
             >GitHub</a
@@ -69,8 +77,8 @@
         </li>
         <li>
           <a
-            class="footer__link"
-            href="#"
+            class="footer__link facebook"
+            href="https://www.facebook.com/aleksey.kh.ua"
             target="_blank"
             rel="noopener noreferrer nofollow"
             >Facebook</a
@@ -78,8 +86,8 @@
         </li>
         <li>
           <a
-            class="footer__link"
-            href="#"
+            class="footer__link linkedin"
+            href="https://www.linkedin.com/in/oleksii-anoshkin-850540210"
             target="_blank"
             rel="noopener noreferrer nofollow"
             >LinkedIn</a

@@ -4,15 +4,19 @@
   /* fonts */
   --font-family: 'Poppins', sans-serif;
 
-  /* bg-colors */
+  /* font colors */
+  --title: #0b2239;
+  --primary-title: #5c62f6;
+  --secondary-title: #2c8cf4;
+  --text: #374957;
+  --btn: #ffffff;
+
+  /* bg colors */
   --main-bg: #fafafc;
   --title-bg: #eff3f6;
-  --btn-bg: #2bc48a;
-  --footer-bg: #9ae0ca;
 }
 
 .wrapper {
-  padding: 0 10% 0;
   width: 100%;
 
   display: flex;
@@ -25,45 +29,217 @@
   line-height: 1.2;
   letter-spacing: 0.03em;
 
-  color: var(--primary-text);
+  color: var(--text);
 
-  background-color: var(--main-bg);
+  background: url(./images/background.jpg) center / contain;
 }
 
 /* ---------------------------------------------- */
 /* header styles */
-.header {}
+.header {
+  margin: 120px 10% 0;
 
-.header__title {}
+  display: flex;
+  flex-direction: column;
+}
 
-.header__nav {}
+.title__conteiner {
+  margin-bottom: 40px;
 
-.nav__items {}
+  align-self: center;
 
-.nav__item {}
+  width: 900px;
+  height: 92px;
 
-.hide {}
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.item__btn {}
+  background-color: var(--title-bg);
+  border-radius: 20px;
+}
 
-.popup__conteiner {}
+.header__title {
+  font-weight: 600;
+  font-size: 52px;
 
-.popup__content {}
+  background-image: linear-gradient(90deg, var(--primary-title), var(--secondary-title));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+.nav__item {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+.item__btn,
+.other {
+  padding-left: 32px;
+
+  width: 200px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+
+  background: var(--title-bg) url(./images/menu-burger.svg) 12px 8px/24px no-repeat;
+  border-radius: 8px;
+
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s linear 0s;
+}
+
+.other {
+  color: inherit;
+}
+
+.item__btn:hover,
+.item__btn:focus,
+.other:hover,
+.other:focus {
+  background: var(--primary-title) url(./images/menu-burger-active.svg) 12px 8px/24px no-repeat;
+  color: var(--btn);
+}
+
+.item__btn:active,
+.other:active {
+  box-shadow: 2px 2px 4px var(--title);
+}
+
+.overlay {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+#checkbox__first:checked~#popup__first.overlay,
+#checkbox__second:checked~#popup__second.overlay,
+#checkbox__third:checked~#popup__third.overlay {
+  display: block;
+}
+
+#checkbox__first:checked~.item__btn,
+#checkbox__second:checked~.item__btn,
+#checkbox__third:checked~.item__btn {
+  background: var(--primary-title) url(./images/cross.svg) 14px 10px/20px no-repeat;
+  color: var(--btn);
+  box-shadow: 2px 2px 4px var(--title);
+}
+
+.popup__conteiner {
+  margin: 75px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #666;
+  width: 300px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
 
 /* ---------------------------------------------- */
 /* main styles */
 .main {
   flex: 1 1 auto;
-}
 
-.main__text {}
+  margin: 0 10%;
+  padding-bottom: 20px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  font-size: 14px;
+}
 
 /* ---------------------------------------------- */
 /* footer styles */
-.footer {}
+.footer {
+  padding: 0 10%;
 
-.footer__text {}
+  width: 100%;
+  height: 40px;
 
-.footer__links {}
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 
-.footer__link {}
+  color: var(--title);
+
+  background-color: var(--title-bg);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer__link {
+  padding-left: 24px;
+
+  display: flex;
+
+  color: inherit;
+
+  transition: all 0.25s ease 0s;
+}
+
+.github {
+  width: 112px;
+  background: url(./images/github.png) center left / 20px no-repeat;
+}
+
+.facebook {
+  width: 136px;
+  background: url(./images/facebook.png) center left / 20px no-repeat;
+}
+
+.linkedin {
+  width: 122px;
+  background: url(./images/linkedin.png) center left / 20px no-repeat;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.footer__link:active {
+  font-size: 16px;
+  color: var(--secondary-title);
+}
