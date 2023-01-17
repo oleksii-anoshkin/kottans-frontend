@@ -43,7 +43,7 @@
   flex-direction: column;
 }
 
-.title__conteiner {
+.header__conteiner {
   margin-bottom: 40px;
 
   align-self: center;
@@ -59,7 +59,7 @@
   border-radius: 20px;
 }
 
-.header__title {
+.header__conteiner-title {
   font-weight: 600;
   font-size: 52px;
 
@@ -74,7 +74,7 @@
   align-items: center;
 }
 
-.nav__items {
+.header__nav-items {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -82,7 +82,7 @@
   width: 100%;
 }
 
-.nav__item {
+.header__nav-item {
   width: 100%;
 
   display: flex;
@@ -97,7 +97,7 @@
   display: none;
 }
 
-.item__btn,
+.btn,
 .other {
   padding-left: 32px;
 
@@ -124,20 +124,20 @@
   color: inherit;
 }
 
-.item__btn:hover,
-.item__btn:focus,
+.btn:hover,
+.btn:focus,
 .other:hover,
 .other:focus {
   background: var(--primary-title) url(./images/menu-burger-active.svg) 12px 8px/24px no-repeat;
   color: var(--btn);
 }
 
-.item__btn:active,
+.btn:active,
 .other:active {
   box-shadow: 2px 2px 4px var(--title);
 }
 
-.overlay {
+.popup {
   position: absolute;
   top: 300px;
   left: 200px;
@@ -145,15 +145,15 @@
   display: none;
 }
 
-#checkbox__first:checked~#popup__first.overlay,
-#checkbox__second:checked~#popup__second.overlay,
-#checkbox__third:checked~#popup__third.overlay {
+#checkboxFirst:checked~#popupFirst.popup,
+#checkboxSecond:checked~#popupSecond.popup,
+#checkboxThird:checked~#popupThird.popup {
   display: block;
 }
 
-#checkbox__first:checked~.item__btn,
-#checkbox__second:checked~.item__btn,
-#checkbox__third:checked~.item__btn {
+#checkboxFirst:checked~.btn,
+#checkboxSecond:checked~.btn,
+#checkboxThird:checked~.btn {
   background: var(--primary-title) url(./images/cross.svg) 14px 10px/20px no-repeat;
   color: var(--btn);
   box-shadow: 2px 2px 4px var(--title);
