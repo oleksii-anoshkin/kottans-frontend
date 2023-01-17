@@ -93,8 +93,15 @@
   font-size: 16px;
 }
 
-.hide {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .btn,
@@ -124,19 +131,6 @@
   color: inherit;
 }
 
-.btn:hover,
-.btn:focus,
-.other:hover,
-.other:focus {
-  background: var(--primary-title) url(./images/menu-burger-active.svg) 12px 8px/24px no-repeat;
-  color: var(--btn);
-}
-
-.btn:active,
-.other:active {
-  box-shadow: 2px 2px 4px var(--title);
-}
-
 .popup {
   position: absolute;
   top: 300px;
@@ -145,20 +139,6 @@
   display: none;
 
   background: rgba(0, 0, 0, 0.5);
-}
-
-#checkboxFirst:checked~#popupFirst.popup,
-#checkboxSecond:checked~#popupSecond.popup,
-#checkboxThird:checked~#popupThird.popup {
-  display: block;
-}
-
-#checkboxFirst:checked~.btn,
-#checkboxSecond:checked~.btn,
-#checkboxThird:checked~.btn {
-  background: var(--primary-title) url(./images/cross.svg) 14px 10px/20px no-repeat;
-  color: var(--btn);
-  box-shadow: 2px 2px 4px var(--title);
 }
 
 .popup__conteiner {
@@ -172,6 +152,29 @@
 
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   position: relative;
+}
+
+.visually-hidden:hover~.btn,
+.visually-hidden:focus~.btn,
+.other:hover,
+.other:focus {
+  background: var(--primary-title) url(./images/menu-burger-active.svg) 12px 8px/24px no-repeat;
+  color: var(--btn);
+}
+
+.btn:active,
+.other:active {
+  box-shadow: 2px 2px 4px var(--title);
+}
+
+.visually-hidden:checked~.popup {
+  display: block;
+}
+
+.visually-hidden:checked~.btn {
+  background: var(--primary-title) url(./images/cross.svg) 14px 10px/20px no-repeat;
+  color: var(--btn);
+  box-shadow: 2px 2px 4px var(--title);
 }
 
 /* ---------------------------------------------- */
