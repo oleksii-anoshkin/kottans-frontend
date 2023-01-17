@@ -17,10 +17,10 @@
 }
 
 .wrapper {
-  width: 100%;
-
   display: flex;
   flex-direction: column;
+
+  width: 100%;
 
   font-family: var(--font-family);
   font-style: normal;
@@ -48,12 +48,12 @@
 
   align-self: center;
 
-  width: 900px;
-  height: 92px;
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 900px;
+  height: 92px;
 
   background-color: var(--title-bg);
   border-radius: 20px;
@@ -83,12 +83,12 @@
 }
 
 .header__nav-item {
-  width: 100%;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  width: 100%;
 
   font-size: 16px;
 }
@@ -101,12 +101,12 @@
 .other {
   padding-left: 32px;
 
-  width: 200px;
-  height: 40px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 200px;
+  height: 40px;
 
   text-transform: uppercase;
   font-size: 18px;
@@ -117,7 +117,7 @@
 
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.25s linear 0s;
+  transition: background-color 0.25s ease 0s, background-image 0.01s linear 0s, color 0.25s ease 0s, box-shadow 0.1s linear 0s;
 }
 
 .other {
@@ -141,8 +141,10 @@
   position: absolute;
   top: 300px;
   left: 200px;
-  background: rgba(0, 0, 0, 0.5);
+
   display: none;
+
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #checkboxFirst:checked~#popupFirst.popup,
@@ -160,11 +162,14 @@
 }
 
 .popup__conteiner {
+  width: 300px;
+
   margin: 75px auto;
   padding: 20px;
+
   background: #fff;
   border: 1px solid #666;
-  width: 300px;
+
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   position: relative;
 }
@@ -172,10 +177,10 @@
 /* ---------------------------------------------- */
 /* main styles */
 .main {
-  flex: 1 1 auto;
-
   margin: 0 10%;
   padding-bottom: 20px;
+
+  flex: 1 1 auto;
 
   display: flex;
   align-items: flex-end;
@@ -189,13 +194,13 @@
 .footer {
   padding: 0 10%;
 
-  width: 100%;
-  height: 40px;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  width: 100%;
+  height: 40px;
 
   color: var(--title);
 
@@ -233,13 +238,21 @@
   background: url(./images/linkedin.png) center left / 20px no-repeat;
 }
 
+.kottans {
+  color: inherit;
+  transition: all 0.15s ease 0s;
+}
+
 .footer__link:hover,
-.footer__link:focus {
+.footer__link:focus,
+.kottans:hover,
+.kottans:focus {
   font-size: 17px;
   font-weight: 600;
 }
 
-.footer__link:active {
+.footer__link:active,
+.kottans:active {
   font-size: 16px;
   color: var(--secondary-title);
 }
