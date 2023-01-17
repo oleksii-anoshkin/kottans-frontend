@@ -43,6 +43,7 @@
   flex-direction: column;
 }
 
+/* header title */
 .header__conteiner {
   margin-bottom: 40px;
 
@@ -68,6 +69,7 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* header buttons */
 .header__nav {
   display: flex;
   flex-direction: column;
@@ -106,6 +108,8 @@
 
 .btn,
 .other {
+  position: relative;
+
   padding-left: 32px;
 
   display: flex;
@@ -131,29 +135,6 @@
   color: inherit;
 }
 
-.popup {
-  position: absolute;
-  top: 300px;
-  left: 200px;
-
-  display: none;
-
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.popup__conteiner {
-  width: 300px;
-
-  margin: 75px auto;
-  padding: 20px;
-
-  background: #fff;
-  border: 1px solid #666;
-
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-
 .visually-hidden:hover~.btn,
 .visually-hidden:focus~.btn,
 .other:hover,
@@ -167,14 +148,145 @@
   box-shadow: 2px 2px 4px var(--title);
 }
 
-.visually-hidden:checked~.popup {
-  display: block;
-}
-
 .visually-hidden:checked~.btn {
   background: var(--primary-title) url(./images/cross.svg) 14px 10px/20px no-repeat;
   color: var(--btn);
   box-shadow: 2px 2px 4px var(--title);
+}
+
+/* popup styles */
+.popup {
+  position: absolute;
+  top: 312px;
+
+  display: none;
+}
+
+.visually-hidden:checked~.popup {
+  display: block;
+}
+
+.popup__items {
+  padding: 20px;
+
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+
+  width: 340px;
+
+  background: var(--main-bg);
+  border: 2px solid var(--secondary-title);
+  border-radius: 8px;
+
+  box-shadow: 2px 2px 4px var(--title);
+}
+
+.popup__item {
+  margin: 8px;
+
+  font-size: 13px;
+}
+
+.popup__item-link {
+  padding: 4px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: 84px;
+  height: 84px;
+
+  color: inherit;
+
+  transition: all 0.1s linear 0s;
+}
+
+.popup__item-link:focus,
+.popup__item-link:hover {
+  color: var(--btn);
+  border-radius: 4px;
+}
+
+.bg-facebook {
+  background: url(./images/facebook.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-facebook:focus,
+.bg-facebook:hover {
+  background: var(--secondary-title) url(./images/facebook-h.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-whatsapp {
+  background: url(./images/whatsapp.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-whatsapp:focus,
+.bg-whatsapp:hover {
+  background: var(--secondary-title) url(./images/whatsapp-h.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-twitter {
+  background: url(./images/twitter.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-twitter:focus,
+.bg-twitter:hover {
+  background: var(--secondary-title) url(./images/twitter-h.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-linkedin {
+  background: url(./images/linkedin.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-linkedin:focus,
+.bg-linkedin:hover {
+  background: var(--secondary-title) url(./images/linkedin-h.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-tik-tok {
+  background: url(./images/tik-tok.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-tik-tok:focus,
+.bg-tik-tok:hover {
+  background: var(--secondary-title) url(./images/tik-tok-h.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-telegram {
+  background: url(./images/telegram.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-telegram:focus,
+.bg-telegram:hover {
+  background: var(--secondary-title) url(./images/telegram-h.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-vk {
+  background: url(./images/vk.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-vk:focus,
+.bg-vk:hover {
+  background: var(--secondary-title) url(./images/vk-h.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-goodreads {
+  background: url(./images/goodreads.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-goodreads:focus,
+.bg-goodreads:hover {
+  background: var(--secondary-title) url(./images/goodreads-h.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-instagram {
+  background: url(./images/instagram.svg) 14px 6px/52px no-repeat;
+}
+
+.bg-instagram:focus,
+.bg-instagram:hover {
+  background: var(--secondary-title) url(./images/instagram-h.svg) 14px 6px/52px no-repeat;
 }
 
 /* ---------------------------------------------- */
