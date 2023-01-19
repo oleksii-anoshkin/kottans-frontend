@@ -361,7 +361,9 @@
 
 @media (max-width: 450px) {
   .popup {
-    top: 240px;
+    top: 232px;
+
+    max-height: 340px;
   }
 }
 
@@ -423,6 +425,37 @@
 
     width: 72px;
     height: 72px;
+  }
+}
+
+@media (max-width: 600px) {
+  .popup__items {
+    padding: 8px 8px 0;
+
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    grid-auto-rows: 68px;
+
+    width: 248px;
+  }
+
+  .popup__item {
+    margin: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 68px;
+
+    font-size: 10px;
+  }
+
+  .popup__item-link {
+    padding: 2px;
+
+    width: 68px;
+    height: 68px;
   }
 }
 
@@ -580,6 +613,20 @@
   }
 }
 
+@media (max-width: 600px) {
+  .popup__items.more {
+    padding: 0 8px 8px;
+    display: none;
+  }
+
+  .btn-more {
+    margin: 8px auto 12px;
+    padding-top: 5px;
+
+    font-size: 12px;
+  }
+}
+
 /* media more links */
 .bg-hand {
   background: url(./images/hand.svg) 14px 6px/52px no-repeat;
@@ -641,6 +688,15 @@
   .popup__item-link:hover,
   .popup__item-link:focus {
     background-size: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .popup__item-link,
+  .popup__item-link:hover,
+  .popup__item-link:focus {
+    background-size: 38px;
   }
 }
 
