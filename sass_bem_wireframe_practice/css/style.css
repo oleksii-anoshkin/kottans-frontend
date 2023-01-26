@@ -182,10 +182,12 @@ table {
   line-height: 1.2;
 }
 
-.link__header {
+.link-header {
   color: #18A0FB;
 }
-.link__header:hover, .link__header:focus {
+
+.link-header:hover,
+.link-header:focus {
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -198,10 +200,13 @@ table {
   border: 1px solid #18A0FB;
   border-radius: 6px;
 }
-.btn__header {
+
+.btn-header {
   height: 40px;
 }
-.btn:hover, .btn:focus {
+
+.btn:hover,
+.btn:focus {
   color: #FFFFFF;
   background-color: #18A0FB;
 }
@@ -224,7 +229,64 @@ table {
   height: 930px;
 }
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   background-image: url("../image/hero/hero-img.svg");
   background-position: center;
   background-size: cover;
+}
+.hero__title {
+  margin-bottom: 40px;
+  font-size: 56px;
+  line-height: 1.4285714286;
+  text-align: center;
+  color: #000000;
+}
+.hero__btn {
+  margin-bottom: 128px;
+  width: 192px;
+  height: 52px;
+}
+
+.line__header,
+.line__hero {
+  margin: 12px 0;
+  border: 1px solid #000000;
+}
+
+.first .btns .nav__item:first-child,
+.second .btns .nav__item:first-child {
+  display: none;
+}
+
+.first .nav .links,
+.second .nav .links {
+  width: 28.6144578313%;
+}
+.first .nav .btns,
+.second .nav .btns {
+  width: 9.7891566265%;
+}
+.first .nav .btns .nav__item,
+.second .nav .btns .nav__item {
+  width: 100%;
+}
+
+.first .nav .links {
+  margin: 0 auto;
+}
+
+.second .nav .links {
+  margin-left: auto;
+  padding-right: 3.0120481928%;
+}
+
+.fourth .btns {
+  display: none;
+}
+
+.fourth .nav {
+  justify-content: flex-end;
 }

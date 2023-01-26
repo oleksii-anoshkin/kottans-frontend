@@ -22,6 +22,8 @@ $headerLinkCol: #18A0FB;
 // lines
 $lineCol: rgba(0, 0, 0, 0.5);
 
+// ----------------------------------------------------------
+// general page
 // general styles
 .wrapper {
   display: flex;
@@ -40,6 +42,7 @@ $lineCol: rgba(0, 0, 0, 0.5);
   background-color: $firstPageBg;
 }
 
+// ----------------------------------------------------------
 // header
 .header {
   padding: 0 (80 / 1680 * 100%);
@@ -113,15 +116,13 @@ $lineCol: rgba(0, 0, 0, 0.5);
 }
 
 // nac links
-.link {
-  &__header {
-    color: $headerLinkCol;
-  }
+.link-header {
+  color: $headerLinkCol;
+}
 
-  &__header:hover,
-  &__header:focus {
-    color: $textCol;
-  }
+.link-header:hover,
+.link-header:focus {
+  color: $textCol;
 }
 
 // nav btns
@@ -140,16 +141,16 @@ $lineCol: rgba(0, 0, 0, 0.5);
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   border-radius: 6px;
+}
 
-  &__header {
-    height: 40px;
-  }
+.btn-header {
+  height: 40px;
+}
 
-  &:hover,
-  &:focus {
-    color: $btnTextHoverFocusCol;
-    background-color: $btnBgHoverFocus;
-  }
+.btn:hover,
+.btn:focus {
+  color: $btnTextHoverFocusCol;
+  background-color: $btnBgHoverFocus;
 }
 
 .btns {
@@ -169,6 +170,7 @@ $lineCol: rgba(0, 0, 0, 0.5);
   transition: all .1s ease-in;
 }
 
+// ----------------------------------------------------------
 // main content
 .content {
   flex: 1 1 auto;
@@ -181,17 +183,36 @@ $lineCol: rgba(0, 0, 0, 0.5);
   &__body {}
 }
 
+// ----------------------------------------------------------
 // hero
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
   background-image: url("../image/hero/hero-img.svg");
   background-position: center;
   background-size: cover;
 
-  &__title {}
+  &__title {
+    margin-bottom: 40px;
 
-  &__btn {}
+    font-size: 56px;
+    line-height: 80 / 56 * 1;
+    text-align: center;
+    color: $titleCol;
+  }
+
+  &__btn {
+    margin-bottom: 128px;
+
+    width: 192px;
+    height: 52px;
+  }
 }
 
+// ----------------------------------------------------------
 // body
 .body {}
 
@@ -272,3 +293,54 @@ $lineCol: rgba(0, 0, 0, 0.5);
 .link__img {}
 
 .nav__text {}
+
+// ----------------------------------------------------------
+// page navigation
+// header first
+.line__header,
+.line__hero {
+  margin: 12px 0;
+  border: 1px solid $titleCol;
+}
+
+.first .btns .nav__item:first-child,
+.second .btns .nav__item:first-child {
+  display: none;
+}
+
+.first .nav,
+.second .nav {
+  .links {
+    width: 380 / 1328 * 100%;
+  }
+
+  .btns {
+    width: 130 / 1328 * 100%;
+
+    & .nav__item {
+      width: 100%;
+    }
+  }
+}
+
+.first .nav .links {
+  margin: 0 auto;
+}
+
+// header second
+.second .nav .links {
+  margin-left: auto;
+  padding-right: 40 / 1328 * 100%;
+}
+
+// header fourth
+.fourth .btns {
+  display: none;
+}
+
+.fourth .nav {
+  justify-content: flex-end;
+}
+
+// ----------------------------------------------------------
+// page hero
