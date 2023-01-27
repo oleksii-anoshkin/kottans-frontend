@@ -188,7 +188,7 @@ table {
   color: #000000;
 }
 .logo__text:hover, .logo__text:focus {
-  color: rgba(0, 0, 0, 0.5);
+  color: #a1a1a1;
 }
 
 .nav__items {

@@ -8,16 +8,30 @@ $liteBlue: #18a0fb;
 $gray: #a1a1a1;
 
 // site colors
-// backgrounds
-$firstPageBg: #ffffff;
-$secondPageBg: #f5f5f5;
-$btnBg: #ffffff;
-$btnBgHoverFocus: #18a0fb;
-// fonts
-$titleCol: #000000;
-$textCol: rgba(0, 0, 0, 0.8);
-$btnTextCol: #18a0fb;
-$btnTextHoverFocusCol: #ffffff;
-$headerLinkCol: #18a0fb;
-// lines
-$lineCol: rgba(0, 0, 0, 0.5);
+// fonts colors
+$titleCol: $primaryBlack;
+$textCol: $secondaryBlack;
+
+// btns colors
+$btnText: $liteBlue;
+$btnBg: $primaryWhite;
+$btnBorder: $liteBlue;
+$btnText: $primaryWhite;
+$btnBgActive: $liteBlue;
+
+// logo colors
+$logo: $primaryBlack;
+$logoActive: $gray;
+
+// links colors
+$headerLink: $liteBlue;
+$headerLinkActive: $secondaryBlack;
+$footerLink: $primaryBlack;
+$footerLinkActive: $liteBlue;
+
+// lines colors
+$lineCol: $thirdlyBlack;
+
+// form colors
+$formTextActive: $liteBlue;
+$formLineActive: $liteBlue;
