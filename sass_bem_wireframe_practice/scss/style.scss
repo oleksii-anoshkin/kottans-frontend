@@ -1,24 +1,45 @@
 // reset styles
-@import "_reset";
+@import "base/reset";
+
+// helpers styles
+@import "helpers/mixins";
+@import "helpers/variables";
+
+// base styles
+@import "base/typography";
+
+// components styles
+@import "components/navigation";
+@import "components/items";
+@import "components/buttons";
+
+// layout styles
+@import "layout/header";
+@import "layout/hero";
+@import "layout/subhero";
+@import "layout/body";
+@import "layout/testimonials";
+@import "layout/signup";
+@import "layout/footer";
 
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;700&display=swap');
-$fontComfortaa: 'Comfortaa', cursive;
-$fontMontserrat: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;700&display=swap");
+$fontComfortaa: "Comfortaa", cursive;
+$fontMontserrat: "Montserrat", sans-serif;
 
 // colors
 // backgrounds
-$firstPageBg: #FFFFFF;
-$secondPageBg: #F5F5F5;
-$btnBg:#FFFFFF;
-$btnBgHoverFocus: #18A0FB;
+$firstPageBg: #ffffff;
+$secondPageBg: #f5f5f5;
+$btnBg: #ffffff;
+$btnBgHoverFocus: #18a0fb;
 $btnBgActive: #a1a1a1;
 // fonts
 $titleCol: #000000;
 $textCol: rgba(0, 0, 0, 0.8);
-$btnTextCol: #18A0FB;
-$btnTextHoverFocusCol: #FFFFFF;
-$headerLinkCol: #18A0FB;
+$btnTextCol: #18a0fb;
+$btnTextHoverFocusCol: #ffffff;
+$headerLinkCol: #18a0fb;
 // lines
 $lineCol: rgba(0, 0, 0, 0.5);
 
@@ -78,7 +99,7 @@ $lineCol: rgba(0, 0, 0, 0.5);
     flex: 0 0 24px;
     margin-right: 8px;
   }
-  
+
   &__text {
     font-family: $fontComfortaa;
     font-size: 28px;
@@ -100,14 +121,14 @@ $lineCol: rgba(0, 0, 0, 0.5);
     justify-content: space-between;
   }
 
-  .links{ 
+  .links {
     width: 388 / 1328 * 100%;
   }
 
   .btns {
     width: 272 / 1328 * 100%;
   }
-  
+
   &__item {
     font-weight: 500;
     font-size: 15px;
@@ -132,7 +153,7 @@ $lineCol: rgba(0, 0, 0, 0.5);
   align-items: center;
 
   color: $btnTextCol;
-      
+
   background-color: $btnBg;
 
   border: 1px solid $btnBgHoverFocus;
@@ -163,11 +184,11 @@ $lineCol: rgba(0, 0, 0, 0.5);
 .link,
 .btn,
 .logo__text {
-  -webkit-transition: all .1s ease-in;
-  -moz-transition: all .1s ease-in;
-  -ms-transition: all .1s ease-in;
-  -o-transition: all .1s ease-in;
-  transition: all .1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 // ----------------------------------------------------------
@@ -180,7 +201,8 @@ $lineCol: rgba(0, 0, 0, 0.5);
     height: 930px;
   }
 
-  &__body {}
+  &__body {
+  }
 }
 
 // ----------------------------------------------------------
@@ -214,133 +236,122 @@ $lineCol: rgba(0, 0, 0, 0.5);
 
 // ----------------------------------------------------------
 // body
-.body {}
-
-.body__header {}
-
-.body__top {}
-
-.top {}
-
-.top__items {}
-
-.top__item {}
-
-.item {}
-
-.item__title {}
-
-.item__text {}
-
-.item__link {}
-
-.body__bot {}
-
-.bot {}
-
-.bot__items {}
-
-.bot__item {}
-
-.item__img {}
-
-.item__wrap {}
-
-.content__sub-page {}
-
-.sub-page {}
-
-.sub-page__header {}
-
-.sub-page__img {}
-
-.content__testimonials {}
-
-.testimonials {}
-
-.testimonials__title {}
-
-.testimonials__text {}
-
-.testimonials__items {}
-
-.testimonials__item {}
-
-.content__signup {}
-
-.signup {}
-
-.signup__title {}
-
-.signup__items {}
-
-.signup__item {}
-
-.btn__signup {}
-
-.footer {}
-
-.footer__nav {}
-
-.nav__other {}
-
-.link__footer {}
-
-.footer__logo {}
-
-.nav__social {}
-
-.link__img {}
-
-.nav__text {}
-
-// ----------------------------------------------------------
-// page navigation
-// header first
-.line__header,
-.line__hero {
-  margin: 12px 0;
-  border: 1px solid $titleCol;
+.body {
 }
 
-.first .btns .nav__item:first-child,
-.second .btns .nav__item:first-child {
-  display: none;
+.body__header {
 }
 
-.first .nav,
-.second .nav {
-  .links {
-    width: 380 / 1328 * 100%;
-  }
-
-  .btns {
-    width: 130 / 1328 * 100%;
-
-    & .nav__item {
-      width: 100%;
-    }
-  }
+.body__top {
 }
 
-.first .nav .links {
-  margin: 0 auto;
+.top {
 }
 
-// header second
-.second .nav .links {
-  margin-left: auto;
-  padding-right: 40 / 1328 * 100%;
+.top__items {
 }
 
-// header fourth
-.fourth .btns {
-  display: none;
+.top__item {
 }
 
-.fourth .nav {
-  justify-content: flex-end;
+.item {
 }
 
-// ----------------------------------------------------------
-// page hero
+.item__title {
+}
+
+.item__text {
+}
+
+.item__link {
+}
+
+.body__bot {
+}
+
+.bot {
+}
+
+.bot__items {
+}
+
+.bot__item {
+}
+
+.item__img {
+}
+
+.item__wrap {
+}
+
+.content__sub-page {
+}
+
+.sub-page {
+}
+
+.sub-page__header {
+}
+
+.sub-page__img {
+}
+
+.content__testimonials {
+}
+
+.testimonials {
+}
+
+.testimonials__title {
+}
+
+.testimonials__text {
+}
+
+.testimonials__items {
+}
+
+.testimonials__item {
+}
+
+.content__signup {
+}
+
+.signup {
+}
+
+.signup__title {
+}
+
+.signup__items {
+}
+
+.signup__item {
+}
+
+.btn__signup {
+}
+
+.footer {
+}
+
+.footer__nav {
+}
+
+.nav__other {
+}
+
+.link__footer {
+}
+
+.footer__logo {
+}
+
+.nav__social {
+}
+
+.link__img {
+}
+
+.nav__text {
+}
