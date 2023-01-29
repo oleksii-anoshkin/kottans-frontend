@@ -20,10 +20,12 @@
 
   .nav__items {
     width: calc(388 / 1328) * 100%;
+    min-width: 320px;
   }
 
   .nav__items:nth-last-child(1) {
     width: calc(272 / 1328) * 100%;
+    min-width: 160px;
 
     & .nav__item {
       width: calc(130 / 272) * 100%;

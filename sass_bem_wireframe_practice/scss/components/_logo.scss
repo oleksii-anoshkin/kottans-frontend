@@ -3,6 +3,8 @@
   @include flexRow;
   align-items: center;
 
+  min-width: 140px;
+
   &__icon {
     flex: 0 0 24px;
     margin-right: 8px;

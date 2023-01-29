@@ -1,8 +1,13 @@
 // hero
 .hero {
+  padding: 0 calc(80 / 1680) * 100%;
+
   @include flexCol;
   align-items: center;
   justify-content: flex-end;
+
+  width: 100%;
+  height: auto;
 
   background-image: url("/image/hero/hero-full-horizontal-video.svg");
   background-position: center;
@@ -22,5 +27,7 @@
 
     width: 192px;
     height: 52px;
+
+    font-size: 18px;
   }
 }

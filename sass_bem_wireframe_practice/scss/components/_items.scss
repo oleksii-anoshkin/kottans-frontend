@@ -1,18 +1,15 @@
 // items
 .item {
-}
+  &__wrap {
+    @include flexCol;
+  }
 
-.item__title {
-}
+  &__title {
+    @extend %secondaryTitleText;
+  }
 
-.item__text {
-}
-
-.item__link {
-}
-
-.item__img {
-}
-
-.item__wrap {
+  &__img {
+    width: 50%;
+    height: auto;
+  }
 }
