@@ -1,0 +1,31 @@
+// general page styles
+.wrapper {
+  @include flexCol;
+  width: 100%;
+
+  @extend %mainText;
+  background-color: $primaryBg;
+}
+
+// main content
+.content {
+  flex: 1 1 auto;
+
+  &__hero {
+    width: 100%;
+    height: auto;
+  }
+
+  &__body {
+  }
+
+  .content__sub-page {
+}
+
+.content__testimonials {
+}
+
+.content__signup {
+}
+
+}

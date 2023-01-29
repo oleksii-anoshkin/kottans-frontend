@@ -1,0 +1,27 @@
+// import fonts
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;700&display=swap");
+$titleText: "Comfortaa", cursive;
+$mainText: "Montserrat", sans-serif;
+
+// page fonts
+%mainText {
+  font-family: $mainText;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.667;
+  letter-spacing: -0.015em;
+  color: $textCol;
+}
+
+%primaryTitleText {
+  font-size: 48px;
+  line-height: 1.5;
+  color: $titleCol;
+}
+
+%secondaryTitleText {
+  @extend %primaryTitleText;
+  font-weight: 700;
+  font-size: 24px;
+}

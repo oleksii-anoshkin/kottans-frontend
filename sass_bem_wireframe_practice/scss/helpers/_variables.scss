@@ -1,6 +1,6 @@
 // color palette
 $primaryWhite: #ffffff;
-$secondaryWhite: #ffffff;
+$secondaryWhite: #f5f5f5;
 $primaryBlack: #000000;
 $secondaryBlack: rgba(0, 0, 0, 0.8);
 $thirdlyBlack: rgba(0, 0, 0, 0.5);
@@ -8,6 +8,10 @@ $liteBlue: #18a0fb;
 $gray: #a1a1a1;
 
 // site colors
+// bgs colors
+$primaryBg: $primaryWhite;
+$secondaryBg: $secondaryWhite;
+
 // fonts colors
 $titleCol: $primaryBlack;
 $textCol: $secondaryBlack;
@@ -16,7 +20,7 @@ $textCol: $secondaryBlack;
 $btnText: $liteBlue;
 $btnBg: $primaryWhite;
 $btnBorder: $liteBlue;
-$btnText: $primaryWhite;
+$btnTextActive: $primaryWhite;
 $btnBgActive: $liteBlue;
 
 // logo colors

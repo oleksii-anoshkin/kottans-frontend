@@ -1,0 +1,26 @@
+// hero
+.hero {
+  @include flexCol;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-image: url("/image/hero/hero-full-horizontal-video.svg");
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    margin-top: calc(632 / 1680) * 100%;
+    margin-bottom: calc(40 / 1680) * 100%;
+
+    @extend %primaryTitleText;
+    font-size: 56px;
+    text-align: center;
+  }
+
+  &__btn {
+    margin-bottom: calc(128 / 1680) * 100%;
+
+    width: 192px;
+    height: 52px;
+  }
+}

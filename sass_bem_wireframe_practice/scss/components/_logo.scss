@@ -1,0 +1,24 @@
+// logo styles
+.logo {
+  @include flexRow;
+  align-items: center;
+
+  &__icon {
+    flex: 0 0 24px;
+    margin-right: 8px;
+  }
+
+  &__text {
+    font-family: $titleText;
+    font-size: 28px;
+    line-height: calc(32 / 28) * 1;
+    color: $logo;
+
+    @include transitionActive;
+  }
+
+  &__text:hover,
+  &__text:focus {
+    color: $logoActive;
+  }
+}
