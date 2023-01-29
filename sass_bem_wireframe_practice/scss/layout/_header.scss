@@ -1,0 +1,46 @@
+// header
+.header {
+  margin: 0 calc(80 / 1680) * 100%;
+
+  @include flexRow;
+
+  min-height: 60px;
+
+  &__logo {
+    width: calc(194 / 1520) * 100%;
+  }
+
+  &__nav {
+    @include flexRow;
+    align-items: center;
+    justify-content: space-between;
+
+    width: calc((1520 - 194) / 1520) * 100%;
+  }
+
+  .nav__items {
+    width: calc(388 / 1328) * 100%;
+  }
+
+  .nav__items:nth-last-child(1) {
+    width: calc(272 / 1328) * 100%;
+
+    & .nav__item {
+      width: calc(130 / 272) * 100%;
+    }
+  }
+
+  .btn {
+    height: 40px;
+  }
+
+  // header nav links
+  .link {
+    color: $headerLink;
+  }
+
+  .link:hover,
+  .link:focus {
+    color: $headerLinkActive;
+  }
+}
