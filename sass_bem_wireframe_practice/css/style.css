@@ -454,7 +454,7 @@ html {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0 5.0847457627%;
+  padding: 0 60px;
   max-width: 1180px;
 }
 .testimonials__item {
