@@ -1,15 +1,37 @@
 // testimonials
 .testimonials {
-}
+  @include flexCol;
+  align-items: center;
 
-.testimonials__title {
-}
+  padding: calc(120 / 1680) * 100% calc(80 / 1680) * 100%;
 
-.testimonials__text {
-}
+  text-align: center;
 
-.testimonials__items {
-}
+  &__title,
+  &__text {
+    margin-bottom: calc(32 / 1520) * 100%;
+    max-width: 1400px;
+  }
 
-.testimonials__item {
+  &__title {
+    @extend %primaryTitleText;
+  }
+
+  &__text {
+    font-size: 36px;
+  }
+
+  &__items {
+    @include flexRow;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    padding: 0 calc(60 / 1180) * 100%;
+
+    max-width: 1180px;
+  }
+
+  &__item {
+    margin: 40px;
+  }
 }

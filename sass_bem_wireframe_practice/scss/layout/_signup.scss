@@ -1,15 +1,32 @@
 // signup
 .signup {
-}
+  @include flexRow;
+  align-items: center;
 
-.signup__title {
-}
+  padding: calc(120 / 1680) * 100% calc(80 / 1680) * 100%;
 
-.signup__items {
-}
+  background-color: $secondaryBg;
 
-.signup__item {
-}
+  &__title {
+    width: calc(944 / 1520) * 100%;
 
-.btn__signup {
+    font-size: 36px;
+  }
+
+  &__items {
+    @include flexRow;
+    justify-content: space-evenly;
+
+    width: calc(576 / 1520) * 100%;
+  }
+
+  &__item {
+    width: calc(192 / 576) * 100%;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: 120px;
+    height: 52px;
+  }
 }
