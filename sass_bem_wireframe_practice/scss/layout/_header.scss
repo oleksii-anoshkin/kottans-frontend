@@ -46,3 +46,25 @@
     color: $headerLinkActive;
   }
 }
+
+// -------------------------------------------------
+// header nav center
+.header.first {
+  .nav__items {
+    margin: 0 auto;
+  }
+
+  .nav__items:nth-last-child(1) {
+    margin: 0;
+    width: calc(130 / 1328) * 100%;
+    min-width: 80px;
+
+    & .nav__item {
+      width: 100%;
+    }
+
+    & .nav__item:nth-last-child(2) {
+      display: none;
+    }
+  }
+}
