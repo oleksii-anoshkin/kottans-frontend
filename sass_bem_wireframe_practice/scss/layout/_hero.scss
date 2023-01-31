@@ -31,3 +31,46 @@
     font-size: 18px;
   }
 }
+
+// hero content left
+.hero1 {
+  padding: 0;
+
+  @include flexRow;
+  // @extend .hero;
+  // align-items: flex-start;
+  // justify-content: center;
+
+  // height: calc(960 / 1680) * 100%;
+
+  .hero1__box,
+  .hero1__bg {
+    flex: 1 1 50%;
+  }
+
+  .hero1__box {
+  }
+
+  .hero1__bg {
+    background-image: url("/image/hero/hero-half-vertical.svg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .hero__title,
+  .hero__btn {
+    margin: 0;
+  }
+
+  // .hero__title {
+  //   // margin-top: calc(354 / 1520) * 100%;
+  //   margin-bottom: calc(40 / 1520) * 100%;
+
+  //   width: calc(688 / 1520) * 100%;
+  // }
+
+  // .hero__btn {
+  //   // margin-bottom: calc(354 / 1520) * 100%;
+  // }
+}
