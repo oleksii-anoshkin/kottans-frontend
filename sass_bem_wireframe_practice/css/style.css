@@ -124,7 +124,7 @@ table {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.testimonials__title, .body__header, .hero__title, .footer .link, .hero-form .form__title, .item__title {
+.testimonials__title, .body__header, .subhero__half-bg .text, .subhero__full-bg .subhero__title, .subhero .text, .subhero-reverse .text, .hero__title, .footer .link, .hero-form .form__title, .item__title {
   font-size: 48px;
   line-height: 1.5;
   color: #000000;
@@ -556,6 +556,97 @@ html {
 .hero-form .hero__btn {
   width: 130px;
   height: 40px;
+}
+
+.subhero, .subhero-reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.subhero__title, .subhero__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 4.7619047619%;
+}
+.subhero__title {
+  padding-right: 2.380952381%;
+}
+.subhero__img {
+  padding-left: 2.380952381%;
+}
+.subhero .img, .subhero-reverse .img {
+  width: 100%;
+}
+
+.subhero-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.subhero-reverse .subhero__title,
+.subhero-reverse .subhero__img {
+  padding: 4.7619047619%;
+}
+.subhero-reverse .subhero__title {
+  padding-left: 2.380952381%;
+}
+.subhero-reverse .subhero__img {
+  padding-right: 2.380952381%;
+}
+
+.subhero__full-bg {
+  padding-left: 4.7619047619%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 27.5%;
+  background-image: url("/image/subhero/subhero-full.svg");
+  background-position: center;
+  background-size: cover;
+}
+.subhero__full-bg .subhero__title {
+  padding: 0;
+  max-width: 688px;
+}
+
+.subhero__half-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.subhero__half-bg .subhero__title {
+  padding: 5.9523809524% 4.7619047619%;
+}
+.subhero__half-bg .text {
+  max-width: 688px;
+}
+.subhero__half-bg .subhero__bg {
+  padding-top: 26.1904761905%;
+  width: 100%;
+  background-image: url("/image/subhero/subhero-half-horizontal.svg");
+  background-position: center;
+  background-size: cover;
 }
 
 .body {
