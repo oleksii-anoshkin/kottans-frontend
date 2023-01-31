@@ -14,8 +14,8 @@
   background-size: cover;
 
   &__title {
-    margin-top: calc(632 / 1680) * 100%;
-    margin-bottom: calc(40 / 1680) * 100%;
+    margin-top: calc(632 / 1520) * 100%;
+    margin-bottom: calc(40 / 1520) * 100%;
 
     @extend %primaryTitleText;
     font-size: 56px;
@@ -23,7 +23,7 @@
   }
 
   &__btn {
-    margin-bottom: calc(128 / 1680) * 100%;
+    margin-bottom: calc(128 / 1520) * 100%;
 
     width: 192px;
     height: 52px;
@@ -37,11 +37,6 @@
   padding: 0;
 
   @include flexRow;
-  // @extend .hero;
-  // align-items: flex-start;
-  // justify-content: center;
-
-  // height: calc(960 / 1680) * 100%;
 
   .hero1__box,
   .hero1__bg {
@@ -49,13 +44,11 @@
   }
 
   .hero1__box {
+    padding: calc(354 / 1680) * 100% calc(40 / 840) * 100%;
   }
 
   .hero1__bg {
-    background-image: url("/image/hero/hero-half-vertical.svg");
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background: url("/image/hero/hero-half-vertical.svg") center / cover no-repeat;
   }
 
   .hero__title,
@@ -63,14 +56,166 @@
     margin: 0;
   }
 
-  // .hero__title {
-  //   // margin-top: calc(354 / 1520) * 100%;
-  //   margin-bottom: calc(40 / 1520) * 100%;
+  .hero__title {
+    margin-bottom: calc(40 / 840) * 100%;
+    text-align: start;
+  }
+}
 
-  //   width: calc(688 / 1520) * 100%;
-  // }
+// hero content right
+.hero2 {
+  @extend .hero1;
+  flex-direction: row-reverse;
+}
 
-  // .hero__btn {
-  //   // margin-bottom: calc(354 / 1520) * 100%;
-  // }
+// hero content top
+.hero3 {
+  padding: 0;
+
+  @include flexCol;
+
+  .hero1__box {
+    padding: calc(162 / 1680) * 100% calc(144 / 1680) * 100%;
+  }
+
+  .hero1__bg {
+    height: 380px;
+    background: url("/image/hero/hero-half-horizontal.svg") center / cover no-repeat;
+  }
+
+  .hero__title,
+  .hero__btn {
+    margin: 0;
+  }
+
+  .hero__title {
+    margin-bottom: calc(40 / 1392) * 100%;
+    max-width: 688px;
+    text-align: start;
+  }
+}
+
+// hero content center/left
+.hero4 {
+  padding: calc(354 / 1680) * 100% calc(144 / 1680) * 100%;
+
+  @extend .hero;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: url("/image/hero/hero-full-horizontal.svg") center / cover no-repeat;
+
+  .hero__title,
+  .hero__btn {
+    margin: 0;
+  }
+
+  .hero__title {
+    margin-bottom: calc(40 / 1680) * 100%;
+    max-width: 688px;
+    text-align: start;
+  }
+}
+
+// hero content center/left with video
+.hero5 {
+  padding: calc(354 / 1680) * 100% calc(144 / 1680) * 100%;
+  padding-bottom: calc(84 / 1680) * 100%;
+
+  @extend .hero;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: url("/image/hero/hero-full-horizontal.svg") center / cover no-repeat;
+
+  .hero__title,
+  .hero__btn {
+    margin: 0;
+  }
+
+  .hero__title {
+    margin-bottom: calc(40 / 1680) * 100%;
+    max-width: 688px;
+    text-align: start;
+  }
+
+  .hero__btn {
+    margin-bottom: calc(60 / 1392) * 100%;
+  }
+}
+
+// hero with form
+.hero-form {
+  padding: 0;
+
+  @include flexRow;
+
+  .hero__text,
+  .hero__container {
+    flex: 1 1 50%;
+  }
+
+  .hero__text {
+    padding: calc(400 / 1680) * 100% calc(80 / 1680) * 100%;
+  }
+
+  .hero__title,
+  .hero__btn {
+    margin: 0;
+  }
+
+  .hero__title {
+    text-align: start;
+  }
+
+  .hero__container {
+    padding: calc(260 / 1680) * 100% calc(144 / 1680) * 100%;
+    padding-left: calc(64 / 1680) * 100%;
+  }
+
+  .form {
+    padding: calc(64 / 632) * 100%;
+
+    border: 1px solid $lineCol;
+  }
+
+  .form__email,
+  .form__password {
+    display: block;
+    width: 100%;
+  }
+
+  .form__first-name,
+  .form__last-name {
+    display: inline;
+    width: calc(236 / 502) * 100%;
+  }
+
+  .form__last-name {
+    float: right;
+  }
+
+  .form__email,
+  .form__password,
+  .form__first-name,
+  .form__last-name {
+    padding: 8px 14px;
+    margin-bottom: calc(24 / 502) * 100%;
+    font-size: 15px;
+    border: 1px solid $lineCol;
+
+    &:focus {
+      border: 1px solid $btnBgActive;
+    }
+  }
+
+  .form__title {
+    @extend %secondaryTitleText;
+    margin-bottom: calc(40 / 502) * 100%;
+  }
+
+  .hero__btn {
+    width: 130px;
+    height: 40px;
+  }
 }
