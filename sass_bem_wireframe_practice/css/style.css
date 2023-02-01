@@ -746,7 +746,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 7.1428571429% 4.7619047619%;
+  padding: 7.1428571429% 4.7619047619% 4.7619047619%;
   text-align: center;
 }
 .testimonials__title, .testimonials__text {
@@ -755,6 +755,7 @@ html {
 }
 .testimonials__text {
   font-size: 36px;
+  line-height: 1.39;
 }
 .testimonials__items {
   display: -webkit-box;
@@ -773,6 +774,60 @@ html {
 }
 .testimonials__item {
   margin: 40px;
+}
+
+.one-line {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  max-width: 1520px;
+}
+
+.testimonials__img {
+  margin-top: 0.5263157895%;
+  margin-bottom: 1.0526315789%;
+}
+
+.testimonials__bottom {
+  margin-bottom: 2.6315789474%;
+}
+
+.rectangle-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  text-align: start;
+}
+.rectangle-right .testimonials__box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 69.7619047619%;
+          flex: 1 1 69.7619047619%;
+  padding: 7.1428571429% 4.7619047619%;
+}
+.rectangle-right .testimonials__bg {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30.2380952381%;
+          flex: 1 1 30.2380952381%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.rectangle-right .testimonials__text {
+  margin-bottom: 3.95256917%;
+}
+.rectangle-right .testimonials__img {
+  margin: 0 20px 4.347826087% 0;
+}
+.rectangle-right .testimonials__bottom {
+  margin: 0;
+  margin-top: 6px;
+  display: inline-block;
 }
 
 .signup {
