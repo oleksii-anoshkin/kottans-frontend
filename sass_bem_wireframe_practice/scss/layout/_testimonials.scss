@@ -64,19 +64,26 @@
   text-align: start;
 
   .testimonials__box {
-    flex: 1 1 calc(1172 / 1680) * 100%;
+    width: calc(1172 / 1680) * 100%;
 
-    padding: calc(120 / 1680) * 100% calc(80 / 1680) * 100%;
+    padding: 0 * 100% calc(80 / 1680) * 100%;
   }
 
   .testimonials__bg {
-    flex: 1 1 calc(508 / 1680) * 100%;
+    padding: calc(234 / 1680) * 100% calc(254 / 1680) * 100%;
 
-    display: flex;
+    background-image: url("/image/testimonials/testimonials-quarter.svg");
+    background-position: center;
+    background-size: cover;
   }
 
   .testimonials__text {
     margin-bottom: calc(40 / 1012) * 100%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .testimonials__img {
@@ -91,4 +98,71 @@
 }
 
 // testimonials with-card
+.with-card {
+  @include flexRow;
+  justify-content: space-between;
+  align-items: flex-start;
 
+  padding: 0;
+
+  text-align: start;
+
+  .content__box,
+  .card__box {
+    flex: 1 1 50%;
+    margin: calc(120 / 1680) * 100% calc(80 / 1680) * 100%;
+  }
+
+  .content__box {
+    margin-right: calc(10 / 1680) * 100%;
+  }
+
+  .card__box {
+    margin-left: calc(80 / 1680) * 100%;
+    border: 1px solid $lineCol;
+  }
+
+  .testimonials__title {
+    margin-bottom: calc(28 / 750) * 100%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .testimonials__text {
+    margin-bottom: calc(40 / 750) * 100%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .testimonials__items {
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .testimonials__item {
+    margin: 30px;
+  }
+
+  .card-bg {
+    padding: calc(200 / 680) * 100% calc(340 / 680) * 100%;
+
+    background-image: url("/image/testimonials/testimonials-half.svg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .text-box {
+    padding: calc(68 / 720) * 100% calc(64 / 720) * 100%;
+  }
+
+  .text-box__title {
+    @extend %secondaryTitleText;
+    margin-bottom: calc(24 / 586) * 100%;
+  }
+}
