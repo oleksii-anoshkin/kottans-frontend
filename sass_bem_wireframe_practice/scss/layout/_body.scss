@@ -81,3 +81,53 @@
     }
   }
 }
+
+// body without btn
+.without-btn {
+  .body__top {
+    margin-bottom: calc(90 / 1680) * 100%;
+  }
+
+  .top__item {
+    padding-bottom: 0;
+  }
+
+  .item__text {
+    padding-bottom: 0;
+  }
+
+  .btn {
+    display: none;
+  }
+}
+
+// body with circle-img
+.circle-img-two {
+  margin-top: calc(120 / 1680) * 100%;
+
+  .body__header {
+    padding-bottom: calc(60 / 1680) * 100%;
+  }
+
+  .top {
+    margin-bottom: calc(90 / 1680) * 100%;
+
+    &__item {
+      padding-bottom: 40px;
+    }
+
+    .item__text {
+      padding: 0 60px 32px 0;
+    }
+  }
+
+  .item__img {
+    margin-bottom: calc(40 / 760) * 100%;
+
+    width: calc(200 / 760) * 100%;
+  }
+
+  .btn {
+    display: flex;
+  }
+}

@@ -735,6 +735,44 @@ html {
   margin-right: 5.3191489362%;
 }
 
+.without-btn .body__top {
+  margin-bottom: 5.3571428571%;
+}
+.without-btn .top__item {
+  padding-bottom: 0;
+}
+.without-btn .item__text {
+  padding-bottom: 0;
+}
+.without-btn .btn {
+  display: none;
+}
+
+.circle-img-two {
+  margin-top: 7.1428571429%;
+}
+.circle-img-two .body__header {
+  padding-bottom: 3.5714285714%;
+}
+.circle-img-two .top {
+  margin-bottom: 5.3571428571%;
+}
+.circle-img-two .top__item {
+  padding-bottom: 40px;
+}
+.circle-img-two .top .item__text {
+  padding: 0 60px 32px 0;
+}
+.circle-img-two .item__img {
+  margin-bottom: 5.2631578947%;
+  width: 26.3157894737%;
+}
+.circle-img-two .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .testimonials {
   display: -webkit-box;
   display: -ms-flexbox;
