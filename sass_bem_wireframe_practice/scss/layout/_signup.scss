@@ -30,3 +30,84 @@
     height: 52px;
   }
 }
+
+// signup with form
+.with-form {
+  @include flexCol;
+
+  padding: calc(120 / 1680) * 100% calc(144 / 1680) * 100%;
+
+  .signup__title {
+    margin-bottom: calc(28 / 1392) * 100%;
+
+    @extend %primaryTitleText;
+    text-align: center;
+  }
+
+  .signup__text {
+    margin-bottom: calc(80 / 1392) * 100%;
+
+    font-size: 36px;
+    line-height: 1.39;
+    text-align: center;
+  }
+}
+
+.form {
+  width: calc(622 / 1392) * 100%;
+  height: auto;
+
+  padding: calc(64 / 1392) * 100%;
+
+  background-color: $primaryBg;
+  border: 1px solid $lineCol;
+
+  .form__email,
+  .form__password {
+    display: block;
+    width: 100%;
+  }
+
+  .form__first-name,
+  .form__last-name {
+    display: inline;
+    width: calc(236 / 502) * 100%;
+  }
+
+  .form__last-name {
+    float: right;
+  }
+
+  .form__email,
+  .form__password,
+  .form__first-name,
+  .form__last-name {
+    padding: 8px 14px;
+    margin-bottom: calc(24 / 502) * 100%;
+    font-size: 15px;
+    border: 1px solid $lineCol;
+
+    &:focus {
+      border: 1px solid $btnBgActive;
+    }
+  }
+
+  .form__btn {
+    width: 130px;
+    height: 40px;
+  }
+}
+
+.form__title {
+  @extend %secondaryTitleText;
+  margin-bottom: calc(40 / 502) * 100%;
+}
+
+// signup one button
+.one-btn {
+  justify-content: center;
+
+  .contact-us {
+    display: none;
+  }
+}

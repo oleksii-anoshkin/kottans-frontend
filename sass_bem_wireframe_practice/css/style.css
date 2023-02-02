@@ -124,13 +124,13 @@ table {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.testimonials__title, .body__header, .subhero__half-bg .text, .subhero__full-bg .subhero__title, .subhero .text, .subhero-reverse .text, .hero__title, .footer .link, .with-card .text-box__title, .hero-form .form__title, .item__title {
+.with-form .signup__title, .testimonials__title, .body__header, .subhero__half-bg .text, .subhero__full-bg .subhero__title, .subhero .text, .subhero-reverse .text, .hero__title, .footer .link, .form__title, .with-card .text-box__title, .hero-form .form__title, .item__title {
   font-size: 48px;
   line-height: 1.5;
   color: #000000;
 }
 
-.footer .link, .with-card .text-box__title, .hero-form .form__title, .item__title {
+.footer .link, .form__title, .with-card .text-box__title, .hero-form .form__title, .item__title {
   font-weight: 700;
   font-size: 24px;
 }
@@ -935,6 +935,80 @@ html {
   width: 100%;
   min-width: 120px;
   height: 52px;
+}
+
+.with-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 7.1428571429% 8.5714285714%;
+}
+.with-form .signup__title {
+  margin-bottom: 2.0114942529%;
+  text-align: center;
+}
+.with-form .signup__text {
+  margin-bottom: 5.7471264368%;
+  font-size: 36px;
+  line-height: 1.39;
+  text-align: center;
+}
+
+.form {
+  width: 44.683908046%;
+  height: auto;
+  padding: 4.5977011494%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.form .form__email,
+.form .form__password {
+  display: block;
+  width: 100%;
+}
+.form .form__first-name,
+.form .form__last-name {
+  display: inline;
+  width: 47.0119521912%;
+}
+.form .form__last-name {
+  float: right;
+}
+.form .form__email,
+.form .form__password,
+.form .form__first-name,
+.form .form__last-name {
+  padding: 8px 14px;
+  margin-bottom: 4.780876494%;
+  font-size: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.form .form__email:focus,
+.form .form__password:focus,
+.form .form__first-name:focus,
+.form .form__last-name:focus {
+  border: 1px solid #18a0fb;
+}
+.form .form__btn {
+  width: 130px;
+  height: 40px;
+}
+
+.form__title {
+  margin-bottom: 7.96812749%;
+}
+
+.one-btn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.one-btn .contact-us {
+  display: none;
 }
 
 .footer {
