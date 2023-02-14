@@ -72,7 +72,7 @@
 
 // ----------------------------------------
 // function credit(time) {
-//   const result = function (price, percentage) { 
+//   const result = function (price, percentage) {
 //     return ((price + price * percentage / 100) / time).toFixed(2);
 //   };
 
@@ -109,35 +109,109 @@
 
 // const myRectangle = new Rectangle(10, 5);
 // console.log(myRectangle);
-// console.log(myRectangle.Area()); 
+// console.log(myRectangle.Area());
 
 // ----------------------------------------
-function firstDog(name) {
-  this.name = name;
-}
+// function firstDog(name) {
+//   this.name = name;
+// }
 
-firstDog.prototype.bark = function () {
-  console.log(this.name + " likes barking! Bark!");
-}
+// firstDog.prototype.bark = function () {
+//   console.log(this.name + " likes barking! Bark!");
+// }
 
-var max = new firstDog("Max", "Buddy");
-console.log(max);
-max.bark();
+// var max = new firstDog("Max", "Buddy");
+// console.log(max);
+// max.bark();
 
 // ----------------------------------------
 
-function secondDog(firstName, secondName) {
-  this.firstName = firstName;
-  this.secondName = secondName;
-}
+// function secondDog(firstName, secondName) {
+//   this.firstName = firstName;
+//   this.secondName = secondName;
+// }
 
-secondDog.prototype.bark = function () {
-  console.log(this.firstName + " likes barking! Bark!");
-  console.log(this.secondName + " likes barking! Bark!");
-}
+// secondDog.prototype.bark = function () {
+//   console.log(this.firstName + " likes barking! Bark!");
+//   console.log(this.secondName + " likes barking! Bark!");
+// }
 
-var max = new secondDog("Max", "Buddy");
-console.log(max);
-max.bark();
+// var max = new secondDog("Max", "Buddy");
+// console.log(max);
+// max.bark();
+
+// ----------------------------------------
+// const books = {
+//   first: "Weather",
+//   second: "Home",
+//   third: "Banana",
+//   fourth: "Item",
+// };
+// console.log("--------------------------");
+// console.log("for-in for object");
+// console.log("--------------------------");
+// for (let book in books) {
+//   console.log(book + ": " + books[book]);
+// };
+
+// const Books = ["Weather", "Home", "Banana", "Item"];
+
+// console.log("--------------------------");
+// console.log("for-in for array");
+// console.log("--------------------------");
+// for (let book in Books) {
+//   console.log(book + ": " + Books[book]);
+// };
+
+// console.log("--------------------------");
+// console.log("for-of for array");
+// console.log("--------------------------");
+// for (let book of Books) {
+//   console.log(book);
+// };
+
+// ----------------------------------------
+// var counter = 0;
+// var myArray = ["Yaakov", 2, {handle: "yaakovchaikin"}];
+// for (var i = 0; i < myArray.length; i++) {
+//   counter++;
+// }
+// console.log(counter);
+
+// ----------------------------------------
+// const firstPerson = {};
+// firstPerson.name = "Oleksii";
+// firstPerson.hello = function () {
+//   console.log(`Welcome ${firstPerson.name}!`);
+// }
+
+// const secondPerson = {};
+// secondPerson.name = "Julia";
+// secondPerson.hello = function () {
+//   console.log(`Welcome ${secondPerson.name}!`);
+// }
+
+// const thirdPerson = {};
+// thirdPerson.hello = function (name) {
+//   console.log(`Welcome ${name}!`);
+// }
+
+// firstPerson.hello();
+// secondPerson.hello();
+// thirdPerson.hello("Ludmila");
+
+// ----------------------------------------
+(function(window) {
+
+  var obj = {};
+  obj.dreamOn = function () {
+  console.log("I want to see the global scope! Let me out!");
+  };
+
+  window.doer = obj;
+
+})(window);
+
+doer.dreamOn();
 
 // ----------------------------------------
