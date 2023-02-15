@@ -201,17 +201,121 @@
 // thirdPerson.hello("Ludmila");
 
 // ----------------------------------------
-(function(window) {
+// (function(window) {
 
-  var obj = {};
-  obj.dreamOn = function () {
-  console.log("I want to see the global scope! Let me out!");
-  };
+//   var obj = {};
+//   obj.dreamOn = function () {
+//   console.log("I want to see the global scope! Let me out!");
+//   };
 
-  window.doer = obj;
+//   window.doer = obj;
 
-})(window);
+// })(window);
 
-doer.dreamOn();
+// doer.dreamOn();
 
 // ----------------------------------------
+// function checkObj(obj, checkProp) {
+//   // Only change code below this line
+//   console.log(obj.hasOwnProperty(checkProp));
+//   console.log(checkProp);
+
+//   if (obj.hasOwnProperty(checkProp)) {
+//     console.log(obj[checkProp]);
+//     return obj.checkProp;
+//   } else {
+//     return "Not Found";
+//   };
+//   // Only change code above this line
+// };
+
+// checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift");
+
+// ----------------------------------------
+// const recordCollection = {
+//   2548: {
+//     albumTitle: 'Slippery When Wet',
+//     artist: 'Bon Jovi',
+//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//   },
+//   2468: {
+//     albumTitle: '1999',
+//     artist: 'Prince',
+//     tracks: ['1999', 'Little Red Corvette']
+//   },
+//   1245: {
+//     artist: 'Robert Palmer',
+//     tracks: []
+//   },
+//   5439: {
+//     albumTitle: 'ABBA Gold'
+//   }
+// };
+
+// // Only change code below this line
+// function updateRecords(records, id, prop, value) {
+//   if (value === "") {
+//     delete records[id][prop];
+//   } else if (prop !== "tracks" && prop !== "") {
+//     records[id][prop] = value;
+//   } else if (prop === "tracks" && !([prop] in records[id])) {
+//     records[id][prop] = [value];
+//   } else if (prop === "tracks" && value !== "") {
+//     records[id][prop].push(value);
+//   };
+
+//   return records;
+// }
+
+// updateRecords(recordCollection, 2548, "artist", "")
+
+// ----------------------------------------
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+const value = "Akira";
+const prop = "likes";
+
+for (let i = 0; i < contacts.length; i++) {
+  for (const item in contacts[i]) {
+    if (contacts[i][item] === value && item in contacts[i]) {
+      console.log("Done");
+      console.log(contacts[i][prop]);
+      // return contacts[i][prop];
+    };
+  };
+};
+
+// function lookUpProfile(name, prop) {
+//   // Only change code below this line
+
+//   // Only change code above this line
+// };
+
+// lookUpProfile();
+// lookUpProfile("Akira", "likes");
