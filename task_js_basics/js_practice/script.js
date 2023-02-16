@@ -481,17 +481,40 @@
 // console.log(user);
 
 // ----------------------------------------
-console.log("35" + - "22");
-console.log("35" * "22");
-// console.log("558" > 22++);
+// console.log("35" + - "22");
+// console.log("35" * "22");
+// // console.log("558" > 22++);
 
-let userName = 0;
-let newUser = userName++;
-console.log(newUser);
-console.log(userName);
+// let userName = 0;
+// let newUser = userName++;
+// console.log(newUser);
+// console.log(userName);
 
-console.log(!false && 11 || 18 && !"");
-console.log(11 && 18);
+// console.log(!false && 11 || 18 && !"");
+// console.log(11 && 18);
 
-let name = 0;
-console.log(name ?? "Hello");
+// let name = 0;
+// console.log(name ?? "Hello");
+
+// ----------------------------------------
+/*
+const s = [5, 7, 2];
+console.log(s);
+function editInPlace() {
+  // Only change code below this line
+  // Using s = [2, 5, 7] would be invalid
+  // let x = ;
+  // console.log(x);
+  s.unshift(s.pop(s.length - 1));
+  // console.log(s);
+  // Only change code above this line
+}
+editInPlace();
+console.log(s);
+*/
+// ----------------------------------------
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+};
+
+console.log(sum(1,2,3,4));
