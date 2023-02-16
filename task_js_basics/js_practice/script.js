@@ -271,51 +271,227 @@
 
 // ----------------------------------------
 // Setup
-const contacts = [
-  {
-    firstName: "Akira",
-    lastName: "Laine",
-    number: "0543236543",
-    likes: ["Pizza", "Coding", "Brownie Points"],
-  },
-  {
-    firstName: "Harry",
-    lastName: "Potter",
-    number: "0994372684",
-    likes: ["Hogwarts", "Magic", "Hagrid"],
-  },
-  {
-    firstName: "Sherlock",
-    lastName: "Holmes",
-    number: "0487345643",
-    likes: ["Intriguing Cases", "Violin"],
-  },
-  {
-    firstName: "Kristian",
-    lastName: "Vos",
-    number: "unknown",
-    likes: ["JavaScript", "Gaming", "Foxes"],
-  },
-];
+// const contacts = [
+//   {
+//     firstName: "Akira",
+//     lastName: "Laine",
+//     number: "0543236543",
+//     likes: ["Pizza", "Coding", "Brownie Points"],
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//   },
+//   {
+//     firstName: "Sherlock",
+//     lastName: "Holmes",
+//     number: "0487345643",
+//     likes: ["Intriguing Cases", "Violin"],
+//   },
+//   {
+//     firstName: "Kristian",
+//     lastName: "Vos",
+//     number: "unknown",
+//     likes: ["JavaScript", "Gaming", "Foxes"],
+//   },
+// ];
 
-const value = "Akira";
-const prop = "likes";
+// const firstNameAr = "Akira";
+// const firstNameAr = "Bob";
+// const prop = "likes";
 
-for (let i = 0; i < contacts.length; i++) {
-  for (const item in contacts[i]) {
-    if (contacts[i][item] === value && item in contacts[i]) {
-      console.log("Done");
-      console.log(contacts[i][prop]);
-      // return contacts[i][prop];
-    };
-  };
-};
+// for (let i = 0; i < contacts.length; i++) {
+//   for (const item in contacts[i]) {
+//     if (contacts[i][item] === firstNameAr && item in contacts[i]) {
+//       console.log("Done");
+//       console.log(contacts[i][prop]);
+//       // return contacts[i][prop];
+//     } else if (!(contacts[i].firstName === firstNameAr)) {
+//       console.log(!(contacts[i].firstName === firstNameAr));
+//       console.log("No such contact");
+//     };
+//   };
+// };
+
+// let result = null;
+
+// for (let i = 0; i < contacts.length; i++) {
+//     if (contacts[i].firstName === firstNameAr && prop in contacts[i]) {
+//       console.log("Done");
+//       console.log(contacts[i][prop]);
+//       // result = contacts[i][prop];
+//     } else if (!(contacts[i].firstName === firstNameAr)) {
+//       let result = "No such contact";
+//       console.log(contacts[i].firstName);
+//       console.log(!(contacts[i].firstName === firstNameAr));
+//       console.log("No such contact");
+//       // result = "No such contact";
+//   };
+  
+// };
 
 // function lookUpProfile(name, prop) {
 //   // Only change code below this line
+//   let result;
 
+//   for (let i = 0; i < contacts.length; i++) {
+//       if (contacts[i].firstName === name && prop in contacts[i]) {
+//         console.log("Done");
+//         console.log(contacts[i][prop]);
+//         return contacts[i][prop];
+//       } else if (contacts[i].firstName === name && !(prop in contacts[i])) {
+//         console.log(prop in contacts[i]);
+//         console.log(!(prop in contacts[i]));
+//         console.log("No such property");
+//         return "No such property";
+//       } else if (!(contacts[i].firstName === name)) {
+//         console.log(contacts[i].firstName);
+//         console.log(!(contacts[i].firstName === name));
+//         console.log("No such contact");
+//         result = "No such contact";
+//       };
+//   };
+
+//   console.log("-----------------------------------------");
+//   console.log(result);
+//   return result;
 //   // Only change code above this line
 // };
 
-// lookUpProfile();
 // lookUpProfile("Akira", "likes");
+// console.log("-----------------------------------------");
+// lookUpProfile("Bob", "likes");
+// console.log("-----------------------------------------");
+// lookUpProfile("Akira", "potato");
+
+// ----------------------------------------
+// function randomRange(myMin, myMax) {
+//   // Only change code below this line
+//   return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin; // Math.floor(Math.random() * (10 - 5 + 1)) + 5
+//   // Only change code above this line
+// }
+
+// console.log(randomRange(5, 10));
+// console.log(randomRange(5, 10));
+// console.log(randomRange(5, 10));
+// console.log(randomRange(5, 10));
+
+// ----------------------------------------
+// function convertToInteger(str) {
+//   return parseInt(str);
+// };
+
+// console.log(convertToInteger("56"));
+// console.log(convertToInteger("4"));
+// console.log(convertToInteger("478282"));
+// console.log(convertToInteger(" "));
+// console.log(convertToInteger("a"));
+// console.log(convertToInteger("fox"));
+
+// ----------------------------------------
+
+// function convertToInteger(str) {
+//   return parseInt(str, 2);
+// }
+
+// console.log(convertToInteger("100110110110"));
+// console.log(convertToInteger("303"));
+// console.log(convertToInteger("1"));
+// console.log(convertToInteger("0"));
+
+// ----------------------------------------
+
+// function countup(n) {
+//   if (n < 1) {
+//     return [];
+//   } else {
+//     const countArray = countup(n - 1);
+//     console.log(n);
+//     console.log(countArray);
+//     countArray.push(n);
+//     return countArray;
+//   }
+// }
+// console.log(countup(5));
+
+// ----------------------------------------
+// function countdown(n){
+//   if (n < 1) {
+//     return [];
+//   } else {
+//     const countArray = countdown(n - 1);
+//     console.log(n);
+//     console.log(countArray);
+//     countArray.unshift(n);
+//     return countArray;
+//   };
+// };
+
+// console.log(countdown(10));
+
+// ----------------------------------------
+// function rangeOfNumbers(startNum, endNum) {
+//   if (startNum <= 0 || endNum <= 0 || startNum > endNum) {
+//     return [];
+//   } else {
+//     const numArray = rangeOfNumbers(startNum + 1, endNum - 1);
+//     console.log(startNum);
+//     console.log(endNum);
+//     console.log(numArray);
+//     numArray.push(endNum);
+//     return numArray;
+//   };
+// };
+
+// function rangeOfNumbers(startNum, endNum) {
+//   if (startNum <= 0 || endNum <= 0 || startNum > endNum) {
+//     return [];
+//   } else if (startNum === endNum) {
+//     return [startNum];
+//   } else {
+//     const numArray = rangeOfNumbers(startNum, endNum - 1);
+//     console.log(startNum);
+//     console.log(endNum);
+//     console.log(numArray);
+//     numArray.push(endNum);
+//     return numArray;
+//   };
+// };
+
+// console.log(rangeOfNumbers(4, 4));
+
+// ----------------------------------------
+// let name = "oleksii",
+//   value = 28,
+//   habits = ["sport", "eat"];
+
+// console.log(name);
+// console.log(value);
+// console.log(habits);
+
+// ----------------------------------------
+// let userEyesColor;
+
+// let user;
+// let USER_NAME = 'Vasya';
+// user = USER_NAME;
+
+// console.log(user);
+
+// ----------------------------------------
+console.log("35" + - "22");
+console.log("35" * "22");
+// console.log("558" > 22++);
+
+let userName = 0;
+let newUser = userName++;
+console.log(newUser);
+console.log(userName);
+
+console.log(!false && 11 || 18 && !"");
+console.log(11 && 18);
+
+let name = 0;
+console.log(name ?? "Hello");
