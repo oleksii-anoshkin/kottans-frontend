@@ -731,3 +731,51 @@ while (num) {
 }
 */
 // ----------------------------------------
+/*
+let showMessage = (name, text) => console.log(`${text} ${name}!`);
+setTimeout(showMessage, 500, "Oleksii", "Hello");
+
+let showNumbers = (startNumber, endNumber) => {
+  console.log(startNumber);
+  if (startNumber < endNumber) {
+    setTimeout(showNumbers, 1000, startNumber += 2, endNumber);
+  };
+};
+setTimeout(showNumbers, 1000, 10, 50);
+
+let showNumbers = (startNumber, endNumber) => {
+  console.log(startNumber);
+  let clear = setTimeout(showNumbers, 1000, startNumber += 2, endNumber);
+  if (startNumber > endNumber) {
+    clearTimeout(clear);
+  };
+};
+setTimeout(showNumbers, 1000, 10, 50);
+*/
+// ----------------------------------------
+
+// let result = 0;
+// let value = 0;
+
+// let showRandomNumber = (minNumber, maxNumber, maxValue) => {
+//   let number = Math.round((Math.random() * (maxNumber - minNumber)) + minNumber);
+//   result += number;
+//   value++;
+
+//   console.log(number);
+
+//   if (result >= maxValue) {
+//     clearInterval(timeID);
+//     console.log(`The sum of numbers is more than ${maxValue}!\nQuantity of numbers: ${value}.`);
+//   }
+// }
+// let timeID = setInterval(showRandomNumber, 500, 5, 50, 500);
+
+// ----------------------------------------
+
+let showName = () => console.log("Vasya!");
+setTimeout(showName, 0);
+console.log("Kolya!");
+
+// ----------------------------------------
+
