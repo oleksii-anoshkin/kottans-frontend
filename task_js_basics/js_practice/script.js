@@ -513,8 +513,221 @@ editInPlace();
 console.log(s);
 */
 // ----------------------------------------
+/*
 const sum = (...args) => {
   return args.reduce((a, b) => a + b, 0);
 };
 
 console.log(sum(1,2,3,4));
+*/
+// ----------------------------------------
+/*
+let a = 8, b = 6; 
+
+const array = [a, b];
+
+console.log(a);
+console.log(b);
+console.log(array);
+
+[b, a] = array;
+
+console.log(a);
+console.log(b);
+console.log(array);
+*/
+// ----------------------------------------
+/*
+function removeFirstTwo(list) {
+  // Only change code below this line
+  const [,, ...shorterList] = list; // Change this line
+  // Only change code above this line
+  return shorterList;
+}
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sourceWithoutFirstTwo = removeFirstTwo(source);
+console.log(sourceWithoutFirstTwo);
+*/
+// ----------------------------------------
+/*
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+// Only change code below this line
+console.log(stats.max);
+console.log(stats.min);
+
+const half = ({ max, min }) => (max + min) / 2.0;
+console.log(half(stats));
+// Only change code above this line
+*/
+// ----------------------------------------
+// var1
+/*
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+
+function makeList(arr) {
+  // Only change code below this line
+  const failureItems = [
+    `<li class="text-warning">${result.failure[0]}</li>`,
+    `<li class="text-warning">${result.failure[1]}</li>`,
+    `<li class="text-warning">${result.failure[2]}</li>`
+  ];
+  // Only change code above this line
+
+  return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+console.log(failuresList);
+*/
+// ----------------------------------------
+// var2
+/*
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+
+function makeList(arr) {
+  // Only change code below this line
+  const failureItems = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    failureItems.push(`<li class="text-warning">${result.failure[i]}</li>`);
+  };
+  // Only change code above this line
+
+  return failureItems;
+};
+
+const failuresList = makeList(result.failure);
+console.log(failuresList);
+*/
+// ----------------------------------------
+/*
+class Thermostat {
+  constructor(temp) {
+    this._temp = temp;
+  }
+  // getter
+  get temperature() {
+    return (5 / 9 * (this._temp - 32));
+  }
+  // setter
+  set temperature(updatedTemp) {
+    this._temp = updatedTemp * 9.0 / 5 + 32;
+  }
+}
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+console.log(thermos);
+let temp = thermos.temperature; // 24.44 in Celsius
+console.log(temp);
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+console.log(temp);
+*/
+// ----------------------------------------
+/*
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = false;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
+makeServerRequest.catch(error => {
+  console.log(error);
+});
+*/
+// ----------------------------------------
+/*
+if (10 > 9 && !"" == true) console.log("hello!");
+console.log("-----------");
+if ("" == false || null == true) console.log("hello!");
+console.log(null == true);
+console.log("-----------");
+if (true) console.log("hello!");
+console.log("-----------");
+if (Boolean("1") === Boolean(1)) console.log("hello!");
+console.log("-----------");
+if (Boolean(undefined) === Boolean(0)) console.log("hello!");
+*/
+// ----------------------------------------
+/*
+let x = 5;
+const MAX = 50;
+const ARRAY = [];
+
+for (; x < MAX; x++) {
+  console.log(x);
+  ARRAY.push(x);
+  if (x === 39) {
+    console.log(`Incorrect value: ${x}. The end!`);
+    break;
+  };
+};
+
+console.log('---------------');
+console.log(ARRAY);
+*/
+// ----------------------------------------
+/*
+const ARRAY = [];
+
+function evenNumbers(startNumber, endNumber) {
+  for (; startNumber <= endNumber; startNumber++) {
+    if (startNumber % 2 !== 0) continue;
+    ARRAY.push(startNumber);
+  };
+};
+
+evenNumbers(0, 100)
+console.log(ARRAY);
+*/
+// ----------------------------------------
+/*
+const ARRAY = [[1, 4, 8, 2], [3, 7, 4, 6, 12, 44, 2], [11, 28, 49, 2, 4], [240, 2, 110, 14], [240, 11, 22, 14], [2, 0, 22, 14]];
+let value = 0;
+
+reset: for (let i = 0; i < ARRAY.length; i++) {
+  for (let j = 0; j < ARRAY[i].length; j++) {
+    if (ARRAY[i][j] === 2) {
+      value++;
+      continue reset;
+    };
+  };
+};
+
+console.log(`${value} "two" were found in this array.`);
+*/
+// ----------------------------------------
+/*
+let num = 8;
+while (num) {
+  console.log(num);
+  num--;
+}
+*/
+// ----------------------------------------
