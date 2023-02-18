@@ -159,6 +159,7 @@ Pекурсивні функції - не думав що функції мож�
 ![html-css-week4-end](./task_js_basics/html-css-week4-end.png)
 ![feeCodeCamp-basic-js-end](./task_js_basics/fcc-basic-js-end.png)
 ![feeCodeCamp-ES6-end](./task_js_basics/feeCodeCamp-ES6-end.png)
+![feeCodeCamp-basic-data-structures-end](./task_js_basics/basic-data-structures-end.png)
 
 ### Додаткова практика та виконані роботи:
 
