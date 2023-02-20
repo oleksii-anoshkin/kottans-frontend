@@ -773,9 +773,202 @@ setTimeout(showNumbers, 1000, 10, 50);
 
 // ----------------------------------------
 
-let showName = () => console.log("Vasya!");
-setTimeout(showName, 0);
-console.log("Kolya!");
+// let showName = () => console.log("Vasya!");
+// setTimeout(showName, 0);
+// console.log("Kolya!");
 
 // ----------------------------------------
+/*
+const OBJ = {
+  firstName: "Oleksii",
+  lastName: "Anoshkin",
+  age: 28,
+};
 
+let newObj = Object.assign({}, OBJ);
+
+console.log(OBJ);
+console.log(newObj);
+
+newObj.firstName = "Ludmila";
+newObj.lastName = "Kilomiets";
+newObj.age = 46;
+
+console.log('------------------------');
+console.log(OBJ);
+console.log(newObj);
+
+newObj = Object.assign({}, { firstName: "Julia", lastName: "Kilomiets", age: 24 });
+
+console.log('------------------------');
+console.log(OBJ);
+console.log(newObj);
+
+newObj = Object.assign(OBJ, { firstName: "Richard" });
+
+console.log('------------------------');
+console.log(OBJ);
+console.log(newObj);
+*/
+// ----------------------------------------
+/*
+const OBJ = {
+  firstName: "Oleksii",
+  lastName: "Anoshkin",
+  age: 28,
+  adress: {
+    city: 'Kharkiv',
+    country: 'Ukrain',
+  },
+}
+
+console.log(OBJ.firstName);
+console.log(OBJ.adress.house);
+console.log(OBJ?.adress?.house);
+*/
+// ----------------------------------------
+/*
+let userInfo = {
+  name: "Vasya",
+  age: 30,
+  "58": "Значення",
+};
+console.log(userInfo[58]);
+*/
+// ----------------------------------------
+/*
+let userInfo = {
+  name: "Vasya",
+  age: 30,
+};
+
+let user = userInfo;
+user.age = 45;
+console.log(userInfo.age);
+*/
+// ----------------------------------------
+/*
+let userInfo = {
+  name: "Vasya",
+  age: 30,
+  showInfo() {
+    console.log(`${this.name}`);
+  },
+};
+
+let user = userInfo;
+userInfo = null;
+user.showInfo();
+console.log(user);
+*/
+// ----------------------------------------
+/*
+let x = 123 + "123";
+console.log(x);
+
+let y = 'Oleksii';
+console.log(y.toUpperCase());
+console.log(y[3]);
+console.log(y.slice(3, y.length - 1));
+console.log(y.includes("leks"));
+*/
+// ----------------------------------------
+/*
+let mainArray = [
+  { name: "Oleksii", age: 28, },
+  { name: "Julia", age: 24, },
+  { name: "Ludmila", age: 46, },
+  { name: "Oleksandr", age: 43, },
+  { name: "Richsrd", age: 14, },
+  { name: "Tolya", age: 16, },
+  { name: "Sveta", age: 17, },
+];
+
+
+let userName = "Oleksii";
+let infoName = array.find(function (item, index, array) {
+  console.log(item);
+  console.log(index);
+  console.log(array);
+  return item.name === userName;
+});
+// let info = array.find(item => item.name === userName); // скорочена форма
+console.log(infoName);
+
+
+
+let userAge = 18;
+// let infoAge = array.filter(function (item, index, array) {
+//   return item.age < userAge;
+// });
+let infoAge = array.filter(item => item.age < userAge); // скорочена форма
+console.log(infoAge);
+
+// ----------------------------------------
+// console.log(mainArray);
+// let reverseArray = mainArray.concat().reverse();
+// console.log(reverseArray);
+
+let CreateNameArray = array => {
+  let nameArray = [];
+  if (array.length === 0) {
+    return array;
+  } else {
+    for (let i = 0; i < array.length; i++) {
+      nameArray.push(array[i].name);
+    };
+
+    return nameArray;
+  };    
+};
+
+console.log(CreateNameArray(mainArray));
+
+let sortNameArray = CreateNameArray(mainArray).sort();
+console.log(sortNameArray);
+*/
+// ----------------------------------------
+/*
+let arr = [9, 2, 8,];
+let reduceValue = arr.reduce(function (x, y, z, a) {
+  console.log(x);
+});
+console.log(reduceValue);
+*/
+// ----------------------------------------
+/*
+// The global variable
+const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+// Change code below this line
+function add(array, bookName) {
+  console.log(array);
+  console.log(bookName);
+
+  return array.concat(bookName);
+  
+  // Change code above this line
+}
+
+// console.log(add(bookList, "A Brief History of Time"));
+// console.log(bookList);
+
+// Change code below this line
+function remove(array, bookName) {
+  const book_index = array.indexOf(bookName);
+  console.log(book_index);
+
+  if (book_index >= 0) {
+    
+    return array.concat().splice(0, book_index).concat(array.concat().splice(book_index + 1, array.length));
+
+    // Change code above this line
+    }
+}
+
+// console.log(remove(bookList, "On The Electrodynamics of Moving Bodies"));
+// console.log(bookList);
+
+console.log(remove(add(bookList, "A Brief History of Time"), "On The Electrodynamics of Moving Bodies"));
+*/
+// ----------------------------------------
