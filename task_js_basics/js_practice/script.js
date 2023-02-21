@@ -895,8 +895,6 @@ let infoName = array.find(function (item, index, array) {
 // let info = array.find(item => item.name === userName); // скорочена форма
 console.log(infoName);
 
-
-
 let userAge = 18;
 // let infoAge = array.filter(function (item, index, array) {
 //   return item.age < userAge;
@@ -972,3 +970,549 @@ function remove(array, bookName) {
 console.log(remove(add(bookList, "A Brief History of Time"), "On The Electrodynamics of Moving Bodies"));
 */
 // ----------------------------------------
+/*
+Array.prototype.myMap = function(callback) {
+  const newArray = [];
+  // Only change code below this line
+  for (let i = 0; i < this.length; i++) {
+    newArray.push(callback(this[i], i, this));
+  }
+  // Only change code above this line
+  return newArray;
+};
+
+[23, 65, 98, 5, 13].myMap(item => item * 2);
+*/
+// ----------------------------------------
+/*
+// The global variable
+const watchList = [
+  {
+    "Title": "Inception",
+    "Year": "2010",
+    "Rated": "PG-13",
+    "Released": "16 Jul 2010",
+    "Runtime": "148 min",
+    "Genre": "Action, Adventure, Crime",
+    "Director": "Christopher Nolan",
+    "Writer": "Christopher Nolan",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+    "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+    "Language": "English, Japanese, French",
+    "Country": "USA, UK",
+    "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+    "Metascore": "74",
+    "imdbRating": "8.8",
+    "imdbVotes": "1,446,708",
+    "imdbID": "tt1375666",
+    "Type": "movie",
+    "Response": "True"
+  },
+  {
+    "Title": "Interstellar",
+    "Year": "2014",
+    "Rated": "PG-13",
+    "Released": "07 Nov 2014",
+    "Runtime": "169 min",
+    "Genre": "Adventure, Drama, Sci-Fi",
+    "Director": "Christopher Nolan",
+    "Writer": "Jonathan Nolan, Christopher Nolan",
+    "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+    "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "Language": "English",
+    "Country": "USA, UK",
+    "Awards": "Won 1 Oscar. Another 39 wins & 132 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+    "Metascore": "74",
+    "imdbRating": "8.6",
+    "imdbVotes": "910,366",
+    "imdbID": "tt0816692",
+    "Type": "movie",
+    "Response": "True"
+  },
+  {
+    "Title": "The Dark Knight",
+    "Year": "2008",
+    "Rated": "PG-13",
+    "Released": "18 Jul 2008",
+    "Runtime": "152 min",
+    "Genre": "Action, Adventure, Crime",
+    "Director": "Christopher Nolan",
+    "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+    "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+    "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+    "Language": "English, Mandarin",
+    "Country": "USA, UK",
+    "Awards": "Won 2 Oscars. Another 146 wins & 142 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+    "Metascore": "82",
+    "imdbRating": "9.0",
+    "imdbVotes": "1,652,832",
+    "imdbID": "tt0468569",
+    "Type": "movie",
+    "Response": "True"
+  },
+  {
+    "Title": "Batman Begins",
+    "Year": "2005",
+    "Rated": "PG-13",
+    "Released": "15 Jun 2005",
+    "Runtime": "140 min",
+    "Genre": "Action, Adventure",
+    "Director": "Christopher Nolan",
+    "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+    "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+    "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+    "Language": "English, Urdu, Mandarin",
+    "Country": "USA, UK",
+    "Awards": "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
+    "Metascore": "70",
+    "imdbRating": "8.3",
+    "imdbVotes": "972,584",
+    "imdbID": "tt0372784",
+    "Type": "movie",
+    "Response": "True"
+  },
+  {
+    "Title": "Avatar",
+    "Year": "2009",
+    "Rated": "PG-13",
+    "Released": "18 Dec 2009",
+    "Runtime": "162 min",
+    "Genre": "Action, Adventure, Fantasy",
+    "Director": "James Cameron",
+    "Writer": "James Cameron",
+    "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+    "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "Language": "English, Spanish",
+    "Country": "USA, UK",
+    "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+    "Metascore": "83",
+    "imdbRating": "7.9",
+    "imdbVotes": "876,575",
+    "imdbID": "tt0499549",
+    "Type": "movie",
+    "Response": "True"
+  }
+];
+
+// Only change code below this line
+
+const filteredList = watchList.filter(item => item["imdbRating"] >= 8.0).map(item => ({ title: item["Title"], rating: item["imdbRating"] }));
+
+// Only change code above this line
+
+console.log(filteredList);
+*/
+// ----------------------------------------
+/*
+Array.prototype.myFilter = function(callback) {
+  const newArray = [];
+  // Only change code below this line
+  for (let i = 0; i < this.length; i++) {
+    if (callback(this[i], i, this)) {
+      newArray.push(this[i]);
+    };
+  };
+  // Only change code above this line
+  return newArray;
+};
+
+console.log([23, 65, 98, 5, 13].myFilter(item => item % 2));
+*/
+// ----------------------------------------
+/*
+// The global variable
+const watchList = [
+  {
+    "Title": "Inception",
+    "Year": "2010",
+    "Rated": "PG-13",
+    "Released": "16 Jul 2010",
+    "Runtime": "148 min",
+    "Genre": "Action, Adventure, Crime",
+    "Director": "Christopher Nolan",
+    "Writer": "Christopher Nolan",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+    "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+    "Language": "English, Japanese, French",
+    "Country": "USA, UK",
+    "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+    "Metascore": "74",
+    "imdbRating": "8.8",
+    "imdbVotes": "1,446,708",
+    "imdbID": "tt1375666",
+    "Type": "movie",
+    "Response": "True"
+  },
+  {
+    "Title": "Interstellar",
+    "Year": "2014",
+    "Rated": "PG-13",
+    "Released": "07 Nov 2014",
+    "Runtime": "169 min",
+    "Genre": "Adventure, Drama, Sci-Fi",
+    "Director": "Christopher Nolan",
+    "Writer": "Jonathan Nolan, Christopher Nolan",
+    "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+    "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "Language": "English",
+    "Country": "USA, UK",
+    "Awards": "Won 1 Oscar. Another 39 wins & 132 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+    "Metascore": "74",
+    "imdbRating": "8.6",
+    "imdbVotes": "910,366",
+    "imdbID": "tt0816692",
+    "Type": "movie",
+    "Response": "True"
+  },
+  {
+    "Title": "The Dark Knight",
+    "Year": "2008",
+    "Rated": "PG-13",
+    "Released": "18 Jul 2008",
+    "Runtime": "152 min",
+    "Genre": "Action, Adventure, Crime",
+    "Director": "Christopher Nolan",
+    "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+    "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+    "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+    "Language": "English, Mandarin",
+    "Country": "USA, UK",
+    "Awards": "Won 2 Oscars. Another 146 wins & 142 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+    "Metascore": "82",
+    "imdbRating": "9.0",
+    "imdbVotes": "1,652,832",
+    "imdbID": "tt0468569",
+    "Type": "movie",
+    "Response": "True"
+  },
+  {
+    "Title": "Batman Begins",
+    "Year": "2005",
+    "Rated": "PG-13",
+    "Released": "15 Jun 2005",
+    "Runtime": "140 min",
+    "Genre": "Action, Adventure",
+    "Director": "Christopher Nolan",
+    "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+    "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+    "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+    "Language": "English, Urdu, Mandarin",
+    "Country": "USA, UK",
+    "Awards": "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
+    "Metascore": "70",
+    "imdbRating": "8.3",
+    "imdbVotes": "972,584",
+    "imdbID": "tt0372784",
+    "Type": "movie",
+    "Response": "True"
+  },
+  {
+    "Title": "Avatar",
+    "Year": "2009",
+    "Rated": "PG-13",
+    "Released": "18 Dec 2009",
+    "Runtime": "162 min",
+    "Genre": "Action, Adventure, Fantasy",
+    "Director": "James Cameron",
+    "Writer": "James Cameron",
+    "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+    "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "Language": "English, Spanish",
+    "Country": "USA, UK",
+    "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+    "Metascore": "83",
+    "imdbRating": "7.9",
+    "imdbVotes": "876,575",
+    "imdbID": "tt0499549",
+    "Type": "movie",
+    "Response": "True"
+  }
+];
+
+function getRating(watchList) {
+  // Only change code below this line
+  let arrLength = (arr) => (arr.filter(item => item["Director"] === "Christopher Nolan")).length;
+  let arrSum = (arr) => arr.filter(item => item["Director"] === "Christopher Nolan").reduce((sum, item) => {
+    return sum += parseFloat(item["imdbRating"])
+  }, 0);
+  let result = (arr) => arrSum(arr) / arrLength(arr);
+
+  let averageRating = result(watchList);
+  // Only change code above this line
+  return averageRating;
+}
+
+console.log(getRating(watchList));
+*/
+// ----------------------------------------
+/*
+const squareList = arr => {
+  // Only change code below this line
+  return arr.filter(number => number > 0 && Number.isInteger(number)).map(number => Math.pow(number, 2));
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+*/
+// ----------------------------------------
+/*
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+  // Only change code below this line
+
+  return arr.concat([]).sort( (a, b) => a - b );
+
+  // Only change code above this line
+}
+
+console.log(nonMutatingSort(globalArray));
+console.log(nonMutatingSort([1, 30, 4, 21, 100000]));
+*/
+// ----------------------------------------
+/*
+function splitify(str) {
+  // Only change code below this line
+  return str.split(/[ ,-]/);
+
+  // Only change code above this line
+}
+
+console.log(splitify("Hello World,I-am code"));
+*/
+// ----------------------------------------
+/*
+// Only change code below this line
+function urlSlug(title) {
+  return title.toLowerCase().split(/[ ]/).filter(item => item.length !== 0).join("-");
+
+}
+// Only change code above this line
+console.log(urlSlug(" Winter Is  Coming"));
+*/
+// ----------------------------------------
+/*
+// v1
+function add(x) {
+  // Only change code below this line
+    return function(y) {
+      return function(z) {
+        return x + y + z;
+    };
+  };
+  // Only change code above this line
+}
+
+// v2
+let add = x => y => z => x + y + z;
+
+console.log(add(10)(20)(30));
+*/
+// ----------------------------------------
+/*
+function reverseString(str) { 
+  return str.split("").reverse().join("");
+};
+
+console.log(reverseString("hello"));
+*/
+// ----------------------------------------
+/*
+// v1
+// function factorialize(num) {
+//   let sum = 1;
+
+//   for (num; num > 0; num--) {
+//     console.log(num);
+//     sum *= num;
+//     console.log(sum);
+//   };
+    
+//   return sum;
+// };
+
+// v2
+function factorialize(num) {
+  let sum = 1;
+
+  console.log(num);
+
+  if (num > 0) {
+    sum = num * factorialize(num - 1);
+    console.log(sum);
+  }
+
+  return sum;
+};
+
+console.log(factorialize(5));
+*/
+// ----------------------------------------
+/*
+function findLongestWordLength(str) {
+  return str.split(" ").map(item => item.length).sort((a, b) => a - b).pop();
+};
+
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));
+console.log(findLongestWordLength("What if we try a super-long word such as otorhinolaryngology"));
+*/
+// ----------------------------------------
+/*
+function largestOfFour(arr) {
+  return arr.map(arrey => arrey.sort((a, b) => a - b).pop());
+};
+
+console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+console.log(largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]));
+*/
+// ----------------------------------------
+/*
+function confirmEnding(str, target) {
+  return str.slice(str.length - target.length, str.length) === target;
+};
+
+console.log(confirmEnding("Bastian", "n"));
+console.log(confirmEnding("Bastian", "an"));
+console.log(confirmEnding("Bastian", "on"));
+console.log(confirmEnding("If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing", "mountain"));
+console.log(confirmEnding("Abstraction", "action"));
+*/
+// ----------------------------------------
+/*
+function repeatStringNumTimes(str, num) {
+  let newStr = "";
+  if (num > 0) for (let i = 0; i < num; i++) newStr += str;
+  return newStr;
+};
+
+console.log(repeatStringNumTimes("abc", 3));
+console.log(repeatStringNumTimes("abc", 4));
+*/
+// ----------------------------------------
+/*
+function truncateString(str, num) {
+  // console.log(num >= str.length || "...");
+  if (num >= str.length) {
+    return str;
+  };
+  return str.slice(0, num) + "...";
+};
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length));
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2));
+*/
+// ----------------------------------------
+/*
+function findElement(arr, func) {
+  return arr.find(func);
+}
+
+console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }));
+console.log(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }));
+*/
+// ----------------------------------------
+/*
+function booWho(bool) {
+  return typeof bool === "boolean";
+};
+
+console.log(booWho(null));
+console.log(booWho(false));
+*/
+// ----------------------------------------
+/*
+function titleCase(str) {
+  return str.toLowerCase().split(" ").map(item => item.replace(item[0], item[0].toUpperCase())).join(" ");
+}
+
+console.log(titleCase("I'm a little tea pot"));
+*/
+// ----------------------------------------
+/*
+function frankenSplice(arr1, arr2, n) {
+  let newArr = arr2.concat();
+  arr1.map((arr, index) => newArr.splice(index + n, 0, arr));
+  return newArr;
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5], 1));
+*/
+// ----------------------------------------
+/*
+function bouncer(arr) {
+  return arr.filter(item => Boolean(item) !== false);
+};
+
+console.log(bouncer([7, "ate", "", false, 9]));
+*/
+// ----------------------------------------
+/*
+function getIndexToIns(arr, num) {
+  if (arr.length === 0) return 0;
+  if (num > arr.sort((a, b) => a - b)[arr.length - 1]) return (arr.length);
+  return arr.sort((a, b) => a - b).findIndex((item) => item >= num);
+};
+
+console.log(getIndexToIns([2, 20, 10], 19), ": 2");
+console.log(getIndexToIns([2, 5, 10], 15), ": 3");
+*/
+// ----------------------------------------
+/*
+// v1
+// function mutation(arr) {
+//   let secondArr = arr[1].toLowerCase().split("");
+//   // console.log(secondArr);
+//   // console.log(arr[0].toLowerCase().includes("h"));
+
+//   for (let i = 0; i < secondArr.length; i++) {
+//     // console.log(secondArr[i]);
+//     // console.log(arr[0].toLowerCase().includes(secondArr[i]));
+//     if (!arr[0].toLowerCase().includes(secondArr[i])) return false;
+//   };
+
+//   return true;
+// };
+
+// v2
+function mutation(arr) {
+  for (let i = 0; i < arr[1].toLowerCase().split("").length; i++) {
+    if (!arr[0].toLowerCase().includes(arr[1].toLowerCase().split("")[i])) return false;
+  };
+  return true;
+}
+
+console.log(mutation(["hello", "neo"], ": false"));
+console.log(mutation(["Mary", "Aarmy"], ": true"));
+*/
+// ----------------------------------------
+/*
+function chunkArrayInGroups(arr, size) {
+  let newArr = [];
+
+  for (let i = 0; i < arr.length; i += size) {
+    // console.log(newArr);
+    // console.log(arr.slice(i, i + size));
+    newArr.push(arr.slice(i, i + size));
+    // console.log(newArr);
+    // console.log(arr);
+  };
+
+  return newArr;
+};
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4));
+*/
