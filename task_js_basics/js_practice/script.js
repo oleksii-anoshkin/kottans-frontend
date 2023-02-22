@@ -1516,3 +1516,53 @@ function chunkArrayInGroups(arr, size) {
 console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4));
 */
+// ----------------------------------------
+/*
+// v1
+// function sumAll(arr) {
+//   let resultArr = [];
+//   let funcArr = arr.sort((a, b,) => a - b);
+//   let i = funcArr[0];
+
+//   for (i; i <= funcArr[funcArr.length - 1]; i++) {
+//     resultArr.push(i);
+//   }
+
+//   return resultArr.reduce((sum, item) => sum + item, 0);
+// };
+
+// v2
+function sumAll(arr) {
+  let funcArr = arr.sort((a, b,) => a - b);
+  let result = 0;
+
+  for (let i = funcArr[0]; i <= funcArr[funcArr.length - 1]; i++) {
+    result += i;
+  }
+
+  return result;
+};
+
+console.log(sumAll([1, 4]));
+*/
+// ----------------------------------------
+/*
+function diffArray(arr1, arr2) {
+  let checkArr = x => y => x.filter(item => !y.includes(item));
+  return [].concat(checkArr(arr1)(arr2), checkArr(arr2)(arr1));
+}
+
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+*/
+// ----------------------------------------
+/*
+function destroyer(arr1, ...arr2) {
+  // console.log(arr1);
+  // console.log(arr2);
+  return arr1.filter(item => !arr2.includes(item));
+};
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
+*/
+// ----------------------------------------
