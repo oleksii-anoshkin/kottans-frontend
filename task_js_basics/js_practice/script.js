@@ -1566,3 +1566,50 @@ console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
 console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
 */
 // ----------------------------------------
+// Regular Expressions
+
+// let ourStr = "Regular expressions";
+// let ourRegex = /expressions/;
+// console.log(ourStr.match(ourRegex));
+// console.log(ourStr);
+
+// let testStr = "Repeat, Repeat, Repeat";
+// let ourRegex = /Repeat/g;
+// testStr.match(ourRegex);
+// console.log(testStr.match(ourRegex));
+// console.log(testStr);
+
+// let twinkleStar = "Twinkle, twinkle, little star";
+// let starRegex = /twinkle/ig; // Change this line
+// let result = twinkleStar.match(starRegex); // Change this line
+// console.log(result);
+
+// let exampleStr = "Let's have fun with regular expressions!";
+// let unRegex = /.un/; // Change this line
+// let $result = unRegex.test(exampleStr);
+
+// let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+// let vowelRegex = /[aeiou]/ig; // Change this line
+// let _result = quoteSample.match(vowelRegex); // Change this line
+// console.log(_result);
+
+// let quoteSample = "The quick brown fox jumps over the lazy dog.";
+// let alphabetRegex = /[a-z]/ig; // Change this line
+// let result = quoteSample.match(alphabetRegex); // Change this line
+
+// let jennyStr = "Jenny8675309";
+// let myRegex = /[a-z0-9]/ig;
+// jennyStr.match(myRegex);
+
+// let quoteSample = "Blueberry 3.141592653s are delicious.";
+// let myRegex = /[h-s2-6]/ig; // Change this line
+// let result = quoteSample.match(myRegex); // Change this line
+// console.log(result);
+
+// let quoteSample = "3 blind mice.";
+// let myRegex = /[^aeiou0-9]/gi; // Change this line
+// let result = quoteSample.match(myRegex); // Change this line
+
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/g; // Change this line
+let result = difficultSpelling.match(myRegex);
