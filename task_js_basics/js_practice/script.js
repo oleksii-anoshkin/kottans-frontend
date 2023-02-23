@@ -1610,6 +1610,76 @@ console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
 // let myRegex = /[^aeiou0-9]/gi; // Change this line
 // let result = quoteSample.match(myRegex); // Change this line
 
-let difficultSpelling = "Mississippi";
-let myRegex = /s+/g; // Change this line
-let result = difficultSpelling.match(myRegex);
+// let difficultSpelling = "Mississippi";
+// let myRegex = /s+/g; // Change this line
+// let result = difficultSpelling.match(myRegex);
+
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let alphabetRegexV2 = /\w/g; // Change this line
+// let result = quoteSample.match(alphabetRegexV2).length;
+
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let nonAlphabetRegex = /\W/g; // Change this line
+// let result = quoteSample.match(nonAlphabetRegex).length;
+
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\d/g; // Change this line
+// let result = movieName.match(numRegex).length;
+
+// let movieName = "2001: A Space Odyssey";
+// let noNumRegex = /\D/g; // Change this line
+// let result = movieName.match(noNumRegex).length;
+
+// let username = "Z97";
+// let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
+// let result = userCheck.test(username);
+// console.log(result);
+
+// let sample = "Whitespace is important in separating words";
+// let countWhiteSpace = /\s/g; // Change this line
+// let result = sample.match(countWhiteSpace);
+
+// let ohStr = "Ohhh no";
+// let ohRegex = /Oh{3,6}\sno/; // Change this line
+// let result = ohRegex.test(ohStr);
+
+// let haStr = "Hazzzzah";
+// let haRegex = /Haz{4,}ah/; // Change this line
+// let result = haRegex.test(haStr);
+
+// let timStr = "Timmmmber";
+// let timRegex = /Tim{4}ber/; // Change this line
+// let result = timRegex.test(timStr);
+
+// let favWord = "favorite";
+// let favRegex = /favou?rite/; // Change this line
+// let result = favRegex.test(favWord);
+
+// let password = "abc123";
+// let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+// checkPass.test(password);
+
+// let sampleWord = "astronaut";
+// let pwRegex = /(?=\w{6,})(?=\D*\d{2})/; // Change this line
+// let result = pwRegex.test(sampleWord);
+
+// let myString = "Eleanor Roosevelt";
+// let myRegex = /(Franklin|Eleanor|Franklin D.)\sRoosevelt/; // Change this line
+// let result = myRegex.test(myString); // Change this line
+// // After passing the challenge experiment with myString and see how the grouping works
+
+// let repeatNum = "42 42 42";
+// let reRegex = /^(\d+) \1 \1$/; // Change this line
+// let result = reRegex.test(repeatNum);
+
+// let str = "one two three";
+// let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+// let replaceText = "$3 $2 $1"; // Change this line
+// let result = str.replace(fixRegex, replaceText);
+
+// let hello = "   Hello, World!  ";
+// let wsRegex = /^\s+|\s+$/g; // Change this line
+// let result = hello.replace(wsRegex, ""); // Change this line
+// console.log(result);
+
+// ----------------------------------------
