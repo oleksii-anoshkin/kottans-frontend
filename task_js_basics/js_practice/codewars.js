@@ -144,3 +144,66 @@ console.log(order("is2 Thi1s T4est 3a"));
 console.log(order("4of Fo1r pe6ople g3ood th5e the2"));
 */
 // ----------------------------------------
+/*
+function firstNonRepeatingLetter(str) {
+  if (str.length === 1) {
+    return str;
+  };
+
+  let arr = str.toLowerCase().split("");
+  let wordsArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    wordsArr = arr.filter(item => item === arr[i]);
+
+    if (wordsArr.length === 1) {
+      return str[i];
+    };
+  };
+
+  return '';
+};
+
+console.log(firstNonRepeatingLetter('stress'));
+console.log(firstNonRepeatingLetter('moonmen'));
+console.log(firstNonRepeatingLetter(''));
+console.log(firstNonRepeatingLetter('a'));
+console.log(firstNonRepeatingLetter('sTreSS'));
+console.log(firstNonRepeatingLetter('moonmEn'));
+*/
+// ----------------------------------------
+/*
+function sumStrings(a, b) { 
+  console.log(BigInt(a));
+  let createNumber = y => y === "" ?  0n : BigInt(y);
+  return String(createNumber(a) + createNumber(b));
+};
+
+console.log(sumStrings('1', '2'));
+console.log(sumStrings('', '2'));
+console.log(sumStrings('712569312664357328695151392', '8100824045303269669937'));
+*/
+// ----------------------------------------
+/*
+function rgb(r, g, b) {
+  let checkMax = item => {
+    if (item > 255) return 255;
+    if (item < 0) return 0;
+
+    return item;
+  };
+
+  return [checkMax(r), checkMax(g), checkMax(b)].map(x => {
+    const hex = x.toString(16)
+    return hex.length === 1 ? '0' + hex : hex
+  }).join('').toUpperCase();
+};
+
+console.log(rgb(255, 255, 255));
+console.log(rgb(0, 0, 0));
+console.log(rgb(148, 0, 211));
+console.log(rgb(255, 255, 300));
+console.log(rgb(173, 255, 47));
+console.log(rgb(0, 0, -1));
+*/
+// ----------------------------------------
