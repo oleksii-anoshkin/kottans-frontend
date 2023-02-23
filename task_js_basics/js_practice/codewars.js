@@ -207,3 +207,60 @@ console.log(rgb(173, 255, 47));
 console.log(rgb(0, 0, -1));
 */
 // ----------------------------------------
+/*
+function formatDuration(time) {
+  if (time === 0) { return "now"; };
+
+  const years = Math.floor(time / (60 * 60 * 24 * 365));
+  const days = Math.floor(time / (60 * 60 * 24)) % 365;
+  const hours = Math.floor(time / (60 * 60)) % 24;
+  const minutes = Math.floor(time / 60) % 60;
+  const seconds = time % 60;
+
+  const timeValues = [years, days, hours, minutes, seconds];
+  const units = ['year', 'day', 'hour', 'minute', 'second'];
+
+  const connect = timeValues.map((value, index) => {
+    if (value > 1) {return value + ' ' + units[index] + 's'}
+    if (value === 1) {return value + ' ' + units[index]}
+  }).filter(value => value !== undefined);
+
+  if (connect.length > 1) {
+    const last = connect.pop();
+    return connect.join(', ') + ' and ' + last;
+  };
+
+  return connect[0];
+};
+
+console.log(formatDuration(0));
+console.log(formatDuration(1));
+console.log(formatDuration(62));
+console.log(formatDuration(83543));
+console.log(formatDuration(7534537));
+*/
+// ----------------------------------------
+/*
+// v1
+function generateMarkdowns(markdown, text, urlOrLanguage) {
+  if (markdown === "link") {
+    return `[${text}](${urlOrLanguage})`;
+  };
+
+  if (markdown === "img") {
+    return `![${text}](${urlOrLanguage})`;
+  };
+
+  if (markdown === "code") {
+    return `\`\`\`${urlOrLanguage}\n${text}\n\`\`\``;
+  };
+  
+  return;
+};
+
+// v2
+let generateMarkdowns = (markdown, text, urlOrLanguage) => markdown === "link" 
+  ? `[${text}](${urlOrLanguage})` : markdown === "img" 
+  ? `![${text}](${urlOrLanguage})` : markdown === "code" 
+  ? `\`\`\`${urlOrLanguage}\n${text}\n\`\`\`` : undefined;
+*/
