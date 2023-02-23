@@ -167,5 +167,6 @@ Pекурсивні функції - не думав, що функції мож
 ### Додаткова практика та виконані роботи:
 
 [coursera-fullstack-week4-homework](https://github.com/oleksii-anoshkin/fullstack-course4/tree/master/assignments/assignment4/assignment4-solution-starter/harder "Week 4 homework")
+![feeCodeCamp-regular-expressions-end](./task_js_basics/regular-expressions-end.png)
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
