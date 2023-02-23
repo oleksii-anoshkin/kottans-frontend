@@ -1683,3 +1683,151 @@ console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
 // console.log(result);
 
 // ----------------------------------------
+/*
+// v1
+// function whatIsInAName(collection, source) {
+//   let result = [];
+
+//   collection.filter(obj => {
+//     for (let key in obj) {
+//       console.log(key);
+//       console.log(obj[key]);
+
+//       for (let item in source) {
+//         console.log(item);
+//         console.log(source[item]);
+//         if (key === item) {
+//           obj[key] === source[item] && result.push(obj);
+//         };
+//       };
+//     };
+//   });
+
+//   return result;
+// };
+
+// v2
+// function whatIsInAName(collection, source) {
+//   let result = [];
+
+//   collection.filter(obj => {
+//     for (let key in source) {
+//       console.log(key);
+//       console.log(source[key]);
+
+//       console.log(obj.hasOwnProperty(key));
+//       console.log(source[key] === obj[key]);
+//       if (obj.hasOwnProperty(key) && (source[key] === obj[key])) {
+//         result.push(obj);
+//         console.log("+");
+//       };
+//     };
+//   });
+
+//   return result;
+// };
+
+// v3
+function whatIsInAName(collection, source) {
+  let sourceKeys = Object.keys(source);
+
+  return collection.filter(obj => {
+    for (let i = 0; i < sourceKeys.length; i++) {
+      if (!obj.hasOwnProperty(sourceKeys[i]) ||
+          obj[sourceKeys[i]] !== source[sourceKeys[i]]) {
+        return false;
+      }
+    }
+    return true;
+  });
+};
+
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }), ": [{ first: \"Tybalt\", last: \"Capulet\" }]");
+console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }), ": [{ \"apple\": 1, \"bat\": 2 }, { \"apple\": 1, \"bat\": 2, \"cookie\": 2 }]");
+*/
+// ----------------------------------------
+/*
+function spinalCase(str) {
+  return str.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/\s+|_+/g, "-").toLowerCase();
+};
+
+console.log(spinalCase('This Is Spinal Tap'));
+console.log(spinalCase("The_Andy_Griffith_Show"));
+console.log(spinalCase('thisIsSpinalTap'));
+*/
+// ----------------------------------------
+/*
+function translatePigLatin(str) {
+  return !/[aeiou]/.test(str)
+    ? str + "ay" : /^[aeiou]/.test(str)
+      ? str + "way" : str.replace(/(^[^aeiou]+)(\w+)/, "$2") + str.match(/^[^aeiou]+/) + "ay";
+};
+
+console.log(translatePigLatin("rhythm"));
+console.log(translatePigLatin("consonant"));
+console.log(translatePigLatin("eight"));
+console.log(translatePigLatin("glove"));
+*/
+// ----------------------------------------
+/*
+function myReplace(str, before, after) {
+  return /^[A-Z]/.test(before) === /^[A-Z]/.test(after) || /^[a-z]/.test(before) === /^[a-z]/.test(after)
+    ? str.replace(before, after) : /^[A-Z]/.test(before)
+      ? str.replace(before, after[0].toUpperCase() + after.slice(1, after.length)) : str.replace(before, after.toLowerCase());
+}
+
+console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"));
+console.log(myReplace("I think we should look up there", "up", "Down"));
+console.log(myReplace("I think we should look Up there", "Up", "down"));
+*/
+// ----------------------------------------
+/*
+function pairElement(str) {
+  let pairsArr = [["A", "T"], ["T", "A"], ["C", "G"], ["G", "C"],];
+  let resultArr = [];
+
+  str.split("").forEach(key => {
+    pairsArr.forEach(pair => {
+      if (pair[0] === key) {
+        resultArr.push(pair);
+      };
+    });    
+  });
+
+  return resultArr; 
+};
+
+console.log(pairElement("GCG"));
+console.log(pairElement("TTGAG"));
+*/
+// ----------------------------------------
+/*
+function uniteUnique(...arr) {
+  let resultArr = [];
+
+  arr.forEach(item => item.forEach(numb => {
+    if (!resultArr.includes(numb)) resultArr.push(numb)
+  }));
+
+  return resultArr;
+};
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+*/
+// ----------------------------------------
+/*
+function convertHTML(str) {
+  const htmlEntities = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  };
+
+  return str.split("").map(entity => htmlEntities[entity] || entity).join("");
+};
+
+console.log(convertHTML("Dolce & Gabbana"));
+*/
+// ----------------------------------------

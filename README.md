@@ -163,6 +163,7 @@ Pекурсивні функції - не думав, що функції мож
 ![feeCodeCamp-basic-data-structures-end](./task_js_basics/basic-data-structures-end.png)
 ![feeCodeCamp-functional-programming-end](./task_js_basics/functional-programming-end.png)
 ![feeCodeCamp-basic-algorithm-scripting-end](./task_js_basics/basic-algorithm-scripting-end.png)
+![feeCodeCamp-intermediate-algorithm-scripting-end](./task_js_basics/intermediate-algorithm-scripting-end.png)
 
 ### Додаткова практика та виконані роботи:
 
