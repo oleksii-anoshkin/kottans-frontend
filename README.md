@@ -82,14 +82,24 @@
 > <details>
 >   <summary>git-branching-main-end</summary>
 > <img src="./task_git_collaboration/git-branching-main-end.png">
+> </details>
+> <details>
 >   <summary>git-branching-remote-end</summary>
 > <img src="./task_git_collaboration/git-branching-remote-end.png">
+> </details>
+> <details>
 >   <summary>introduction-git-week1-end</summary>
 > <img src="./task_git_collaboration/introduction-git-week1-end.png">
+> </details>
+> <details>
 >   <summary>introduction-git-week2-end</summary>
 > <img src="./task_git_collaboration/introduction-git-week2-end.png">
+> </details>
+> <details>
 >   <summary>introduction-git-week2-end</summary>
 > <img src="./task_git_collaboration/introduction-git-week3-end.png">
+> </details>
+> <details>
 >   <summary>introduction-git-week4-end</summary>
 > <img src="./task_git_collaboration/introduction-git-week4-end.png">
 > </details>
