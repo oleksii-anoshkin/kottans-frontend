@@ -7,7 +7,7 @@
 -   [x] [Git Collaboration](#git-collaboration)
 -   [x] [Intro to HTML and CSS](#intro-to-html-and-css)
 -   [x] [Responsive Web Design](#responsive-web-design)
--   [x] [HTML CSS Popup](#html-css-popup)
+-   [x] [HTML CSS Popup](#html-and-css-practice-hooli-style-popup)
 -   [x] [JS Basics](#js-basics)
 -   [ ] [DOM](#dom)
 -   [ ] [Tiny JS World](#tiny-js-world)
@@ -140,7 +140,7 @@ Flexbox дуже корисний та гнучкий. Grid також необ�
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
-## HTML / CSS practice: Hooli-style Popup
+## HTML and CSS practice: Hooli-style Popup
 
 Виконане завдання цього розділу.
 [Hooli-style Popup](https://html-css-popup.netlify.app "HTML CSS Popup Practise")
