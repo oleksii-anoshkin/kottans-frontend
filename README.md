@@ -1,5 +1,23 @@
 # kottans-frontend
 
+## Tasks
+
+-   [x] [Git Basics](#git-basics)
+-   [x] [Linux CLI, and HTTP](#linux-cli-and-http)
+-   [x] [Git Collaboration](#git-collaboration)
+-   [x] [Intro to HTML and CSS](#intro-to-html-and-css)
+-   [x] [Responsive Web Design](#responsive-web-design)
+-   [x] [HTML CSS Popup](#html-css-popup)
+-   [x] [JS Basics](#js-basics)
+-   [ ] [DOM](#dom)
+-   [ ] [Tiny JS World](#tiny-js-world)
+-   [ ] [Object Oriented JS](#object-oriented-js)
+-   [ ] [OOP Exercise](#oop-exercise)
+-   [ ] [Offline Web Applications](#offline-web-applications)
+-   [ ] [Memory Pair Game](#memory-pair-game)
+-   [ ] [Website Performance Optimization](#website-performance-optimization)
+-   [ ] [Friends App](#friends-app)
+
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 ## Git basics
