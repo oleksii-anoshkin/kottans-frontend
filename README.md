@@ -223,20 +223,60 @@ Pекурсивні функції - не думав, що функції мож
 
 ### Скріншоти виконаних завдань:
 
-![html-css-week4-end](./task_js_basics/html-css-week4-end.png)
-![feeCodeCamp-basic-js-end](./task_js_basics/fcc-basic-js-end.png)
-![feeCodeCamp-ES6-end](./task_js_basics/feeCodeCamp-ES6-end.png)
-![feeCodeCamp-basic-data-structures-end](./task_js_basics/basic-data-structures-end.png)
-![feeCodeCamp-functional-programming-end](./task_js_basics/functional-programming-end.png)
-![feeCodeCamp-basic-algorithm-scripting-end](./task_js_basics/basic-algorithm-scripting-end.png)
-![feeCodeCamp-intermediate-algorithm-scripting-end](./task_js_basics/intermediate-algorithm-scripting-end.png)
+> <details>
+>   <summary>html-css-week4-end</summary>
+> <img src="./task_js_basics/html-css-week4-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-basic-js-end</summary>
+> <img src="./task_js_basics/fcc-basic-js-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-ES6-end</summary>
+> <img src="./task_js_basics/feeCodeCamp-ES6-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-basic-data-structures-end</summary>
+> <img src="./task_js_basics/basic-data-structures-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-functional-programming-end</summary>
+> <img src="./task_js_basics/functional-programming-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-basic-algorithm-scripting-end</summary>
+> <img src="./task_js_basics/basic-algorithm-scripting-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-intermediate-algorithm-scripting-end</summary>
+> <img src="./task_js_basics/intermediate-algorithm-scripting-end.png">
+> </details>
 
 ### Додаткова практика та виконані роботи:
 
-[coursera-fullstack-week4-homework](https://github.com/oleksii-anoshkin/fullstack-course4/tree/master/assignments/assignment4/assignment4-solution-starter/harder "Week 4 homework")
-![feeCodeCamp-regular-expressions-end](./task_js_basics/regular-expressions-end.png)
-![feeCodeCamp-debugging-end](./task_js_basics/debugging-end.png)
-![feeCodeCamp-object-oriented-programming-end](./task_js_basics/object-oriented-programming-end.png)
-![feeCodeCamp-js-algorithms-and-data-structures-projects-end](./task_js_basics/js-algorithms-and-data-structures-projects-end.png)
+> <details>
+>   <summary>feeCodeCamp-regular-expressions-end</summary>
+> <img src="./task_js_basics/regular-expressions-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-debugging-end</summary>
+> <img src="./task_js_basics/debugging-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-object-oriented-programming-end</summary>
+> <img src="./task_js_basics/object-oriented-programming-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-js-algorithms-and-data-structures-projects-end</summary>
+> <img src="./task_js_basics/js-algorithms-and-data-structures-projects-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-js-certificate</summary>
+> <img src="./task_js_basics/feeCodeCamp-js-certificate.jpg">
+> </details>
+
+### Практичні завдання:
+
+- [coursera-fullstack-week4-homework](https://github.com/oleksii-anoshkin/fullstack-course4/tree/master/assignments/assignment4/assignment4-solution-starter/harder "Week 4 homework")
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
