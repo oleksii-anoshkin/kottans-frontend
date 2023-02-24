@@ -54,8 +54,6 @@
 > <img src="./task_linux_cli/linux-tutorial-end.png">
 > </details>
 
-<!-- ![linux-tutorial-end](./task_linux_cli/linux-tutorial-end.png) -->
-
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
 ## Git Collaboration
@@ -81,12 +79,27 @@
 
 ### Скріншоти виконаних завдань:
 
-![git-branching-main-end](./task_git_collaboration/git-branching-main-end.png)
+> <details>
+>   <summary>git-branching-main-end</summary>
+> <img src="./task_git_collaboration/git-branching-main-end.png">
+>   <summary>git-branching-remote-end</summary>
+> <img src="./task_git_collaboration/git-branching-remote-end.png">
+>   <summary>introduction-git-week1-end</summary>
+> <img src="./task_git_collaboration/introduction-git-week1-end.png">
+>   <summary>introduction-git-week2-end</summary>
+> <img src="./task_git_collaboration/introduction-git-week2-end.png">
+>   <summary>introduction-git-week2-end</summary>
+> <img src="./task_git_collaboration/introduction-git-week3-end.png">
+>   <summary>introduction-git-week4-end</summary>
+> <img src="./task_git_collaboration/introduction-git-week4-end.png">
+> </details>
+
+<!-- ![git-branching-main-end](./task_git_collaboration/git-branching-main-end.png)
 ![git-branching-remote-end](./task_git_collaboration/git-branching-remote-end.png)
 ![introduction-git-week1-end](./task_git_collaboration/introduction-git-week1-end.png)
 ![introduction-git-week2-end](./task_git_collaboration/introduction-git-week2-end.png)
 ![introduction-git-week3-end](./task_git_collaboration/introduction-git-week3-end.png)
-![introduction-git-week4-end](./task_git_collaboration/introduction-git-week4-end.png)
+![introduction-git-week4-end](./task_git_collaboration/introduction-git-week4-end.png) -->
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
 
