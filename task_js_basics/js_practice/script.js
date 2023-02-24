@@ -2075,20 +2075,7 @@ console.log(rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT."), "--- THE QUIC
 // ----------------------------------------
 /*
 function checkCashRegister(price, cash, cid) {
-  // money values
-  const MONEY = [
-    ["PENNY", 0.01],
-    ["NICKEL", 0.05],
-    ["DIME", 0.1],
-    ["QUARTER", 0.25],
-    ["ONE", 1],
-    ["FIVE", 5],
-    ["TEN", 10],
-    ["TWENTY", 20],
-    ["ONE HUNDRED", 100],
-  ];
-
-  // sum money
+  // sum of money cash register
   let sumBank = 0;
   for (let i = 0; i < cid.length; i++) { sumBank += cid[i][1]; };
 
@@ -2097,29 +2084,54 @@ function checkCashRegister(price, cash, cid) {
     return {status: "CLOSED", change: cid};
   };
 
-  // check rest
-  const sumRest = cash - price;
-  const restArr = [["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
+  // check bills
+  let findBills = (rest, arrOfBills) => {
 
-  // sort rest
-  let x = 0;
+    let hundred = Math.floor(rest / 100);
+    let twenty = Math.floor(rest % 100 / 20);
+    let ten = Math.floor(rest % 100 % 20 / 10);
+    let five = Math.floor(rest % 100 % 20 % 10 / 5);
+    let one = Math.floor(rest % 100 % 20 % 10 % 5 / 1);
+    let quarter = Math.floor(rest % 100 % 20 % 10 % 5 % 1 / 0.25);
+    let dime = Math.floor(rest % 100 % 20 % 10 % 5 % 1 % 0.25 / 0.1);
+    let nickel = Math.floor(rest % 100 % 20 % 10 % 5 % 1 % 0.25 % 0.1 / 0.05);
+    let penny = Math.ceil(rest % 100 % 20 % 10 % 5 % 1 % 0.25 % 0.1 % 0.05 / 0.01);
 
-  for (let i = cid.length - 1; i >= 0; i--) {
-    if (sumRest % MONEY[i][1] === 0) {
-      if ( sumRest === cid[i][1] || sumRest < cid[i][1]) {
-        console.log("+");
-        restArr[i][1] = sumRest;
-        break;
-      } else if (numberOfBills > cid[i][1]) {
-        console.log("*")
-      };      
+    let billsArr = [[penny * 0.01], [nickel * 0.05], [dime * 0.1], [quarter * 0.25], [one * 1], [five * 5], [ten * 10], [twenty * 20], [hundred * 100]];
+    let cashRegisterArr = arrOfBills.map(item => item[1]);
+
+    for (let i = billsArr.length - 1; i >= 0; i--) {
+      if (cashRegisterArr[i] < billsArr[i]) {
+        let diff = parseInt(billsArr[i]) - parseInt(cashRegisterArr[i]);
+        billsArr[i] = [cashRegisterArr[i]];
+        billsArr[i - 1] = [parseInt(billsArr[i - 1]) + diff];
+      };
     };
+
+    return billsArr;
   };
 
-  return restArr;
+  // create bills keys
+  let createBillsKeys = billsArr => {
+    let keysArr = [["PENNY"], ["NICKEL"], ["DIME"], ["QUARTER"], ["ONE"], ["FIVE"], ["TEN"], ["TWENTY"], ["ONE HUNDRED"]];
+
+    for (let i = 0; i < keysArr.length; i++) { keysArr[i].push(billsArr[i][0]); };
+
+    return keysArr.filter(item => item[1] !== 0).reverse();
+  };
+
+  let result = createBillsKeys(findBills(cash - price, cid));
+
+  if (result.length === 0) {
+    return {status: "INSUFFICIENT_FUNDS", change: []}
+  };
+
+  return {status: "OPEN", change: result}
 };
 
-// console.log(checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
 // console.log(checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
-console.log(checkCashRegister(3.26, 203.26, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 300]]));
+// console.log(checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
+// console.log(checkCashRegister(143.26, 500, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 30], ["TWENTY", 120], ["ONE HUNDRED", 400]]));
+console.log(checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]), '--- {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]}');
 */
+// ----------------------------------------

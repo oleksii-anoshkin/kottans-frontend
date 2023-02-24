@@ -171,5 +171,6 @@ Pекурсивні функції - не думав, що функції мож
 ![feeCodeCamp-regular-expressions-end](./task_js_basics/regular-expressions-end.png)
 ![feeCodeCamp-debugging-end](./task_js_basics/debugging-end.png)
 ![feeCodeCamp-object-oriented-programming-end](./task_js_basics/object-oriented-programming-end.png)
+![feeCodeCamp-js-algorithms-and-data-structures-projects-end](./task_js_basics/js-algorithms-and-data-structures-projects-end.png)
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
