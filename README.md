@@ -123,10 +123,22 @@
 
 ### Скріншоти виконаних завдань:
 
-![html-css-week1-end](./task_html_css_intro/html-css-week1-end.png)
-![html-css-week2-end](./task_html_css_intro/html-css-week2-end.png)
-![html-css-week3-end](./task_html_css_intro/html-css-week3-end.png)
-![html-css-codeacademy-end](./task_html_css_intro/html-css-codeacademy-end.png)
+> <details>
+>   <summary>html-css-week1-end</summary>
+> <img src="./task_html_css_intro/html-css-week1-end.png">
+> </details>
+> <details>
+>   <summary>html-css-week2-end</summary>
+> <img src="./task_html_css_intro/html-css-week2-end.png">
+> </details>
+> <details>
+>   <summary>html-css-week3-end</summary>
+> <img src="./task_html_css_intro/html-css-week3-end.png">
+> </details>
+> <details>
+>   <summary>html-css-codeacademy-end</summary>
+> <img src="./task_html_css_intro/html-css-codeacademy-end.png">
+> </details>
 
 ### Додаткова практика та виконані роботи:
 
