@@ -264,3 +264,29 @@ let generateMarkdowns = (markdown, text, urlOrLanguage) => markdown === "link"
   ? `![${text}](${urlOrLanguage})` : markdown === "code" 
   ? `\`\`\`${urlOrLanguage}\n${text}\n\`\`\`` : undefined;
 */
+// ----------------------------------------
+/*
+function ipsBetween(start, end) {
+  let startArr = start.split(".");
+  let endArr = end.split(".");
+  let resultArr = [];
+
+  for (let i = 0; i < 4; i++) {
+    startArr[i] === endArr[i] ? resultArr.push(0) : resultArr.push(endArr[i] - startArr[i]);
+  };
+
+  return resultArr[0] * Math.pow(256, 3) + resultArr[1]*Math.pow(256, 2) + resultArr[2] * 256 + resultArr[3];
+};
+
+console.log(ipsBetween("150.0.0.0", "150.0.0.1"), "--- 1"); 
+console.log(ipsBetween("10.0.0.0", "10.0.0.50"), "--- 50");
+console.log(ipsBetween("20.0.0.10", "20.0.1.0"), "--- 246");
+console.log(ipsBetween("10.11.12.13", "10.11.13.0"), "--- 243");
+console.log(ipsBetween("160.0.0.0", "160.0.1.0"), "--- 256");
+console.log(ipsBetween("170.0.0.0", "170.1.0.0"), "--- 65536");
+console.log(ipsBetween("50.0.0.0", "50.1.1.1"), "--- 65793");
+console.log(ipsBetween("180.0.0.0", "181.0.0.0"), "--- 16777216");
+console.log(ipsBetween("1.2.3.4", "5.6.7.8"), "--- 67372036");
+console.log(ipsBetween("0.0.0.0", "255.255.255.255"), "--- ?");
+*/
+// ----------------------------------------

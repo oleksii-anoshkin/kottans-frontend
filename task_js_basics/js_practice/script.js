@@ -1831,3 +1831,295 @@ function convertHTML(str) {
 console.log(convertHTML("Dolce & Gabbana"));
 */
 // ----------------------------------------
+/*
+let output = "Get this to show once in the freeCodeCamp console and not at all in the browser console";
+console.log(output);
+console.clear();
+
+let myArray = [1, 2, 3];
+let arraySum = myArray.reduce((previous, current =>  previous + current), 0);
+console.log(`Sum of array values is: ${arraySum}`);
+*/
+// ----------------------------------------
+/*
+function palindrome(str) {
+  let arr = str.toLowerCase().match(/[a-z0-9]/g);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[arr.length - 1 - i]) {
+      return false;
+    }
+  };
+  
+  return true;
+};
+
+console.log(palindrome("eye"), "--- true");
+console.log(palindrome("not a palindrome"), "--- false");
+console.log(palindrome("My age is 0, 0 si ega ym."), "--- true");
+console.log(palindrome("0_0 (: /-\ :) 0-0"), "--- true");
+console.log(palindrome("five|\_/|four"), "--- false");
+*/
+// ----------------------------------------
+/*
+function convertToRoman(num) {
+  // false input number
+  if (num >= 10000 || num <= 0) {
+    return "Sorry, unable to calculate.";
+  };
+
+  // roman numbers
+  let createArabicNumerals = (numb, index) => {
+    if (numb === 0) {
+      return "";
+    };
+
+    if (index === 0) {
+      let result = ""; 
+
+      for (let i = 1; i <= numb; i++) {
+        result += "M";
+      };
+
+      return result;
+    };
+
+    if (index === 1) {
+      switch (numb) {
+        case 1:
+          return "C";
+          break;
+        case 2:
+          return "CC";
+          break;
+        case 3:
+          return "CCC";
+          break;
+        case 4:
+          return "CD";
+          break;
+        case 5:
+          return "D";
+          break;
+        case 6:
+          return "DC";
+          break;
+        case 7:
+          return "DCC";
+          break;
+        case 8:
+          return "DCCC";
+          break;
+        case 9:
+          return "CM";
+          break;
+      };
+    };
+
+    if (index === 2) {
+      switch (numb) {
+        case 1:
+          return "X";
+          break;
+        case 2:
+          return "XX";
+          break;
+        case 3:
+          return "XXX";
+          break;
+        case 4:
+          return "XL";
+          break;
+        case 5:
+          return "L";
+          break;
+        case 6:
+          return "LX";
+          break;
+        case 7:
+          return "lXX";
+          break;
+        case 8:
+          return "LXXX";
+          break;
+        case 9:
+          return "XC";
+          break;
+      };
+    };
+
+    if (index === 3) {
+      switch (numb) {
+        case 1:
+          return "I";
+          break;
+        case 2:
+          return "II";
+          break;
+        case 3:
+          return "III";
+          break;
+        case 4:
+          return "IV";
+          break;
+        case 5:
+          return "V";
+          break;
+        case 6:
+          return "VI";
+          break;
+        case 7:
+          return "VII";
+          break;
+        case 8:
+          return "VIII";
+          break;
+        case 9:
+          return "IX";
+          break;    
+      };
+    };
+  };
+
+  // check numbers
+  let thousands = Math.floor(num / 1000);
+  let hundreds = Math.floor((num % 1000) / 100);
+  let dozens = Math.floor((num % 1000 % 100) / 10);
+  let units = Math.floor((num % 1000 % 100 % 10));
+  let arabicNumArr = [thousands, hundreds, dozens, units];
+
+  // result roman numbers
+  let romanNumArr = [];
+  arabicNumArr.forEach((item, index) => romanNumArr.push(createArabicNumerals(item, index)));
+
+  return romanNumArr.join("");
+};
+
+console.log(convertToRoman(4), "--- IV");
+console.log(convertToRoman(36), "--- XXXVI");
+console.log(convertToRoman(68), "--- LXVIII");
+console.log(convertToRoman(99), "--- XCIX");
+console.log(convertToRoman(891), "--- DCCCXCI");
+console.log(convertToRoman(3999), "--- MMMCMXCIX");
+*/
+// ----------------------------------------
+/*
+function rot13(str) {
+  // check letter
+  let transformLetter = (letter) => { 
+    let basicStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    return basicStr[basicStr.indexOf(letter) <= 12 ? basicStr.indexOf(letter) + 13 : basicStr.indexOf(letter) - 13];
+  };
+
+  return str.split("").map(item => /[A-Z]/.test(item) ? transformLetter(item) : item).join("");
+};
+
+console.log(rot13("SERR PBQR PNZC"), "--- FREE CODE CAMP");
+console.log(rot13("SERR YBIR?"), "--- FREE LOVE?");
+console.log(rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT."), "--- THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.");
+*/
+// ----------------------------------------
+
+// function telephoneCheck(str) {
+//   return /^\+?[1]?[- ]?\d{3}[ -]*?\d{3}[ -]?\d{4}$|\d{3}-\d{3}-\d{4}$|^\+?[1]?[ (]?\d{3}[) ]*?\d{3}[ -]?\d{4}$/.test(str);
+// };
+
+// function telephoneCheck(str) {
+//   return /^[\d]{1}\ \([\d]{3}\)\ [\d]{3}-[\d]{4}$/.test(str);
+// };
+
+// function telephoneCheck(str) {
+//   if (str.length < 10 || str.length > 16) {
+//     return false;
+//   };
+//   if (/[*&!?#.a-zA-Z:;/\\]/.test(str)) {
+//     return false;
+//   };
+
+//   if (str.length >= 10 && str.length <= 12) {
+//     return /^\d{3}[ -]\d{3}[ -]\d{4}$|^[(]\d{3}[)]\d{3}[ -]\d{4}$|^\d{10}$/.test(str)
+//   };
+
+//   if (str.length >= 13 && str.length <= 14) {
+//     if (/^[1]\ \d{3}\)+/.test(str)) {
+//       return false;
+//     };
+
+//     if (/^[1][ (]+?\d{3}[ )-]+\d{3}[ -]\d{4}$/.test(str)) {
+//       return true;
+//     };
+//   };
+
+//   if (str.length >= 13 && str.length <= 16) {
+//     if (str.length === 16 && /^[1]\ \(\d{3}\)\ \d{3}\-\d{4}$/.test(str)) {
+//       return true;
+//     };
+
+//     if (/^[(]\d{3}[)]\d{3}[- ]\d{4}$/.test(str)) {
+//       return true;
+//     };
+
+//     if (/^[^1]*/.test(str)) {
+//       return false;
+//     };
+//   };
+// };
+
+// console.log(telephoneCheck("555-555-5555"));
+// console.log(telephoneCheck("(555)555-5555"));
+// console.log(telephoneCheck("(555) 555-5555"));
+// console.log(telephoneCheck("555 555 5555"));
+// console.log(telephoneCheck("5555555555"));
+// console.log(telephoneCheck("(555-555-5555"));
+// console.log(telephoneCheck("11 555-555-5555"));
+// ----------------------------------------
+/*
+function checkCashRegister(price, cash, cid) {
+  // money values
+  const MONEY = [
+    ["PENNY", 0.01],
+    ["NICKEL", 0.05],
+    ["DIME", 0.1],
+    ["QUARTER", 0.25],
+    ["ONE", 1],
+    ["FIVE", 5],
+    ["TEN", 10],
+    ["TWENTY", 20],
+    ["ONE HUNDRED", 100],
+  ];
+
+  // sum money
+  let sumBank = 0;
+  for (let i = 0; i < cid.length; i++) { sumBank += cid[i][1]; };
+
+  // check "CLOSED"
+  if (sumBank === (cash - price)) {
+    return {status: "CLOSED", change: cid};
+  };
+
+  // check rest
+  const sumRest = cash - price;
+  const restArr = [["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
+
+  // sort rest
+  let x = 0;
+
+  for (let i = cid.length - 1; i >= 0; i--) {
+    if (sumRest % MONEY[i][1] === 0) {
+      if ( sumRest === cid[i][1] || sumRest < cid[i][1]) {
+        console.log("+");
+        restArr[i][1] = sumRest;
+        break;
+      } else if (numberOfBills > cid[i][1]) {
+        console.log("*")
+      };      
+    };
+  };
+
+  return restArr;
+};
+
+// console.log(checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
+// console.log(checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
+console.log(checkCashRegister(3.26, 203.26, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 300]]));
+*/
