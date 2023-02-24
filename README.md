@@ -162,11 +162,24 @@ Flexbox дуже корисний та гнучкий. Grid також необ�
 
 ### Скріншоти виконаних завдань:
 
-![flexbox-froggy-game-end](./task_responsive_web_design/flexbox-froggy-game-end.png)
-![grid-garden-game-end](./task_responsive_web_design/grid-garden-game-end.png)
-![codecademy-intermediate-css-end](./task_responsive_web_design/codecademy-intermediate-css-end.png)
-[Мій перший сайт](https://short-about-html.netlify.app "Що таке HTML?")
-[Мій перший макет](https://britlex-lan9ua9e-school.netlify.app "Britlex Language School")
+> <details>
+>   <summary>flexbox-froggy-game-end</summary>
+> <img src="./task_responsive_web_design/flexbox-froggy-game-end.png">
+> </details>
+> <details>
+>   <summary>grid-garden-game-end</summary>
+> <img src="./task_responsive_web_design/grid-garden-game-end.png">
+> </details>
+> <details>
+>   <summary>codecademy-intermediate-css-end</summary>
+> <img src="./task_responsive_web_design/codecademy-intermediate-css-end.png">
+> </details>
+> <details>
+
+### Практичні завдання:
+
+- [Мій перший сайт](https://short-about-html.netlify.app "Що таке HTML?")
+- [Мій перший макет](https://britlex-lan9ua9e-school.netlify.app "Britlex Language School")
 
 ### Додаткова практика та виконані роботи:
 
