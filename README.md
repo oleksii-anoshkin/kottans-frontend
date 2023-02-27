@@ -280,3 +280,29 @@ Pекурсивні функції - не думав, що функції мож
 - [coursera-fullstack-week4-homework](https://github.com/oleksii-anoshkin/fullstack-course4/tree/master/assignments/assignment4/assignment4-solution-starter/harder "Week 4 homework")
 
 <!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+## DOM
+
+### Що для мене було новим:
+
+---
+
+### Що мене здивувало:
+
+---
+
+### Що планую використовувати в майбутньому:
+
+---
+
+### Скріншоти виконаних завдань:
+
+> <details>
+>   <summary>feeCodeCamp-intermediate-algorithm-scripting-end</summary>
+> <img src="./task_js_dom/intermediate-algorithm-scripting-end.png">
+> </details>
+
+### Додаткова практика та виконані роботи:
+
+
+### Практичні завдання:

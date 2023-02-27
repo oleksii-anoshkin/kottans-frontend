@@ -2135,3 +2135,154 @@ function checkCashRegister(price, cash, cid) {
 console.log(checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]), '--- {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]}');
 */
 // ----------------------------------------
+/*
+try {
+  console.log(1);
+  // ggv();
+} catch {
+  console.log(2);
+} finally {
+  console.log(3);
+};
+*/
+// ----------------------------------------
+/*
+class Publication {
+  constructor(title,author,pubDate) {
+      this.title = title;
+      this.author = author;
+      this.pubDate = pubDate;
+  };
+
+  print() {
+      console.log(`
+          Title: ${ this.title }
+          By: ${ this.author }
+          ${ this.pubDate }
+      `);
+  };
+};
+
+let x = new Publication("Weather", "Oleksii", "27.02.2023");
+x.print();
+
+class Book extends Publication {
+    constructor(bookDetails) {
+        super(
+            bookDetails.title,
+            bookDetails.author,
+            bookDetails.publishedOn
+        );
+        this.publisher = bookDetails.publisher;
+        this.ISBN = bookDetails.ISBN;
+    }
+
+    print() {
+        super.print();
+        console.log(`
+            Publisher: ${ this.publisher }
+            ISBN: ${ this.ISBN }
+        `);
+    }
+}
+
+class BlogPost extends Publication {
+    constructor(title,author,pubDate,URL) {
+        super(title,author,pubDate);
+        this.URL = URL;
+    }
+
+    print() {
+        super.print();
+        console.log(this.URL);
+    }
+}
+
+var YDKJS = new Book({
+    title: "You Don't Know JS",
+    author: "Kyle Simpson",
+    publishedOn: "June 2014",
+    publisher: "O'Reilly",
+    ISBN: "123456-789"
+});
+
+YDKJS.print();
+
+var forAgainstLet = new BlogPost(
+    "For and against let",
+    "Kyle Simpson",
+    "October 27, 2014",
+    "https://davidwalsh.name/for-and-against-let"
+);
+
+forAgainstLet.print();
+*/
+// ----------------------------------------
+/*
+function Publication(title,author,pubDate) {
+    var publicAPI = {
+        print() {
+            console.log(`
+                Title: ${ title }
+                By: ${ author }
+                ${ pubDate }
+            `);
+        }
+    };
+
+    return publicAPI;
+}
+
+function Book(bookDetails) {
+    var pub = Publication(
+        bookDetails.title,
+        bookDetails.author,
+        bookDetails.publishedOn
+    );
+
+    var publicAPI = {
+        print() {
+            pub.print();
+            console.log(`
+                Publisher: ${ bookDetails.publisher }
+                ISBN: ${ bookDetails.ISBN }
+            `);
+        }
+    };
+
+    return publicAPI;
+}
+
+function BlogPost(title,author,pubDate,URL) {
+    var pub = Publication(title,author,pubDate);
+
+    var publicAPI = {
+        print() {
+            pub.print();
+            console.log(URL);
+        }
+    };
+
+    return publicAPI;
+}
+
+var YDKJS = Book({
+    title: "You Don't Know JS",
+    author: "Kyle Simpson",
+    publishedOn: "June 2014",
+    publisher: "O'Reilly",
+    ISBN: "123456-789"
+});
+
+YDKJS.print();
+
+var forAgainstLet = BlogPost(
+    "For and against let",
+    "Kyle Simpson",
+    "October 27, 2014",
+    "https://davidwalsh.name/for-and-against-let"
+);
+
+forAgainstLet.print();
+*/
+// ----------------------------------------
