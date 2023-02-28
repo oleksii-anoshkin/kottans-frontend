@@ -1,0 +1,14 @@
+// import fonts
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap");
+$mainText: "Comfortaa", cursive;
+
+// page fonts
+%mainText {
+  font-family: $mainText;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.003em;
+  color: $sidebarTextCol;
+}

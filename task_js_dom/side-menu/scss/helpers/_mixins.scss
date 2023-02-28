@@ -1,0 +1,18 @@
+// mixins
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin transformRotate($deg) {
+  transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+}

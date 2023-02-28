@@ -1,0 +1,12 @@
+// general styles
+.wrap {
+  @include flexRow;
+  width: 100%;
+
+  @extend %mainText;
+  background-color: $thirdlyBg;
+}
+
+.hidden {
+  display: none;
+}

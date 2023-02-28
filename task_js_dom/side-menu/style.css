@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrap {
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.003em;
+  color: #ffffff;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #e3e9f7;
+}
+
+.hidden {
+  display: none;
+}
+
+.sidebar {
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  max-width: 280px;
+  background-color: #11111d;
+}
+.sidebar__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+.sidebar__menu {
+  flex: 1 1 auto;
+}
+.sidebar__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header__arrow {
+  position: relative;
+  align-self: flex-end;
+  height: 28px;
+  width: 20px;
+  cursor: pointer;
+}
+.header__arrow::before, .header__arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 16px;
+  height: 2px;
+  background-color: #ffffff;
+}
+.header__arrow::before {
+  top: 8px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+.header__arrow::after {
+  bottom: 8px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.logo {
+  height: 40px;
+}
+.logo__text {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-left: 48px;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+  background: url(../../images/kottans-logo.png) left center/40px 40px no-repeat;
+}
+
+.menu__item {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+}
+
+.footer {
+  background-color: #1d1b31;
+}
+.footer__text {
+  font-size: 16px;
+}
+
+.content {
+  flex: 75%;
+}
