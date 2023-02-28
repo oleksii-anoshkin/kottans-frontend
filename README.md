@@ -298,6 +298,10 @@ Pекурсивні функції - не думав, що функції мож
 ### Скріншоти виконаних завдань:
 
 > <details>
+>   <summary>coursera-document-object-model-manipulation-end</summary>
+> <img src="./task_js_dom/document-object-model-manipulation-end.png">
+> </details>
+> <details>
 >   <summary>feeCodeCamp-intermediate-algorithm-scripting-end</summary>
 > <img src="./task_js_dom/intermediate-algorithm-scripting-end.png">
 > </details>
