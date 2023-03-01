@@ -1,16 +1,25 @@
 "use strict";
 
 //--------------------------------------------
-const arrow = document.querySelector(".header__arrow");
-const textHidden = document.querySelectorAll(".text");
+const WRAP = document.querySelector(".wrap");
+const SIDEBAR = document.querySelector(".sidebar");
+const ARROW = document.querySelector(".sidebar__arrow");
 
-arrow.addEventListener("click",
+// arrow btn
+ARROW.addEventListener("click",
   function (event) {
-    //
+    // hidden
+    SIDEBAR.classList.toggle("hidden");
+    WRAP.classList.toggle("hidden");
+  }
+);
 
-    // hidden text
-    for (let text of textHidden) {
-      text.classList.toggle("hidden");
-    };
+ARROW.addEventListener("keydown",
+  function (event) {
+    // hidden
+    if (event.code === "Space" || event.code === "Enter") {
+      SIDEBAR.classList.toggle("hidden");
+      WRAP.classList.toggle("hidden");
+    }
   }
 );

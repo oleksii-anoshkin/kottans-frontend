@@ -16,3 +16,27 @@
   -ms-transform: rotate($deg);
   -o-transform: rotate($deg);
 }
+
+@mixin transition {
+  transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -ms-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+}
+
+@mixin transitionOpacity {
+  transition: opacity 0.2s linear 0s;
+  -webkit-transition: opacity 0.2s linear 0s;
+  -moz-transition: opacity 0.2s linear 0s;
+  -ms-transition: opacity 0.2s linear 0s;
+  -o-transition: opacity 0.2s linear 0s;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}

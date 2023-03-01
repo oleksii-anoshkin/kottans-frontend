@@ -1,103 +1,196 @@
 // sidebar styles
 .sidebar {
-  flex: 25%;
-
+  // main sidebar styles
   @include flexCol;
 
-  min-width: 220px;
-  max-width: 280px;
+  width: 280px;
 
   background-color: $primaryBg;
+  @include transition;
 
+  // sidebar header styles
   &__header {
     @include flexRow;
-    justify-content: space-between;
+    justify-content: flex-end;
 
-    padding: 20px;
-  }
+    margin: 20px;
 
-  &__menu {
-    flex: 1 1 auto;
-  }
-
-  &__footer {
-    @include flexRow;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px 0;
-  }
-}
-
-.header {
-  &__logo {
+    background-color: $secondaryBg;
+    @include border-radius(8px);
   }
 
   &__arrow {
     position: relative;
-    align-self: flex-end;
 
-    height: 28px;
-    width: 20px;
-    
+    height: 40px;
+    width: 40px;
+
     cursor: pointer;
+
+    border: 2px solid $secondaryBg;
+    @include border-radius(8px);
+    @include transition;
 
     &::before,
     &::after {
       content: "";
 
       position: absolute;
-      right: 0;
+      right: 10px;
 
       width: 16px;
       height: 2px;
 
       background-color: $logoTextCol;
+      @include transition;
+      @include border-radius(1px);
     }
 
     &::before {
-      top: 8px;
-      @include transformRotate(-45deg);
+      top: 12px;
+      @include transformRotate(-225deg);
     }
 
     &::after {
-      bottom: 8px;
-      @include transformRotate(45deg);
+      bottom: 12px;
+      @include transformRotate(225deg);
+    }
+
+    &:focus,
+    &:hover {
+      border: 2px solid $logoTextCol;
     }
   }
-}
 
-.logo {
-  height: 40px;
+  // sidebar menu styles
+  &__menu {
+    flex: 1 1 auto;
+
+    padding: 0px 20px;
+  }
+
+  &__item {
+    position: relative;
+
+    margin: 20px 16px;
+    height: 40px;
+
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.015em;
+
+    background-color: $secondaryBg;
+    @include border-radius(8px);
+
+    overflow: hidden;
+    cursor: pointer;
+    @include transition;
+
+    .sidebar__text {
+      position: absolute;
+      top: 10px;
+      left: 40px;
+    }
+
+    .sidebar__img {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $secondaryBlack;
+      background-color: $primaryGray;
+    }
+  }
 
   &__text {
+    opacity: 1;
+    @include transitionOpacity;
+  }
+
+  // sidebar footer styles
+  &__footer {
+    margin: 20px;
+
+    height: 40px;
+
+    background-color: $secondaryBg;
+    @include border-radius(8px);
+  }
+
+  &__link {
+    position: relative;
+
     @include flexRow;
-    align-items: flex-end;
 
-    padding-left: 48px;
-
+    width: 100%;
     height: 100%;
 
     font-size: 24px;
     font-weight: 700;
-
     color: inherit;
-    background: url(../../images/kottans-logo.png) left center / 40px 40px no-repeat;
+
+    border: 2px solid $secondaryBg;
+    @include border-radius(8px);
+
+    overflow: hidden;
+    @include transition;
+
+    .sidebar__text,
+    .sidebar__img {
+      @include transition;
+    }
+
+    .sidebar__text {
+      position: absolute;
+      top: 6px;
+      left: 88px;
+    }
+
+    .sidebar__img {
+      position: absolute;
+      top: 2px;
+      left: 48px;
+    }
+
+    &:focus,
+    &:hover {
+      border-color: $logoTextCol;
+    }
   }
-}
 
-.menu {
-  &__item {
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.015em;
-  }
-}
+  // hidden styles
+  &.hidden {
+    width: 80px;
 
-.footer {
-  background-color: $secondaryBg;
+    .sidebar__text {
+      opacity: 0;
+    }
 
-  &__text {
-    font-size: 16px;
+    .sidebar__arrow::before {
+      @include transformRotate(45deg);
+    }
+
+    .sidebar__arrow::after {
+      @include transformRotate(-45deg);
+    }
+
+    .sidebar__link {
+      left: 0px;
+
+      .sidebar__text {
+        left: 40px;
+      }
+
+      .sidebar__img {
+        left: 2px;
+      }
+    }
+
+    .sidebar__item {
+      margin: 20px 0;
+    }
   }
 }

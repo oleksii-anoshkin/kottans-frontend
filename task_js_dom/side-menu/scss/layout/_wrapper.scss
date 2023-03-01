@@ -1,12 +1,16 @@
 // general styles
 .wrap {
-  @include flexRow;
+  display: grid;
+  grid-template: 1fr / 280px 1fr;
+
   width: 100%;
 
   @extend %mainText;
-  background-color: $thirdlyBg;
-}
+  background: $thirdlyBg;
 
-.hidden {
-  display: none;
+  @include transition;
+
+  &.hidden {
+    grid-template: 1fr / 80px 1fr;
+  }
 }
