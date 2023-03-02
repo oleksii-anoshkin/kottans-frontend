@@ -1,6 +1,13 @@
 // sidebar styles
 .sidebar {
   // main sidebar styles
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
   @include flexCol;
 
   width: 280px;
@@ -98,6 +105,7 @@
       left: 6px;
     }
 
+    &.active,
     &:hover,
     &:focus {
       color: $secondaryBlack;
@@ -191,6 +199,51 @@
 
     .sidebar__item {
       margin: 20px 0;
+    }
+  }
+}
+
+@media (max-width: 512px) {
+  .sidebar {
+    width: 220px;
+
+    &__header {
+      margin: 20px 10px;
+    }
+
+    &__menu {
+      padding: 0px 10px;
+    }
+
+    &__item {
+      margin: 20px 8px;
+      font-size: 16px;
+
+      .sidebar__text {
+        top: 12px;
+      }
+    }
+
+    &__footer {
+      margin: 20px 10px;
+    }
+
+    &__link {
+      font-size: 20px;
+
+      .sidebar__text {
+        top: 7px;
+        left: 72px;
+      }
+
+      .sidebar__img {
+        left: 32px;
+      }
+    }
+
+    // hidden styles
+    &.hidden {
+      width: 60px;
     }
   }
 }

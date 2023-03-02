@@ -1,16 +1,28 @@
 // general styles
 .wrap {
+  position: relative;
+
   display: grid;
   grid-template: 1fr / 280px 1fr;
 
   width: 100%;
 
   @extend %mainText;
-  background: $thirdlyBg;
+  background: $thirdlyBg url(../../images/kottans-bg.svg) center / auto 80% no-repeat fixed;
 
   @include transition;
 
   &.hidden {
     grid-template: 1fr / 80px 1fr;
+  }
+}
+
+@media (max-width: 512px) {
+  .wrap {
+    grid-template: 1fr / 220px 1fr;
+
+    &.hidden {
+      grid-template: 1fr / 60px 1fr;
+    }
   }
 }
