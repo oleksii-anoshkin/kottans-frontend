@@ -10,7 +10,7 @@
 - [x] [HTML CSS Popup](#html-and-css-practice-hooli-style-popup)
 - [x] [JS Basics](#js-basics)
 - [x] [DOM](#dom)
-- [ ] [Tiny JS World](#tiny-js-world)
+- [x] [Tiny JS World](#tiny-js-world)
 - [ ] [Object Oriented JS](#object-oriented-js)
 - [ ] [OOP Exercise](#oop-exercise)
 - [ ] [Offline Web Applications](#offline-web-applications)
@@ -203,7 +203,7 @@ Flexbox дуже корисний та гнучкий. Grid також необ�
 
 - Методи об'єктів та функцій.
 - Що об'єкти та масиви можуть зберігати не тільки значення (числа, строки тощо), а й функції, методи тощо.
-- Оператори /= та *=.
+- Оператори /= та \*=.
 - Уникання закриття рядка та формування цитат за допомогою \".
 - Доступ до масивів, що є елементами інших масивів.
 - Default в switch.
@@ -312,3 +312,10 @@ Pекурсивні функції - не думав, що функції мож
 
 - [side-menu](https://task-js-dom.netlify.app/ "side-menu")
 - [вихідний код side-menu](https://github.com/oleksii-anoshkin/kottans-frontend/tree/main/task_js_dom/side-menu)
+
+## Tiny JS World
+
+### Практичні завдання:
+
+- [tiny-js-world](https://oleksii-anoshkin.github.io/a-tiny-JS-world/ "tiny-js-world")
+- [вихідний код tiny-js-world](https://github.com/oleksii-anoshkin/a-tiny-JS-world)
