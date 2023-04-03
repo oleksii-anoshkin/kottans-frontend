@@ -11,7 +11,7 @@
 - [x] [JS Basics](#js-basics)
 - [x] [DOM](#dom)
 - [x] [Tiny JS World](#tiny-js-world)
-- [ ] [Object Oriented JS](#object-oriented-js)
+- [x] [Object Oriented JS](#object-oriented-js)
 - [ ] [OOP Exercise](#oop-exercise)
 - [ ] [Offline Web Applications](#offline-web-applications)
 - [ ] [Memory Pair Game](#memory-pair-game)
@@ -313,9 +313,49 @@ Pекурсивні функції - не думав, що функції мож
 - [side-menu](https://task-js-dom.netlify.app/ "side-menu")
 - [вихідний код side-menu](https://github.com/oleksii-anoshkin/kottans-frontend/tree/main/task_js_dom/side-menu)
 
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
 ## Tiny JS World
 
 ### Практичні завдання:
 
 - [tiny-js-world](https://oleksii-anoshkin.github.io/a-tiny-JS-world/ "tiny-js-world")
 - [вихідний код tiny-js-world](https://github.com/oleksii-anoshkin/a-tiny-JS-world)
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+## Object Oriented JS
+
+### Що для мене було новим:
+
+Методологія програмування ООП для мене була зовсім новою і завдяки цьому розділу я зміг трохи розібратися з нею, зокрема з класами та прототипами.
+
+### Що мене здивувало:
+
+this – дуже крута річ! При правильному використанні значно полегшує доступ до багатьох властивостей елементів, з якими працюєш.
+
+### Що планую використовувати в майбутньому:
+
+Все, що вдалося вивчити: прототипи, їх методи тощо.
+
+### Скріншоти виконаних завдань:
+
+> <details>
+>   <summary>coursera-document-object-model-manipulation-end</summary>
+> <img src="./task_js_oop/object-oriented-1-end.png">
+> </details>
+> <details>
+>   <summary>feeCodeCamp-intermediate-algorithm-scripting-end</summary>
+> <img src="./task_js_oop/object-oriented-2-end.png">
+> </details>
+
+### Codewars:
+
+- [codewars](https://www.codewars.com/users/OleksiiAnoshkin)
+
+### Практичні завдання:
+
+- [classic frogger game](https://classic-frogger-game-kottans.netlify.app/ "classic frogger game")
+- [вихідний код side-menu](https://github.com/oleksii-anoshkin/frontend-nanodegree-arcade-game)
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
