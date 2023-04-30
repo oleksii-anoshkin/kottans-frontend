@@ -13,7 +13,7 @@
 - [x] [Tiny JS World](#tiny-js-world)
 - [x] [Object Oriented JS](#object-oriented-js)
 - [x] [OOP Exercise](#oop-exercise)
-- [ ] [Offline Web Applications](#offline-web-applications)
+- [x] [Offline Web Applications](#offline-web-applications)
 - [ ] [Memory Pair Game](#memory-pair-game)
 - [ ] [Website Performance Optimization](#website-performance-optimization)
 - [ ] [Friends App](#friends-app)
